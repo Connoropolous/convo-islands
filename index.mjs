@@ -10,7 +10,7 @@ generate x,y coordinates for every topic in the layout object
 
 */
 
-// synapses = [{ topic1_id: 4, topic2_id: 5, direction: 'from-to', desc: 'has reply' }]
+// synapses = [{ topic1_id: 4, topic2_id: 5, category: 'from-to', desc: 'has reply' }]
 
 const isEven = n => n % 2 === 0
 const isOdd = n => Math.abs(n % 2) === 1
