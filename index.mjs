@@ -1,4 +1,4 @@
-import { findIndex, orderBy } from 'lodash'
+import lodash from 'lodash'
 
 /*
 step 1
@@ -42,7 +42,7 @@ export const generateLayoutObject = (topics, synapses, focalTopicId) => {
       .map(synapse => synapse.topic2_id)
       .forEach(childId => topic.children.push(addParentsAndChildren({id: childId}, false, true, nextDegree)))
 
-      topic.children = orderBy(topic.children, 'maxDescendants', 'desc')
+      topic.children = lodash.orderBy(topic.children, 'maxDescendants', 'desc')
       topic.maxDescendants = topic.children.length ? topic.children[0].maxDescendants + 1 : 0
     }
 
@@ -56,7 +56,7 @@ export const generateLayoutObject = (topics, synapses, focalTopicId) => {
       .map(synapse => synapse.topic1_id)
       .forEach(parentId => topic.parents.push(addParentsAndChildren({id: parentId}, true, false, nextDegree)))
 
-      topic.parents = orderBy(topic.parents, 'maxAncestors', 'desc')
+      topic.parents = lodash.orderBy(topic.parents, 'maxAncestors', 'desc')
       topic.maxAncestors = topic.parents.length ? topic.parents[0].maxAncestors + 1 : 0
     }
 
@@ -136,7 +136,7 @@ export const generateObjectCoordinates = (layoutObject, focalTopicId, focalCoord
       else if (attempt > 0) {
         // if the relations sign is 0, alternate between putting this topic into the upper and lower quadrants
         if (coords[relation.id].y === 0) {
-          indexOfTopic = findIndex(arrayOfTopics, t => t.id === topic.id)
+          indexOfTopic = lodash.findIndex(arrayOfTopics, t => t.id === topic.id)
           relationSign = isOdd(indexOfTopic) ? 1 : -1
         } else {
           // if the quadrant of the related topic is already decided, make sure to keep it
