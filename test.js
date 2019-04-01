@@ -1,8 +1,8 @@
-import {
+const {
     generateObjectCoordinates,
     generateLayoutObject,
     getLayoutForData
-} from './index'
+} = require('./index')
 
 // single node
 

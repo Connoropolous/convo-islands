@@ -1,4 +1,4 @@
-import lodash from 'lodash'
+const lodash =  require('lodash')
 
 /*
 step 1
@@ -15,11 +15,16 @@ generate x,y coordinates for every topic in the layout object
 const isEven = n => n % 2 === 0
 const isOdd = n => Math.abs(n % 2) === 1
 
-export const X_GRID_SPACE = 250
-export const Y_GRID_SPACE = 200
-export const ISLAND_SPACING = 300
+const X_GRID_SPACE = 250
+module.exports.X_GRID_SPACE = X_GRID_SPACE
 
-export const generateLayoutObject = (topics, synapses, focalTopicId) => {
+const Y_GRID_SPACE = 200
+module.exports.Y_GRID_SPACE = Y_GRID_SPACE
+
+const ISLAND_SPACING = 300
+module.exports.ISLAND_SPACING = ISLAND_SPACING
+
+const generateLayoutObject = (topics, synapses, focalTopicId) => {
   let layout = [] // will be the final output
   const usedTopics = {} // will store the topics that have been placed into islands
   let newRoot
@@ -91,9 +96,10 @@ export const generateLayoutObject = (topics, synapses, focalTopicId) => {
 
   return layout
 }
+module.exports.generateLayoutObject = generateLayoutObject
 
 
-export const generateObjectCoordinates = (layoutObject, focalTopicId, focalCoords) => {
+const generateObjectCoordinates = (layoutObject, focalTopicId, focalCoords) => {
   const coords = {}
 
   const traverseIsland = (island, func, parent, child) => {
@@ -217,7 +223,9 @@ export const generateObjectCoordinates = (layoutObject, focalTopicId, focalCoord
 
   return coords
 }
+module.exports.generateObjectCoordinates = generateObjectCoordinates
 
-export const getLayoutForData = (topics, synapses, focalTopicId, focalCoords) => {
+const getLayoutForData = (topics, synapses, focalTopicId, focalCoords) => {
   return generateObjectCoordinates(generateLayoutObject(topics, synapses, focalTopicId), focalTopicId, focalCoords)
 }
+module.exports.getLayoutForData = getLayoutForData
