@@ -97,10 +97,6 @@ module.exports.generateLayoutObject = generateLayoutObject
 // given an island, and a function, call the given function on every node
 // in that island by recursing
 const traverseIsland = (island, func, parent, child) => {
-
-  // it is because of this line that we have all these other
-  // functions returning functions
-  // this is likely the root of the issue right here
   func(island, parent, child)
 
   if (island.parents) {
@@ -113,114 +109,109 @@ const traverseIsland = (island, func, parent, child) => {
 module.exports.traverseIsland = traverseIsland
 
 
+// position a topic in an object containing many coordinates
+// according to how it sits in the tree of topics
+const positionTopic = (coords, tempPosStore, topic, parent, child) => {
 
-const createPositionTopic = (coords, topicIndex) => {
-  const tempPosStore = {}
-  if (topicIndex === 0) {
-    tempPosStore[X_GRID_SPACE] = {
-      0: true
-    }
-  }
+  // this is a function nested too deep, it should be stripped out too
+  const yForX = (x, attempt = 0) => {
+    tempPosStore[x] = tempPosStore[x] || {}
+    let yValue
+    let relationSign
+    let indexOfTopic
+    let relation = parent || child
+    let arrayOfTopics = parent ? parent.children : (child ? child.parents : [])
 
-  // create a function that can be passed to traverseIsland
-  return (topic, parent, child) => {
-    let pos = {}
+    // first figure out what you'd like it to be
+    // then figure out if that spot's taken
+    // and if it is then call this function again with another attempt
 
-    // this is a function nested too deep, it should be stripped out too
-    const getYValueForX = (x, attempt = 0) => {
-      tempPosStore[x] = tempPosStore[x] || {}
-      let yValue
-      let relationSign
-      let indexOfTopic
-      let relation = parent || child
-      let arrayOfTopics = parent ? parent.children : (child ? child.parents : [])
+    // after the focal topic only, ODD indexes will move negatively on the Y axis
+    // and EVEN indexes will move positively on the Y axis
 
-      // first figure out what you'd like it to be
-      // then figure out if that spot's taken
-      // and if it is then call this function again with another attempt
+    // for everything beyond the direct parents and children of the focal topic
+    // maintain the positivity or negativity on the Y axis of its parent or child
 
-      // after the focal topic only, ODD indexes will move negatively on the Y axis
-      // and EVEN indexes will move positively on the Y axis
-
-      // for everything beyond the direct parents and children of the focal topic
-      // maintain the positivity or negativity on the Y axis of its parent or child
-
-      if (!relation) yValue = 0
-      else if (attempt === 0) yValue = coords[relation.id].y
-      else if (attempt > 0) {
-        // if the relations sign is 0, alternate between putting this topic into the upper and lower quadrants
-        if (coords[relation.id].y === 0) {
-          indexOfTopic = lodash.findIndex(arrayOfTopics, t => t.id === topic.id)
-          relationSign = isOdd(indexOfTopic) ? 1 : -1
-        } else {
-          // if the quadrant of the related topic is already decided, make sure to keep it
-          relationSign = coords[relation.id].y > 0 ? 1 : -1
-        }
-        yValue = coords[relation.id].y + (Y_GRID_SPACE * attempt * relationSign)
+    if (!relation) yValue = 0
+    else if (attempt === 0) yValue = coords[relation.id].y
+    else if (attempt > 0) {
+      // if the relations sign is 0, alternate between putting this topic into the upper and lower quadrants
+      if (coords[relation.id].y === 0) {
+        indexOfTopic = lodash.findIndex(arrayOfTopics, t => t.id === topic.id)
+        relationSign = isOdd(indexOfTopic) ? 1 : -1
+      } else {
+        // if the quadrant of the related topic is already decided, make sure to keep it
+        relationSign = coords[relation.id].y > 0 ? 1 : -1
       }
-
-      if (tempPosStore[x][yValue]) yValue = getYValueForX(x, attempt + 1)
-      tempPosStore[x][yValue] = true
-      return yValue
+      yValue = coords[relation.id].y + (Y_GRID_SPACE * attempt * relationSign)
     }
 
-    pos.x = topic.degreeFromFocus * X_GRID_SPACE * (parent ? 1 : -1),
-    pos.y = getYValueForX(pos.x)
-    coords[topic.id] = pos
+    if (tempPosStore[x][yValue]) yValue = yForX(x, attempt + 1)
+    // TODO: eliminate this side effect on tempPosStore
+    tempPosStore[x][yValue] = true
+    return yValue
+  }
+
+  const x = topic.degreeFromFocus * X_GRID_SPACE * (parent ? 1 : -1)
+  return {
+    ...coords,
+    [topic.id]: {
+      x,
+      y: yForX(x)
+    }
   }
 }
-module.exports.createPositionTopic = createPositionTopic
+module.exports.positionTopic = positionTopic
 
-// the inner function is intended to modify a coords (coordinates) object
-const createTranslateIsland = (coords, x, y) => {
-  // create a function that can be passed to traverseIsland
-  return (topic, parent, child) => {
-    coords[topic.id].x = coords[topic.id].x + x
-    coords[topic.id].y = coords[topic.id].y + y
+// translate a coordinate in an object containing many coordinates
+// by an amount (modX, modY)
+const translateCoord = (coords, modX, modY, id) => {
+  return {
+    ...coords,
+    [id]: {
+      x: coords[id].x + modX,
+      y: coords[id].y + modY
+    }
   }
 }
-module.exports.createTranslateIsland = createTranslateIsland
+module.exports.translateCoord = translateCoord
 
-// the inner function is intended to modify an islandBounds object
-const createAdjustIslandBounds = (coords, island, islandBoundArray) => {
-  const islandBounds = {
-    minX: coords[island.id].x,
-    maxX: coords[island.id].x,
-    minY: coords[island.id].y,
-    maxY: coords[island.id].y
-  }
-  islandBoundArray.push(islandBounds)
-
-  // return a function that can be passed to traverseIsland
-  return (topic, parent, child) => {
-    const relation = parent || child
-    if (!relation) return
-    islandBounds.minX = Math.min(islandBounds.minX, coords[topic.id].x)
-    islandBounds.maxX = Math.max(islandBounds.maxX, coords[topic.id].x)
-    islandBounds.minY = Math.min(islandBounds.minY, coords[topic.id].y)
-    islandBounds.maxY = Math.max(islandBounds.maxY, coords[topic.id].y)
+// modify an islandBounds object
+const adjustIslandBounds = (islandBounds, coord) => {
+  return {
+    minX: Math.min(islandBounds.minX, coord.x),
+    maxX: Math.max(islandBounds.maxX, coord.x),
+    minY: Math.min(islandBounds.minY, coord.y),
+    maxY: Math.max(islandBounds.maxY, coord.y)
   }
 }
-module.exports.createAdjustIslandBounds = createAdjustIslandBounds
+module.exports.adjustIslandBounds = adjustIslandBounds
 
 
 const generateObjectCoordinates = (layoutObject, focalCoords) => {
-  const coords = {} // will be the final output
-
+  let coords = {}
   // lay each island out as if there were no other islands
   layoutObject.forEach((island, index) => {
-    // positionTopic is a function
-    const positionTopic = createPositionTopic(coords, index)
-    traverseIsland(island, positionTopic)
+    const tempPosStore = {}
+    if (index === 0) tempPosStore[X_GRID_SPACE] = { 0: true }
+    traverseIsland(island, (topic, parent, child) => {
+      coords = positionTopic(coords, tempPosStore, topic, parent, child)
+    })
   })
 
   // calculate the bounds of each island
   // and store them in the islandBoundArray
-  const islandBoundArray= []
-  layoutObject.forEach(island => {
-    // adjustIslandBounds is a function
-    let adjustIslandBounds = createAdjustIslandBounds(coords, island, islandBoundArray)
-    traverseIsland(island, adjustIslandBounds)
+  const islandBoundArray = layoutObject.map(island => {
+    let islandBounds = {
+      minX: coords[island.id].x,
+      maxX: coords[island.id].x,
+      minY: coords[island.id].y,
+      maxY: coords[island.id].y
+    }
+    traverseIsland(island, topic => {
+      islandBounds = adjustIslandBounds(islandBounds, coords[topic.id])
+    })
+    return islandBounds
   })
 
   // reposition the islands according to the bounds
@@ -228,25 +219,32 @@ const generateObjectCoordinates = (layoutObject, focalCoords) => {
   let minYForIslands = 0 // the lowest Y value that has thus been placed
   layoutObject.forEach((island, index) => {
     const islandHeight = islandBoundArray[index].maxY - islandBoundArray[index].minY
-    let translateIsland
     if (index === 0) {
-      // translateIsland is a function
-      // position the selected island to where the user has it already
-      translateIsland = createTranslateIsland(coords, focalCoords.x, focalCoords.y)
-      traverseIsland(island, translateIsland)
+      // FLAG: this is a less efficient way than necessary to do this
+      traverseIsland(island, topic => {
+        // Here we actually modify the final output
+        coords = translateCoord(coords, focalCoords.x, focalCoords.y, topic.id)
+      })
       maxYForIslands = focalCoords.y + islandBoundArray[0].maxY
       minYForIslands = focalCoords.y + islandBoundArray[0].minY
     }
     else if (isOdd(index)) {
-      // translateIsland is a function
-      translateIsland = createTranslateIsland(coords, focalCoords.x - islandBoundArray[index].maxX, maxYForIslands + ISLAND_SPACING + Math.abs(islandBoundArray[index].minY))
-      traverseIsland(island, translateIsland)
+      let oddXTranslate = focalCoords.x - islandBoundArray[index].maxX
+      let oddYTranslate = maxYForIslands + ISLAND_SPACING + Math.abs(islandBoundArray[index].minY)
+      traverseIsland(island, topic => {
+        // Here we actually modify the final output
+        coords = translateCoord(coords, oddXTranslate, oddYTranslate, topic.id)
+      })
       maxYForIslands = maxYForIslands + ISLAND_SPACING + islandHeight
     }
     else {
       // translateIsland is a function
-      translateIsland = createTranslateIsland(coords, focalCoords.x - islandBoundArray[index].maxX, minYForIslands - ISLAND_SPACING - islandBoundArray[index].maxY)
-      traverseIsland(island, translateIsland)
+      let evenXTranslate = focalCoords.x - islandBoundArray[index].maxX
+      let evenYTranslate = minYForIslands - ISLAND_SPACING - islandBoundArray[index].maxY
+      traverseIsland(island, topic => {
+        // Here we actually modify the final output
+        coords = translateCoord(coords, evenXTranslate, evenYTranslate, topic.id)
+      })
       minYForIslands = minYForIslands - ISLAND_SPACING - islandHeight
     }
   })
