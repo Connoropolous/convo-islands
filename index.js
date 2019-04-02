@@ -28,6 +28,7 @@ module.exports.ISLAND_SPACING = ISLAND_SPACING
 const addParentsAndChildren = (usedTopics, synapses, topic, getParents, getChildren, degreeFromFocus) => {
   if (!topic.id) return topic
 
+  // TODO: eliminate this side effect
   usedTopics[topic.id] = true
   topic.degreeFromFocus = degreeFromFocus
   const nextDegree = degreeFromFocus + 1
