@@ -188,6 +188,46 @@ const adjustIslandBounds = (islandBounds, coord) => {
 }
 module.exports.adjustIslandBounds = adjustIslandBounds
 
+const positionIslandsByBounds = (layoutObject, coords, islandBoundArray, focalCoords) => {
+  let newCoords = {
+    ...coords
+  }
+  // reposition the islands according to the bounds
+  let maxYForIslands = 0 // the highest Y value that has thus been placed
+  let minYForIslands = 0 // the lowest Y value that has thus been placed
+  layoutObject.forEach((island, index) => {
+    const islandHeight = islandBoundArray[index].maxY - islandBoundArray[index].minY
+    if (index === 0) {
+      // FLAG: this is a less efficient way than necessary to do this
+      traverseIsland(island, topic => {
+        // Here we actually modify the final output
+        newCoords = translateCoord(newCoords, focalCoords.x, focalCoords.y, topic.id)
+      })
+      maxYForIslands = focalCoords.y + islandBoundArray[0].maxY
+      minYForIslands = focalCoords.y + islandBoundArray[0].minY
+    }
+    else if (isOdd(index)) {
+      let oddXTranslate = focalCoords.x - islandBoundArray[index].maxX
+      let oddYTranslate = maxYForIslands + ISLAND_SPACING + Math.abs(islandBoundArray[index].minY)
+      traverseIsland(island, topic => {
+        // Here we actually modify the final output
+        newCoords = translateCoord(newCoords, oddXTranslate, oddYTranslate, topic.id)
+      })
+      maxYForIslands = maxYForIslands + ISLAND_SPACING + islandHeight
+    }
+    else {
+      let evenXTranslate = focalCoords.x - islandBoundArray[index].maxX
+      let evenYTranslate = minYForIslands - ISLAND_SPACING - islandBoundArray[index].maxY
+      traverseIsland(island, topic => {
+        // Here we actually modify the final output
+        newCoords = translateCoord(newCoords, evenXTranslate, evenYTranslate, topic.id)
+      })
+      minYForIslands = minYForIslands - ISLAND_SPACING - islandHeight
+    }
+  })
+  return newCoords
+}
+module.exports.positionIslandsByBounds = positionIslandsByBounds
 
 const generateObjectCoordinates = (layoutObject, focalCoords) => {
   let coords = {}
@@ -215,39 +255,7 @@ const generateObjectCoordinates = (layoutObject, focalCoords) => {
     return islandBounds
   })
 
-  // reposition the islands according to the bounds
-  let maxYForIslands = 0 // the highest Y value that has thus been placed
-  let minYForIslands = 0 // the lowest Y value that has thus been placed
-  layoutObject.forEach((island, index) => {
-    const islandHeight = islandBoundArray[index].maxY - islandBoundArray[index].minY
-    if (index === 0) {
-      // FLAG: this is a less efficient way than necessary to do this
-      traverseIsland(island, topic => {
-        // Here we actually modify the final output
-        coords = translateCoord(coords, focalCoords.x, focalCoords.y, topic.id)
-      })
-      maxYForIslands = focalCoords.y + islandBoundArray[0].maxY
-      minYForIslands = focalCoords.y + islandBoundArray[0].minY
-    }
-    else if (isOdd(index)) {
-      let oddXTranslate = focalCoords.x - islandBoundArray[index].maxX
-      let oddYTranslate = maxYForIslands + ISLAND_SPACING + Math.abs(islandBoundArray[index].minY)
-      traverseIsland(island, topic => {
-        // Here we actually modify the final output
-        coords = translateCoord(coords, oddXTranslate, oddYTranslate, topic.id)
-      })
-      maxYForIslands = maxYForIslands + ISLAND_SPACING + islandHeight
-    }
-    else {
-      let evenXTranslate = focalCoords.x - islandBoundArray[index].maxX
-      let evenYTranslate = minYForIslands - ISLAND_SPACING - islandBoundArray[index].maxY
-      traverseIsland(island, topic => {
-        // Here we actually modify the final output
-        coords = translateCoord(coords, evenXTranslate, evenYTranslate, topic.id)
-      })
-      minYForIslands = minYForIslands - ISLAND_SPACING - islandHeight
-    }
-  })
+  coords = positionIslandsByBounds(layoutObject, coords, islandBoundArray, focalCoords)
 
   return coords
 }

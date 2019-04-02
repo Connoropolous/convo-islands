@@ -8,6 +8,7 @@ const {
     translateCoord,
     adjustIslandBounds,
     generateObjectCoordinates,
+    positionIslandsByBounds,
     generateLayoutObject,
     getLayoutForData
 } = require('./index')
