@@ -70,7 +70,7 @@ const addParentsAndChildren = (usedTopics, synapses, topic, getParents, getChild
   return topic
 }
 // export for testing
-module.exports.addParentsAndChildren
+module.exports.addParentsAndChildren = addParentsAndChildren
 
 
 const generateLayoutObject = (topics, synapses, focalTopicId) => {
