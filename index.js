@@ -238,7 +238,6 @@ const generateObjectCoordinates = (layoutObject, focalCoords) => {
       maxYForIslands = maxYForIslands + ISLAND_SPACING + islandHeight
     }
     else {
-      // translateIsland is a function
       let evenXTranslate = focalCoords.x - islandBoundArray[index].maxX
       let evenYTranslate = minYForIslands - ISLAND_SPACING - islandBoundArray[index].maxY
       traverseIsland(island, topic => {
