@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/convo-islands
     docker:
-      - image: circleci/node:chakracore-10.1.0
+      - image: circleci/node:8.9.4
     steps:
       - checkout
       - run:
