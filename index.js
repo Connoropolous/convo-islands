@@ -24,101 +24,109 @@ module.exports.Y_GRID_SPACE = Y_GRID_SPACE
 const ISLAND_SPACING = 300
 module.exports.ISLAND_SPACING = ISLAND_SPACING
 
+// recursively use an edge list to generate a tree structure of a node and its ancestors and descendants
+const addParentsAndChildren = (usedTopics, synapses, topic, getParents, getChildren, degreeFromFocus) => {
+  if (!topic.id) return topic
+
+  usedTopics[topic.id] = true
+  topic.degreeFromFocus = degreeFromFocus
+  const nextDegree = degreeFromFocus + 1
+
+  if (getChildren) {
+    // recursive to add children
+    topic.children = []
+    synapses.filter(synapse => {
+      return synapse.topic1_id === topic.id
+             && !usedTopics[synapse.topic2_id]
+             && synapse.category === 'from-to'
+    })
+    .map(synapse => synapse.topic2_id)
+    .forEach(childId => topic.children.push(addParentsAndChildren(usedTopics, synapses, {id: childId}, false, true, nextDegree)))
+
+    topic.children = lodash.orderBy(topic.children, 'maxDescendants', 'desc')
+    topic.maxDescendants = topic.children.length ? topic.children[0].maxDescendants + 1 : 0
+  }
+
+  if (getParents) {
+    // recursive to add parents
+    topic.parents = []
+    synapses.filter(synapse => {
+      return synapse.topic2_id === topic.id
+             && !usedTopics[synapse.topic1_id]
+             && synapse.category === 'from-to'
+    })
+    .map(synapse => synapse.topic1_id)
+    .forEach(parentId => topic.parents.push(addParentsAndChildren(usedTopics, synapses, {id: parentId}, true, false, nextDegree)))
+
+    topic.parents = lodash.orderBy(topic.parents, 'maxAncestors', 'desc')
+    topic.maxAncestors = topic.parents.length ? topic.parents[0].maxAncestors + 1 : 0
+  }
+
+  if (getParents && getChildren) {
+    topic.longestThread = topic.maxDescendants + topic.maxAncestors + 1
+  }
+
+  return topic
+}
+// export for testing
+module.exports.addParentsAndChildren
+
+
 const generateLayoutObject = (topics, synapses, focalTopicId) => {
   let layout = [] // will be the final output
   const usedTopics = {} // will store the topics that have been placed into islands
-  let newRoot
-  let currentTopic
-
-  const addParentsAndChildren = (topic, getParents, getChildren, degreeFromFocus) => {
-    if (!topic.id) return topic
-
-    usedTopics[topic.id] = true
-    topic.degreeFromFocus = degreeFromFocus
-    const nextDegree = degreeFromFocus + 1
-
-    if (getChildren) {
-      topic.children = []
-      synapses.filter(synapse => {
-        return synapse.topic1_id === topic.id
-               && !usedTopics[synapse.topic2_id]
-               && synapse.category === 'from-to'
-      })
-      .map(synapse => synapse.topic2_id)
-      .forEach(childId => topic.children.push(addParentsAndChildren({id: childId}, false, true, nextDegree)))
-
-      topic.children = lodash.orderBy(topic.children, 'maxDescendants', 'desc')
-      topic.maxDescendants = topic.children.length ? topic.children[0].maxDescendants + 1 : 0
-    }
-
-    if (getParents) {
-      topic.parents = []
-      synapses.filter(synapse => {
-        return synapse.topic2_id === topic.id
-               && !usedTopics[synapse.topic1_id]
-               && synapse.category === 'from-to'
-      })
-      .map(synapse => synapse.topic1_id)
-      .forEach(parentId => topic.parents.push(addParentsAndChildren({id: parentId}, true, false, nextDegree)))
-
-      topic.parents = lodash.orderBy(topic.parents, 'maxAncestors', 'desc')
-      topic.maxAncestors = topic.parents.length ? topic.parents[0].maxAncestors + 1 : 0
-    }
-
-    if (getParents && getChildren) {
-      topic.longestThread = topic.maxDescendants + topic.maxAncestors + 1
-    }
-
-    return topic
-  }
 
   // start with the focal node, and build its island
-  currentTopic = topics.find(t => t.id === focalTopicId)
+  const currentTopic = topics.find(t => t.id === focalTopicId)
   if (!currentTopic) {
     console.log('you didnt pass a valid focalTopicId')
     return layout
   }
-  newRoot = {
-    id: currentTopic.id
-  }
-  layout.push(addParentsAndChildren(newRoot, true, true, 0))
-
+  layout.push(addParentsAndChildren(usedTopics, synapses, { id: currentTopic.id }, true, true, 0))
+  
   // right now there's no reasoning going on about the selection of focal topics
   // its just whichever ones happen to be found in the array first
-  topics.forEach(topic => {
-    if (topic && topic.id && !usedTopics[topic.id]) {
-      newRoot = {
-        id: topic.id
-      }
-      layout.push(addParentsAndChildren(newRoot, true, true, 0))
-    }
-  })
+  topics.filter(topic => topic && topic.id && !usedTopics[topic.id]).forEach(
+    topic => layout.push(addParentsAndChildren(usedTopics, synapses, { id: topic.id }, true, true, 0)))
 
   return layout
 }
 module.exports.generateLayoutObject = generateLayoutObject
 
 
-const generateObjectCoordinates = (layoutObject, focalTopicId, focalCoords) => {
-  const coords = {}
+// given an island, and a function, call the given function on every node
+// in that island by recursing
+const traverseIsland = (island, func, parent, child) => {
 
-  const traverseIsland = (island, func, parent, child) => {
-    func(island, parent, child)
-    if (island.parents) {
-      island.parents.forEach(p => traverseIsland(p, func, null, island))
-    }
-    if (island.children) {
-      island.children.forEach(c => traverseIsland(c, func, island, null))
+  // it is because of this line that we have all these other
+  // functions returning functions
+  // this is likely the root of the issue right here
+  func(island, parent, child)
+
+  if (island.parents) {
+    island.parents.forEach(p => traverseIsland(p, func, null, island))
+  }
+  if (island.children) {
+    island.children.forEach(c => traverseIsland(c, func, island, null))
+  }
+}
+module.exports.traverseIsland = traverseIsland
+
+
+
+const createPositionTopic = (coords, topicIndex) => {
+  const tempPosStore = {}
+  if (topicIndex === 0) {
+    tempPosStore[X_GRID_SPACE] = {
+      0: true
     }
   }
 
-  // const myFunction = n => n*5
-
-  // myFunction(2) === 10
-
-  const positionTopic = tempPosStore => (topic, parent, child) => {
+  // create a function that can be passed to traverseIsland
+  return (topic, parent, child) => {
     let pos = {}
 
+    // this is a function nested too deep, it should be stripped out too
     const getYValueForX = (x, attempt = 0) => {
       tempPosStore[x] = tempPosStore[x] || {}
       let yValue
@@ -160,21 +168,31 @@ const generateObjectCoordinates = (layoutObject, focalTopicId, focalCoords) => {
     pos.y = getYValueForX(pos.x)
     coords[topic.id] = pos
   }
+}
+module.exports.createPositionTopic = createPositionTopic
 
-  // lay all of them out as if there were no other ones
-  layoutObject.forEach((island, index) => {
-    const tempPosStore = {}
-    if (index === 0) {
-      tempPosStore[X_GRID_SPACE] = {
-        0: true
-      }
-    }
-    traverseIsland(island, positionTopic(tempPosStore))
-  })
+// the inner function is intended to modify a coords (coordinates) object
+const createTranslateIsland = (coords, x, y) => {
+  // create a function that can be passed to traverseIsland
+  return (topic, parent, child) => {
+    coords[topic.id].x = coords[topic.id].x + x
+    coords[topic.id].y = coords[topic.id].y + y
+  }
+}
+module.exports.createTranslateIsland = createTranslateIsland
 
-  // calculate the bounds of each island
-  const islandBoundArray= []
-  const adjustBounds = islandBounds => (topic, parent, child) => {
+// the inner function is intended to modify an islandBounds object
+const createAdjustIslandBounds = (coords, island, islandBoundArray) => {
+  const islandBounds = {
+    minX: coords[island.id].x,
+    maxX: coords[island.id].x,
+    minY: coords[island.id].y,
+    maxY: coords[island.id].y
+  }
+  islandBoundArray.push(islandBounds)
+
+  // return a function that can be passed to traverseIsland
+  return (topic, parent, child) => {
     const relation = parent || child
     if (!relation) return
     islandBounds.minX = Math.min(islandBounds.minX, coords[topic.id].x)
@@ -182,41 +200,53 @@ const generateObjectCoordinates = (layoutObject, focalTopicId, focalCoords) => {
     islandBounds.minY = Math.min(islandBounds.minY, coords[topic.id].y)
     islandBounds.maxY = Math.max(islandBounds.maxY, coords[topic.id].y)
   }
+}
+module.exports.createAdjustIslandBounds = createAdjustIslandBounds
+
+
+const generateObjectCoordinates = (layoutObject, focalCoords) => {
+  const coords = {} // will be the final output
+
+  // lay each island out as if there were no other islands
+  layoutObject.forEach((island, index) => {
+    // positionTopic is a function
+    const positionTopic = createPositionTopic(coords, index)
+    traverseIsland(island, positionTopic)
+  })
+
+  // calculate the bounds of each island
+  // and store them in the islandBoundArray
+  const islandBoundArray= []
   layoutObject.forEach(island => {
-    const islandBounds = {
-      minX: coords[island.id].x,
-      maxX: coords[island.id].x,
-      minY: coords[island.id].y,
-      maxY: coords[island.id].y
-    }
-    islandBoundArray.push(islandBounds)
-    traverseIsland(island, adjustBounds(islandBounds))
+    // adjustIslandBounds is a function
+    let adjustIslandBounds = createAdjustIslandBounds(coords, island, islandBoundArray)
+    traverseIsland(island, adjustIslandBounds)
   })
 
   // reposition the islands according to the bounds
-  const translateIsland = (island, x, y) => {
-    const adjustTopicPos = topic => {
-      coords[topic.id].x = coords[topic.id].x + x
-      coords[topic.id].y = coords[topic.id].y + y
-    }
-    traverseIsland(island, adjustTopicPos)
-  }
   let maxYForIslands = 0 // the highest Y value that has thus been placed
   let minYForIslands = 0 // the lowest Y value that has thus been placed
   layoutObject.forEach((island, index) => {
-    let translateY
     const islandHeight = islandBoundArray[index].maxY - islandBoundArray[index].minY
+    let translateIsland
     if (index === 0) {
-      translateIsland(island, focalCoords.x, focalCoords.y) // position the selected island to where the user has it already
+      // translateIsland is a function
+      // position the selected island to where the user has it already
+      translateIsland = createTranslateIsland(coords, focalCoords.x, focalCoords.y)
+      traverseIsland(island, translateIsland)
       maxYForIslands = focalCoords.y + islandBoundArray[0].maxY
       minYForIslands = focalCoords.y + islandBoundArray[0].minY
     }
     else if (isOdd(index)) {
-      translateIsland(island, focalCoords.x - islandBoundArray[index].maxX, maxYForIslands + ISLAND_SPACING + Math.abs(islandBoundArray[index].minY))
+      // translateIsland is a function
+      translateIsland = createTranslateIsland(coords, focalCoords.x - islandBoundArray[index].maxX, maxYForIslands + ISLAND_SPACING + Math.abs(islandBoundArray[index].minY))
+      traverseIsland(island, translateIsland)
       maxYForIslands = maxYForIslands + ISLAND_SPACING + islandHeight
     }
     else {
-      translateIsland(island, focalCoords.x - islandBoundArray[index].maxX, minYForIslands - ISLAND_SPACING - islandBoundArray[index].maxY)
+      // translateIsland is a function
+      translateIsland = createTranslateIsland(coords, focalCoords.x - islandBoundArray[index].maxX, minYForIslands - ISLAND_SPACING - islandBoundArray[index].maxY)
+      traverseIsland(island, translateIsland)
       minYForIslands = minYForIslands - ISLAND_SPACING - islandHeight
     }
   })
@@ -225,7 +255,10 @@ const generateObjectCoordinates = (layoutObject, focalTopicId, focalCoords) => {
 }
 module.exports.generateObjectCoordinates = generateObjectCoordinates
 
+// nothing interesting happening here, just combining other functions
+// doesn't need to be tested
 const getLayoutForData = (topics, synapses, focalTopicId, focalCoords) => {
-  return generateObjectCoordinates(generateLayoutObject(topics, synapses, focalTopicId), focalTopicId, focalCoords)
+  const layoutObject = generateLayoutObject(topics, synapses, focalTopicId)
+  return generateObjectCoordinates(layoutObject, focalCoords)
 }
 module.exports.getLayoutForData = getLayoutForData
