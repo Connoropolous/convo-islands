@@ -1,6 +1,12 @@
 const assert = require('assert')
 
 const {
+    // TODO: every single one of the following should be tested
+    addParentsAndChildren,
+    traverseIsland,
+    positionTopic,
+    translateCoord,
+    adjustIslandBounds,
     generateObjectCoordinates,
     generateLayoutObject,
     getLayoutForData
@@ -32,6 +38,7 @@ describe('generateLayoutObject', function () {
     describe('two nodes with link', function () {
         it('should create a layout object with two nodes in one island', function () {
             const topics = [{ id: 1 }, { id: 2 }]
+            // TODO: this synapse format isn't great, fix it
             const synapses = [{ topic1_id: 1, topic2_id: 2, category: 'from-to', desc: 'has reply' }]
             const focalTopicId = 1
             const result = generateLayoutObject(topics, synapses, focalTopicId)
