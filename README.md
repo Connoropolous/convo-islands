@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/Connoropolous/convo-islands.svg?style=svg)](https://circleci.com/gh/Connoropolous/convo-islands)
+
 # convo-islands
 
 clone the repo
