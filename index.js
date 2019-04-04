@@ -110,55 +110,87 @@ const traverseIsland = (island, func, parent, child) => {
 module.exports.traverseIsland = traverseIsland
 
 
-// position a topic in an object containing many coordinates
-// according to how it sits in the tree of topics
-const positionTopic = (coords, tempPosStore, topic, parent, child) => {
-
-  // this is a function nested too deep, it should be stripped out too
-  const yForX = (x, attempt = 0) => {
-    tempPosStore[x] = tempPosStore[x] || {}
-    let yValue
-    let relationSign
-    let indexOfTopic
-    let relation = parent || child
-    let arrayOfTopics = parent ? parent.children : (child ? child.parents : [])
-
-    // first figure out what you'd like it to be
-    // then figure out if that spot's taken
-    // and if it is then call this function again with another attempt
-
-    // after the focal topic only, ODD indexes will move negatively on the Y axis
-    // and EVEN indexes will move positively on the Y axis
-
-    // for everything beyond the direct parents and children of the focal topic
-    // maintain the positivity or negativity on the Y axis of its parent or child
-
-    if (!relation) yValue = 0
-    else if (attempt === 0) yValue = coords[relation.id].y
-    else if (attempt > 0) {
-      // if the relations sign is 0, alternate between putting this topic into the upper and lower quadrants
-      if (coords[relation.id].y === 0) {
-        indexOfTopic = lodash.findIndex(arrayOfTopics, t => t.id === topic.id)
-        relationSign = isOdd(indexOfTopic) ? 1 : -1
-      } else {
-        // if the quadrant of the related topic is already decided, make sure to keep it
-        relationSign = coords[relation.id].y > 0 ? 1 : -1
-      }
-      yValue = coords[relation.id].y + (Y_GRID_SPACE * attempt * relationSign)
-    }
-
-    if (tempPosStore[x][yValue]) yValue = yForX(x, attempt + 1)
-    // TODO: eliminate this side effect on tempPosStore
-    tempPosStore[x][yValue] = true
-    return yValue
+const yForX = (coords, topic, parent, child, takenPositions, x, attempt = 0) => {
+  
+  // initialize an x key (if there isn't one) to
+  // track "taken" y positions for
+  // that x value
+  let newTakenPositions = {
+    ...takenPositions,
+    [x]: takenPositions[x] || {}
   }
 
+  let yValue
+  let relationSign
+  let indexOfTopic
+  let relation = parent || child
+  let arrayOfTopics = parent ? parent.children : (child ? child.parents : [])
+
+  // first figure out what you'd like it to be
+  // then figure out if that spot's taken
+  // and if it is then call this function again with another attempt
+
+  // after the focal topic only, ODD indexes will move negatively on the Y axis
+  // and EVEN indexes will move positively on the Y axis
+
+  // for everything beyond the direct parents and children of the focal topic
+  // maintain the positivity or negativity on the Y axis of its parent or child
+
+  // if there's no parent and no child
+  // then just place y as 0
+  if (!relation) {
+    yValue = 0
+  }
+  // if this is the first attempt, just use
+  // the same y as the relation
+  else if (attempt === 0) {
+    yValue = coords[relation.id].y
+  }
+  // if this is greater than the first attempt, we will
+  // need to do more work to calculate the y
+  else if (attempt > 0) {
+    // if the relations sign is 0, alternate between putting this topic into the upper and lower quadrants
+    if (coords[relation.id].y === 0) {
+      indexOfTopic = lodash.findIndex(arrayOfTopics, t => t.id === topic.id)
+      relationSign = isOdd(indexOfTopic) ? 1 : -1
+    } else {
+      // if the quadrant of the related topic is already decided, make sure to keep it
+      relationSign = coords[relation.id].y > 0 ? 1 : -1
+    }
+    yValue = coords[relation.id].y + (Y_GRID_SPACE * attempt * relationSign)
+  }
+
+  // if the y spot is already taken, recurse and increase the attempt
+  if (newTakenPositions[x][yValue]) {
+    let result = yForX(coords, topic, parent, child, newTakenPositions, x, attempt + 1)
+    yValue = result.y
+    newTakenPositions = result.takenPositions
+  }
+  
+  newTakenPositions[x][yValue] = true
+
+  return {
+    y: yValue,
+    takenPositions: newTakenPositions
+  }
+}
+module.exports.yForX = yForX
+
+
+// position a topic in an object containing many coordinates
+// according to how it sits in the tree of topics
+// x is the primary axis along which we are doing the layout
+// y is calculated as a function of x
+const positionTopic = (coords, takenPositions, topic, parent, child) => {
+  // x value is a simple calculation of the degreeFromFocus
+  // times the grid spacing times the directionality
   const x = topic.degreeFromFocus * X_GRID_SPACE * (parent ? 1 : -1)
+  const result = yForX(coords, topic, parent, child, takenPositions, x)
   return {
     ...coords,
     [topic.id]: {
       x,
-      y: yForX(x)
+      y: result.y
     }
   }
 }
@@ -229,14 +261,24 @@ const positionIslandsByBounds = (layoutObject, coords, islandBoundArray, focalCo
 }
 module.exports.positionIslandsByBounds = positionIslandsByBounds
 
+
 const generateObjectCoordinates = (layoutObject, focalCoords) => {
   let coords = {}
   // lay each island out as if there were no other islands
   layoutObject.forEach((island, index) => {
-    const tempPosStore = {}
-    if (index === 0) tempPosStore[X_GRID_SPACE] = { 0: true }
+    const takenPositions = {}
+    // since the first island is the island with the focal node in it
+    // we treat it special
+    if (index === 0) {
+      // "take up" the position immediately to the right (by the grid spacing) of the focal node
+      // this is the location where "new replies" would be made, in response
+      // to the focal node
+      takenPositions[X_GRID_SPACE] = {
+        0: true // 0 represents a value on the y axis
+      }
+    }
     traverseIsland(island, (topic, parent, child) => {
-      coords = positionTopic(coords, tempPosStore, topic, parent, child)
+      coords = positionTopic(coords, takenPositions, topic, parent, child)
     })
   })
 

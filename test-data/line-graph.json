@@ -1,0 +1,21 @@
+{
+    "nodes": [
+        {"id":1 },
+        {"id":2 },
+        {"id":3 }    
+    ],
+    "edges": [
+        {
+            "topic1_id": 1,
+            "topic2_id": 2,
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "topic1_id": 2,
+            "topic2_id": 3,
+            "category": "from-to",
+            "desc": "has reply"
+        }
+    ]
+}
