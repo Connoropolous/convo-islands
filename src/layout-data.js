@@ -122,13 +122,14 @@ const generateLayoutObject = (nodes, edges, focalNodeId) => {
 
     // right now there's no reasoning going on about the selection of focal nodes
     // its just whichever ones happen to be found in the array first
-    nodes
-        .filter(node => node && node.id && !usedNodes[node.id])
-        .forEach((node) => {
+    nodes.forEach(node => {
+        if (!usedNodes[node.id]) {
             const result = addParentsAndChildren(usedNodes, edges, { id: node.id })
+            // update the list of usedNodes, before moving on to the next node
             usedNodes = result.usedNodes
             layout.push(result.node)
-        })
+        }
+    })
 
     return layout
 }
