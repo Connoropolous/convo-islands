@@ -6,14 +6,14 @@
     ],
     "edges": [
         {
-            "topic1_id": 1,
-            "topic2_id": 2,
+            "from": 1,
+            "to": 2,
             "category": "from-to",
             "desc": "has reply"
         },
         {
-            "topic1_id": 2,
-            "topic2_id": 3,
+            "from": 2,
+            "to": 3,
             "category": "from-to",
             "desc": "has reply"
         }

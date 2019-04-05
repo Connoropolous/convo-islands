@@ -20,98 +20,98 @@
     ],
     "edges": [
         {
-            "topic1_id": 1,
-            "topic2_id": 2,
+            "from": 1,
+            "to": 2,
             "category": "from-to",
             "desc": "has reply"
         },
         {
-            "topic1_id": 2,
-            "topic2_id": 3,
+            "from": 2,
+            "to": 3,
             "category": "from-to",
             "desc": "has reply"
         },
         {
-            "topic1_id": 3,
-            "topic2_id": 4,
+            "from": 3,
+            "to": 4,
             "category": "from-to",
             "desc": "has reply"
         },
         {
-            "topic1_id": 4,
-            "topic2_id": 5,
+            "from": 4,
+            "to": 5,
             "category": "from-to",
             "desc": "has reply"
         },
         {
-            "topic1_id": 5,
-            "topic2_id": 6,
+            "from": 5,
+            "to": 6,
             "category": "from-to",
             "desc": "has reply"
         },
         {
-            "topic1_id": 6,
-            "topic2_id": 7,
+            "from": 6,
+            "to": 7,
             "category": "from-to",
             "desc": "has reply"
         },
         {
-            "topic1_id": 7,
-            "topic2_id": 8,
+            "from": 7,
+            "to": 8,
             "category": "from-to",
             "desc": "has reply"
         },
         {
-            "topic1_id": 8,
-            "topic2_id": 9,
+            "from": 8,
+            "to": 9,
             "category": "from-to",
             "desc": "has reply"
         },
         {
-            "topic1_id": 9,
-            "topic2_id": 10,
+            "from": 9,
+            "to": 10,
             "category": "from-to",
             "desc": "has reply"
         },
         {
-            "topic1_id": 10,
-            "topic2_id": 11,
+            "from": 10,
+            "to": 11,
             "category": "from-to",
             "desc": "has reply"
         },
         {
-            "topic1_id": 11,
-            "topic2_id": 12,
+            "from": 11,
+            "to": 12,
             "category": "from-to",
             "desc": "has reply"
         },
         {
-            "topic1_id": 6,
-            "topic2_id": 13,
+            "from": 6,
+            "to": 13,
             "category": "from-to",
             "desc": "has reply"
         },
         {
-            "topic1_id": 13,
-            "topic2_id": 14,
+            "from": 13,
+            "to": 14,
             "category": "from-to",
             "desc": "has reply"
         },
         {
-            "topic1_id": 14,
-            "topic2_id": 15,
+            "from": 14,
+            "to": 15,
             "category": "from-to",
             "desc": "has reply"
         },
         {
-            "topic1_id": 15,
-            "topic2_id": 16,
+            "from": 15,
+            "to": 16,
             "category": "from-to",
             "desc": "has reply"
         },
         {
-            "topic1_id": 16,
-            "topic2_id": 17,
+            "from": 16,
+            "to": 17,
             "category": "from-to",
             "desc": "has reply"
         }

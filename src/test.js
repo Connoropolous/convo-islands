@@ -137,7 +137,7 @@ describe('generateLayoutObject', function () {
         it('should create a layout object with two nodes in one island', function () {
             const topics = [{ id: 1 }, { id: 2 }]
             // TODO: this synapse format isn't great, fix it
-            const synapses = [{ topic1_id: 1, topic2_id: 2, category: 'from-to', desc: 'has reply' }]
+            const synapses = [{ from: 1, to: 2, category: 'from-to', desc: 'has reply' }]
             const focalTopicId = 1
             const result = generateLayoutObject(topics, synapses, focalTopicId)
             assert.deepEqual(result, [
@@ -175,7 +175,7 @@ describe('getLayoutForData', function () {
     describe('two nodes with link', function () {
         it('should position the child node to the lower right of the focal node', function () {
             const topics = [{ id: 1 }, { id: 2 }]
-            const synapses = [{ topic1_id: 1, topic2_id: 2, category: 'from-to', desc: 'has reply' }]
+            const synapses = [{ from: 1, to: 2, category: 'from-to', desc: 'has reply' }]
             const focalTopicId = 1
             const focalCoords = { x: 0, y: 0 }
             const result = getLayoutForData(topics, synapses, focalTopicId, focalCoords)

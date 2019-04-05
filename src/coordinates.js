@@ -146,7 +146,7 @@ module.exports.adjustIslandBounds = adjustIslandBounds
 const positionIslandsByBounds = (layoutObject, coords, islandBoundArray, focalCoords) => {
     // newCoords represents the final
     // value that will be repeatedly adjusted,
-    // and eventuall returned
+    // and eventually returned
     let newCoords = {
         ...coords
     }
