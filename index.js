@@ -187,11 +187,14 @@ const positionTopic = (coords, takenPositions, topic, parent, child) => {
   const x = topic.degreeFromFocus * X_GRID_SPACE * (parent ? 1 : -1)
   const result = yForX(coords, topic, parent, child, takenPositions, x)
   return {
-    ...coords,
-    [topic.id]: {
-      x,
-      y: result.y
-    }
+    newCoords: {
+      ...coords,
+      [topic.id]: {
+        x,
+        y: result.y
+      }
+    },
+    newTakenPositions: result.takenPositions
   }
 }
 module.exports.positionTopic = positionTopic
@@ -266,7 +269,7 @@ const generateObjectCoordinates = (layoutObject, focalCoords) => {
   let coords = {}
   // lay each island out as if there were no other islands
   layoutObject.forEach((island, index) => {
-    const takenPositions = {}
+    let takenPositions = {}
     // since the first island is the island with the focal node in it
     // we treat it special
     if (index === 0) {
@@ -278,7 +281,9 @@ const generateObjectCoordinates = (layoutObject, focalCoords) => {
       }
     }
     traverseIsland(island, (topic, parent, child) => {
-      coords = positionTopic(coords, takenPositions, topic, parent, child)
+      const result = positionTopic(coords, takenPositions, topic, parent, child)
+      coords = result.newCoords
+      takenPositions = result.newTakenPositions
     })
   })
 

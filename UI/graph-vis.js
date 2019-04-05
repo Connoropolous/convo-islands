@@ -14,7 +14,11 @@ cytoscape({
     { data: { id: 10 }, position: { x: 1250, y: -200 } },
     { data: { id: 11 }, position: { x: 1500, y: -200 } },
     { data: { id: 12 }, position: { x: 1750, y: -200 } },
-    { data: { id: 13 }, position: { x: 2000, y: -200 } },
+    { data: { id: 13 }, position: { x: 500, y: -400 } },
+    { data: { id: 14 }, position: { x: 750, y: -400 } },
+    { data: { id: 15 }, position: { x: 1000, y: -400 } },
+    { data: { id: 16 }, position: { x: 1250, y: -400 } },
+    { data: { id: 17 }, position: { x: 1500, y: -400 } },
     { data: { id: 'edge0', source: 1, target: 2 } },
     { data: { id: 'edge1', source: 2, target: 3 } },
     { data: { id: 'edge2', source: 3, target: 4 } },
@@ -26,7 +30,11 @@ cytoscape({
     { data: { id: 'edge8', source: 9, target: 10 } },
     { data: { id: 'edge9', source: 10, target: 11 } },
     { data: { id: 'edge10', source: 11, target: 12 } },
-    { data: { id: 'edge11', source: 12, target: 13 } } ],
+    { data: { id: 'edge11', source: 6, target: 13 } },
+    { data: { id: 'edge12', source: 13, target: 14 } },
+    { data: { id: 'edge13', source: 14, target: 15 } },
+    { data: { id: 'edge14', source: 15, target: 16 } },
+    { data: { id: 'edge15', source: 16, target: 17 } } ],
 
   layout: {
     name: 'preset'
