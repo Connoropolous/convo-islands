@@ -4,16 +4,19 @@ const sinon = require('sinon')
 const {
     // TODO: every single one of the following should be tested
     addParentsAndChildren,
-    traverseIsland,
+    generateLayoutObject,
+} = require('./layout-data')
+const {
+    // TODO: every single one of the following should be tested
     positionTopic,
     yForX,
-    translateCoord,
-    adjustIslandBounds,
     generateObjectCoordinates,
     positionIslandsByBounds,
-    generateLayoutObject,
-    getLayoutForData
-} = require('./index')
+    traverseIsland,
+    translateCoord,
+    adjustIslandBounds,
+} = require('./coordinates')
+const { getLayoutForData } = require('./index')
 
 // for object and array comparison, use assert.deepEqual
 // for simple value comparison, use assert.equal
@@ -182,7 +185,7 @@ describe('getLayoutForData', function () {
 
     describe('three nodes in a chain', function () {
         it('should position all nodes in a line on the x-axis', function () {
-            const { nodes, edges } = require('./test-data/line-graph.json')
+            const { nodes, edges } = require('../test-data/line-graph.json')
             const focalTopicId = 3
             const focalCoords = { x: 0, y: 0 }
             const result = getLayoutForData(nodes, edges, focalTopicId, focalCoords)

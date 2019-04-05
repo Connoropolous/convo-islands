@@ -1,6 +1,6 @@
 const {
     getLayoutForData
-} = require('./index')
+} = require('./src/index')
 
 
 const { nodes, edges } = require('./test-data/big-graph.1.json')
