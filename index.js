@@ -25,39 +25,53 @@ const ISLAND_SPACING = 300
 module.exports.ISLAND_SPACING = ISLAND_SPACING
 
 // recursively use an edge list to generate a tree structure of a node and its ancestors and descendants
+// only the root node should have getParents = true and getChildren = true
+// if it is in the child direction, getChildren should be true and getParents = false
+// and vice versa
 const addParentsAndChildren = (usedTopics, synapses, topic, getParents, getChildren, degreeFromFocus) => {
   if (!topic.id) return topic
 
-  // TODO: eliminate this side effect
-  usedTopics[topic.id] = true
+  let newUsedTopics = {
+    ...usedTopics,
+    [topic.id]: true
+  }
+
   topic.degreeFromFocus = degreeFromFocus
   const nextDegree = degreeFromFocus + 1
 
   if (getChildren) {
-    // recursive to add children
+    // recurse to add children
     topic.children = []
     synapses.filter(synapse => {
       return synapse.topic1_id === topic.id
-             && !usedTopics[synapse.topic2_id]
+             && !newUsedTopics[synapse.topic2_id]
              && synapse.category === 'from-to'
     })
     .map(synapse => synapse.topic2_id)
-    .forEach(childId => topic.children.push(addParentsAndChildren(usedTopics, synapses, {id: childId}, false, true, nextDegree)))
+    .forEach(childId => {
+      const result = addParentsAndChildren(newUsedTopics, synapses, {id: childId}, false, true, nextDegree)
+      newUsedTopics = result.usedTopics
+      topic.children.push(result.topic)
+    })
 
     topic.children = lodash.orderBy(topic.children, 'maxDescendants', 'desc')
     topic.maxDescendants = topic.children.length ? topic.children[0].maxDescendants + 1 : 0
   }
 
   if (getParents) {
-    // recursive to add parents
+    // recurse to add parents
     topic.parents = []
     synapses.filter(synapse => {
       return synapse.topic2_id === topic.id
-             && !usedTopics[synapse.topic1_id]
+             && !newUsedTopics[synapse.topic1_id]
              && synapse.category === 'from-to'
     })
     .map(synapse => synapse.topic1_id)
-    .forEach(parentId => topic.parents.push(addParentsAndChildren(usedTopics, synapses, {id: parentId}, true, false, nextDegree)))
+    .forEach(parentId => {
+      const result = addParentsAndChildren(newUsedTopics, synapses, {id: parentId}, true, false, nextDegree)
+      newUsedTopics = result.usedTopics
+      topic.parents.push(result.topic)
+    })
 
     topic.parents = lodash.orderBy(topic.parents, 'maxAncestors', 'desc')
     topic.maxAncestors = topic.parents.length ? topic.parents[0].maxAncestors + 1 : 0
@@ -67,7 +81,10 @@ const addParentsAndChildren = (usedTopics, synapses, topic, getParents, getChild
     topic.longestThread = topic.maxDescendants + topic.maxAncestors + 1
   }
 
-  return topic
+  return {
+    topic,
+    usedTopics: newUsedTopics
+  }
 }
 // export for testing
 module.exports.addParentsAndChildren = addParentsAndChildren
@@ -75,20 +92,31 @@ module.exports.addParentsAndChildren = addParentsAndChildren
 
 const generateLayoutObject = (topics, synapses, focalTopicId) => {
   let layout = [] // will be the final output
-  const usedTopics = {} // will store the topics that have been placed into islands
+  // will act as a store of the topics that have been placed into islands
+  // to begin with, no topics have been placed into islands
+  let usedTopics = {}
 
   // start with the focal node, and build its island
-  const currentTopic = topics.find(t => t.id === focalTopicId)
+  const currentTopic = topics.find(topic => topic.id === focalTopicId)
   if (!currentTopic) {
     console.log('you didnt pass a valid focalTopicId')
     return layout
   }
-  layout.push(addParentsAndChildren(usedTopics, synapses, { id: currentTopic.id }, true, true, 0))
+  const result = addParentsAndChildren(usedTopics, synapses, { id: currentTopic.id }, true, true, 0)
+  // to avoid side effects, calling addParentsAndChildren
+  // also returns the new "list" of usedTopics
+  usedTopics = result.usedTopics
+  layout.push(result.topic)
   
   // right now there's no reasoning going on about the selection of focal topics
   // its just whichever ones happen to be found in the array first
-  topics.filter(topic => topic && topic.id && !usedTopics[topic.id]).forEach(
-    topic => layout.push(addParentsAndChildren(usedTopics, synapses, { id: topic.id }, true, true, 0)))
+  topics
+    .filter(topic => topic && topic.id && !usedTopics[topic.id])
+    .forEach((topic) => {
+      const result = addParentsAndChildren(usedTopics, synapses, { id: topic.id }, true, true, 0)
+      usedTopics = result.usedTopics
+      layout.push(result.topic)
+    })
 
   return layout
 }
