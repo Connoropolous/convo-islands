@@ -40,38 +40,66 @@ const addParentsAndChildren = (usedTopics, synapses, topic, getParents, getChild
   const nextDegree = degreeFromFocus + 1
 
   if (getChildren) {
-    // recurse to add children
+    // add an empty list of children
     topic.children = []
-    synapses.filter(synapse => {
-      return synapse.topic1_id === topic.id
-             && !newUsedTopics[synapse.topic2_id]
-             && synapse.category === 'from-to'
-    })
-    .map(synapse => synapse.topic2_id)
-    .forEach(childId => {
-      const result = addParentsAndChildren(newUsedTopics, synapses, {id: childId}, false, true, nextDegree)
-      newUsedTopics = result.usedTopics
-      topic.children.push(result.topic)
-    })
+    synapses
+      // look inside the list of synapses for the ones
+      // that represent parent-child relationships
+      // where the current topic is the parent
+      // and filter to just an array of those synapses
+      .filter(synapse => {
+        return synapse.topic1_id === topic.id
+              && !newUsedTopics[synapse.topic2_id]
+              && synapse.category === 'from-to'
+      })
+      // convert that array into an array of the
+      // ids of those children
+      .map(synapse => synapse.topic2_id)
+      // iterate on that array
+      // creating a node from that id
+      // and adding it to the array of
+      // children
+      .forEach(childId => {
+        // get that node as a child by recursing
+        const result = addParentsAndChildren(newUsedTopics, synapses, {id: childId}, false, true, nextDegree)
+        // override the usedTopics list, with the new list
+        newUsedTopics = result.usedTopics
+        // add the new child to the children array
+        topic.children.push(result.topic)
+      })
 
     topic.children = lodash.orderBy(topic.children, 'maxDescendants', 'desc')
     topic.maxDescendants = topic.children.length ? topic.children[0].maxDescendants + 1 : 0
   }
 
   if (getParents) {
-    // recurse to add parents
+    // add an empty list of parents
     topic.parents = []
-    synapses.filter(synapse => {
-      return synapse.topic2_id === topic.id
-             && !newUsedTopics[synapse.topic1_id]
-             && synapse.category === 'from-to'
-    })
-    .map(synapse => synapse.topic1_id)
-    .forEach(parentId => {
-      const result = addParentsAndChildren(newUsedTopics, synapses, {id: parentId}, true, false, nextDegree)
-      newUsedTopics = result.usedTopics
-      topic.parents.push(result.topic)
-    })
+    synapses
+      // look inside the list of synapses for the ones
+      // that represent parent-child relationships
+      // where the current topic is the child
+      // and filter to just an array of those synapses
+      .filter(synapse => {
+        return synapse.topic2_id === topic.id
+              && !newUsedTopics[synapse.topic1_id]
+              && synapse.category === 'from-to'
+      })
+      // convert that array into an array of the
+      // ids of those children
+      .map(synapse => synapse.topic1_id)
+      // iterate on that array
+      // creating a node from that id
+      // and adding it to the array of
+      // children
+      .forEach(parentId => {
+        // get that node as a parent by recursing
+        const result = addParentsAndChildren(newUsedTopics, synapses, {id: parentId}, true, false, nextDegree)
+        // override the usedTopics list, with the new list
+        newUsedTopics = result.usedTopics
+        // add the new parent to the parents array
+        topic.parents.push(result.topic)
+      })
 
     topic.parents = lodash.orderBy(topic.parents, 'maxAncestors', 'desc')
     topic.maxAncestors = topic.parents.length ? topic.parents[0].maxAncestors + 1 : 0
