@@ -1,10 +1,12 @@
 const assert = require('assert')
+const sinon = require('sinon')
 
 const {
     // TODO: every single one of the following should be tested
     addParentsAndChildren,
     traverseIsland,
     positionTopic,
+    yForX,
     translateCoord,
     adjustIslandBounds,
     generateObjectCoordinates,
@@ -15,6 +17,50 @@ const {
 
 // for object and array comparison, use assert.deepEqual
 // for simple value comparison, use assert.equal
+
+describe('traverseIsland', function () {
+    it('calls a given callback function for every node in an island', function () {
+        const island = {
+            id: 1,
+            degreeFromFocus: 0,
+            children: [{
+                id: 2,
+                degreeFromFocus: 1,
+                children: [],
+                maxDescendants: 0
+            }],
+            maxDescendants: 1,
+            parents: [{
+                id: 3,
+                degreeFromFocus: 1,
+                parents: [],
+                maxAncestors: 0
+            }],
+            maxAncestors: 0,
+            longestThread: 2
+        }
+        const forEachInIsland = sinon.fake()
+        traverseIsland(island, forEachInIsland)
+        // forEachInIsland should now have been called 3 times
+        // once for each node in the island
+        assert.equal(forEachInIsland.callCount, 3)
+
+        // for the root node, parent and child are undefined
+        assert.equal(forEachInIsland.firstCall.args[0].id, 1)
+        assert.equal(forEachInIsland.firstCall.args[1], undefined)
+        assert.equal(forEachInIsland.firstCall.args[2], undefined)
+
+        // for parents, descendant is in the 'child' argument, the thir
+        assert.equal(forEachInIsland.secondCall.args[0].id, 3)
+        assert.equal(forEachInIsland.secondCall.args[1], undefined)
+        assert.equal(forEachInIsland.secondCall.args[2].id, 1)
+
+        // for children, ancestor is in the 'parent' argument, the second
+        assert.equal(forEachInIsland.thirdCall.args[0].id, 2)
+        assert.equal(forEachInIsland.thirdCall.args[1].id, 1)
+        assert.equal(forEachInIsland.thirdCall.args[2], undefined)
+    })
+})
 
 describe('translateCoord', function () {
     it('tests translating a node 10 in both positive directions', function () {
