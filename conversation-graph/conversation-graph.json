@@ -409,6 +409,11 @@
             "text": "On its side",
             "author": "connor",
             "id": "_425z4rjdy"
+        },
+        {
+            "text": "this could be useful to compare with : https://github.com/nicoespeon/gitgraph.js",
+            "author": "connor",
+            "id": "_tcgkrmxnt"
         }
     ],
     "edges": [
@@ -889,6 +894,12 @@
         {
             "from": "_qgpevyxy8",
             "to": "_425z4rjdy",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_qgpevyxy8",
+            "to": "_tcgkrmxnt",
             "category": "from-to",
             "desc": "has reply"
         }
