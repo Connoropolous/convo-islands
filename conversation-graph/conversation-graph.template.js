@@ -78,9 +78,16 @@ const cy = cytoscape({
   ]
 })
 
+const searchParams = new URLSearchParams(window.location.search)
+const selectedId = searchParams.get('selected') || "1"
+cy.$(`#${selectedId}`).select()
+// http://cytoscape.github.io/cytoscape.js/#core/viewport-manipulation/cy.fit
+const viewPadding = 350
+cy.fit( cy.$(':selected'), viewPadding)
+
 // AUTHORS
 const authors = ["connor", "robert"]
-let active_author = new URLSearchParams(window.location.search).get('author') || "connor"
+let active_author = searchParams.get('author') || "connor"
 const authorDiv = document.getElementById('authors')
 authors.forEach(author => {
   const buttonEl = document.createElement("button")
@@ -113,7 +120,12 @@ const submitNode = () => {
       },
       reply_to
     })
-  }).then(() => window.location.reload())
+  }).then(async response => {
+    const selectedId = await response.text()
+    const search = new URLSearchParams(window.location.search)
+    search.set('selected', selectedId)
+    window.location.search = search.toString()
+  })
 }
 replyInput.focus()
 const enterKeyCode = 13

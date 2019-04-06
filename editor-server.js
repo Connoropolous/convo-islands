@@ -50,7 +50,7 @@ app.post('/add-node', (req, res) => {
 
     // update the html
     refreshHtml(nodes, edges)
-    res.sendStatus(200)
+    res.status(200).send(node.id)
 })
 
 app.get('/refresh', (req, res) => {
