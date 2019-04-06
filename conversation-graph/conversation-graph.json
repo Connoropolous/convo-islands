@@ -354,6 +354,61 @@
             "text": "the reason is because if we are trying to 'distributed version control' we can't have deletes",
             "author": "connor",
             "id": "_xbu2hv3t4"
+        },
+        {
+            "text": "Lets schedule our pairing sessions",
+            "author": "robert",
+            "id": "_21y562k6y"
+        },
+        {
+            "text": "make it a little more open too",
+            "author": "robert",
+            "id": "_fnw5gja53"
+        },
+        {
+            "text": "anyone can come hack with us if they want",
+            "author": "robert",
+            "id": "_qsykkxxr6"
+        },
+        {
+            "text": "demo something they've been working on",
+            "author": "robert",
+            "id": "_fiupv0fzn"
+        },
+        {
+            "text": "ssb, holochain, fedwiki, dat, social ledger, games , whatever",
+            "author": "robert",
+            "id": "_x6m85q402"
+        },
+        {
+            "text": "i also want to play with otter.ai with you on a call, or maybe a metacaugs call",
+            "author": "robert",
+            "id": "_br63z4ubq"
+        },
+        {
+            "text": "I don't know what Otter.ai is",
+            "author": "connor",
+            "id": "_nrn129j53"
+        },
+        {
+            "text": "Monday?",
+            "author": "robert",
+            "id": "_1vgzyzq26"
+        },
+        {
+            "text": "Yah",
+            "author": "connor",
+            "id": "_91b1x07go"
+        },
+        {
+            "text": "I think we’ve been unknowingly coding something very similar to the Git DAG visual representations https://images.app.goo.gl/KkNcqZsgzdQhHzSm7",
+            "author": "connor",
+            "id": "_qgpevyxy8"
+        },
+        {
+            "text": "On its side",
+            "author": "connor",
+            "id": "_425z4rjdy"
         }
     ],
     "edges": [
@@ -768,6 +823,72 @@
         {
             "from": "_r1zl921vm",
             "to": "_xbu2hv3t4",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "1",
+            "to": "_21y562k6y",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_21y562k6y",
+            "to": "_fnw5gja53",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_fnw5gja53",
+            "to": "_qsykkxxr6",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_fnw5gja53",
+            "to": "_fiupv0fzn",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_fnw5gja53",
+            "to": "_x6m85q402",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "1",
+            "to": "_br63z4ubq",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_br63z4ubq",
+            "to": "_nrn129j53",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_21y562k6y",
+            "to": "_1vgzyzq26",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_1vgzyzq26",
+            "to": "_91b1x07go",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "1",
+            "to": "_qgpevyxy8",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_qgpevyxy8",
+            "to": "_425z4rjdy",
             "category": "from-to",
             "desc": "has reply"
         }
