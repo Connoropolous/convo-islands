@@ -24,6 +24,11 @@ const refreshHtml = (nodes, edges) => {
     fs.writeFileSync('./conversation-graph/conversation-graph.js', newhtml, 'utf-8')
 }
 
+if (!fs.readFileSync('./conversation-graph/conversation-graph.js', 'utf-8')) {
+    const { nodes, edges } = JSON.parse(fs.readFileSync('./conversation-graph/conversation-graph.json', 'utf-8'))
+    refreshHtml(nodes, edges)
+}
+
 app.post('/add-node', (req, res) => {
     const { node, reply_to } = req.body
     // update the graph
