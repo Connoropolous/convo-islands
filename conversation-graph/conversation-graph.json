@@ -235,6 +235,10 @@
         {
             "text": "Connor loves this idea",
             "id": "_arurdkiwc"
+        },
+        {
+            "text": "nodes could be given a size according to how many descendants they have",
+            "id": "_segwg6hc7"
         }
     ],
     "edges": [
@@ -577,6 +581,12 @@
         {
             "from": "_0scvcomsp",
             "to": "_arurdkiwc",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_segwg6hc7",
             "category": "from-to",
             "desc": "has reply"
         }
