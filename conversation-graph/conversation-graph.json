@@ -424,6 +424,46 @@
             "text": "no removing lines from the file",
             "author": "connor",
             "id": "_ds24rkc4p"
+        },
+        {
+            "text": "what is taking up the most amount of time while I use this?",
+            "author": "connor",
+            "id": "_fmmmpcrwi"
+        },
+        {
+            "text": "scrolling?",
+            "author": "connor",
+            "id": "_dd15llxug"
+        },
+        {
+            "text": "zooming?",
+            "author": "connor",
+            "id": "_j5muw0ax4"
+        },
+        {
+            "text": "panning?",
+            "author": "connor",
+            "id": "_b7qks6lcb"
+        },
+        {
+            "text": "selecting a node?",
+            "author": "connor",
+            "id": "_8xvasc3l5"
+        },
+        {
+            "text": "then clicking in the input area?",
+            "author": "connor",
+            "id": "_8d625wiq3"
+        },
+        {
+            "text": "then clicking submit?",
+            "author": "connor",
+            "id": "_rnqe14g2w"
+        },
+        {
+            "text": "how could we eliminate all that time spent?",
+            "author": "connor",
+            "id": "_yjr8ucds8"
         }
     ],
     "edges": [
@@ -922,6 +962,54 @@
         {
             "from": "_ew9788wnt",
             "to": "_ds24rkc4p",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_6nqg1dw91",
+            "to": "_fmmmpcrwi",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_fmmmpcrwi",
+            "to": "_dd15llxug",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_fmmmpcrwi",
+            "to": "_j5muw0ax4",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_fmmmpcrwi",
+            "to": "_b7qks6lcb",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_fmmmpcrwi",
+            "to": "_8xvasc3l5",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_8xvasc3l5",
+            "to": "_8d625wiq3",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_8d625wiq3",
+            "to": "_rnqe14g2w",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_rnqe14g2w",
+            "to": "_yjr8ucds8",
             "category": "from-to",
             "desc": "has reply"
         }
