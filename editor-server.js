@@ -39,7 +39,7 @@ app.post('/add-node', (req, res) => {
         }
         edges.push(edge)
     }
-    fs.writeFileSync('./conversation-graph/conversation-graph.json', JSON.stringify({ nodes, edges }), 'utf-8')
+    fs.writeFileSync('./conversation-graph/conversation-graph.json', JSON.stringify({ nodes, edges }, null, 4), 'utf-8')
 
     // update the html
     refreshHtml(nodes, edges)
@@ -52,7 +52,7 @@ app.post('/remove-node', (req, res) => {
     let { nodes, edges } = JSON.parse(fs.readFileSync('./conversation-graph/conversation-graph.json', 'utf-8'))
     nodes = nodes.filter(n => n.id !== id)
     edges = edges.filter(e => e.from !== id && e.to !== id)
-    fs.writeFileSync('./conversation-graph/conversation-graph.json', JSON.stringify({ nodes, edges }), 'utf-8')
+    fs.writeFileSync('./conversation-graph/conversation-graph.json', JSON.stringify({ nodes, edges }, null, 4), 'utf-8')
 
     // update the html
     refreshHtml(nodes, edges)
