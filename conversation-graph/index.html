@@ -19,10 +19,13 @@
             left: 20px;
         }
 
-        #delete {
+        #authors {
             position: absolute;
             top: 20px;
             right: 20px;
+        }
+        #authors .activeAuthor {
+            border: 1px solid blue;                 
         }
     </style>
 </head>
@@ -33,7 +36,7 @@
         <textarea id="reply-input"></textarea>
         <input type="submit" id="reply-submit"></input>
     </div>
-    <input type="submit" id="delete" value="Delete Selected Node"></input>
+    <div id="authors">Act as:</div>
 
     <script src="conversation-graph.js"></script>
 </body>

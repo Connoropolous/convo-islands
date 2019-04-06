@@ -2,255 +2,333 @@
     "nodes": [
         {
             "text": "may all our conversations begin here and be very fruitful",
-            "id": "1"
+            "id": "1",
+            "author": "connor"
         },
         {
             "text": "how to use this",
-            "id": "_1dibr5xjl"
+            "id": "_1dibr5xjl",
+            "author": "connor"
         },
         {
             "text": "select a node",
-            "id": "_85xo626um"
+            "id": "_85xo626um",
+            "author": "connor"
         },
         {
             "text": "then type in the input area",
-            "id": "_k1212bftn"
+            "id": "_k1212bftn",
+            "author": "connor"
         },
         {
             "text": "then hit submit",
-            "id": "_tw8dghnim"
+            "id": "_tw8dghnim",
+            "author": "connor"
         },
         {
             "text": "once you have added the data you want to share",
-            "id": "_3id3gb428"
+            "id": "_3id3gb428",
+            "author": "connor"
         },
         {
             "text": "do a git commit of this repo",
-            "id": "_856xkqlmp"
+            "id": "_856xkqlmp",
+            "author": "connor"
         },
         {
             "text": "then push it back to github",
-            "id": "_25r52hdu4"
+            "id": "_25r52hdu4",
+            "author": "connor"
         },
         {
             "text": "by doing this, we get a distributed conversation platform out-of-the-box",
-            "id": "_g3pxpx9hz"
+            "id": "_g3pxpx9hz",
+            "author": "connor"
         },
         {
             "text": "weird questions",
-            "id": "_6nqg1dw91"
+            "id": "_6nqg1dw91",
+            "author": "connor"
         },
         {
             "text": "does it keep\nline breaks",
-            "id": "_oo0hf4kma"
+            "id": "_oo0hf4kma",
+            "author": "connor"
         },
         {
             "text": "no",
-            "id": "_n7uzuerlp"
+            "id": "_n7uzuerlp",
+            "author": "connor"
         },
         {
             "text": "first, run `node editor-server.js`",
-            "id": "_cstd467mq"
+            "id": "_cstd467mq",
+            "author": "connor"
         },
         {
             "text": "then, open http://localhost:3000",
-            "id": "_qt5ftx9bc"
+            "id": "_qt5ftx9bc",
+            "author": "connor"
         },
         {
             "text": "do what editing and replying you want",
-            "id": "_1w372i49p"
+            "id": "_1w372i49p",
+            "author": "connor"
         },
         {
             "text": "when you're done, stop the server with ctrl-c",
-            "id": "_44eew70hi"
+            "id": "_44eew70hi",
+            "author": "connor"
         },
         {
             "text": "feature ideas",
-            "id": "_z0k58fv18"
+            "id": "_z0k58fv18",
+            "author": "connor"
         },
         {
             "text": "a delete button to delete a selected node",
-            "id": "_u68grbeyz"
+            "id": "_u68grbeyz",
+            "author": "connor"
         },
         {
             "text": "does it\nkeep\nline breaks\nnow?",
-            "id": "_xsrc06qip"
+            "id": "_xsrc06qip",
+            "author": "connor"
         },
         {
             "text": "yes",
-            "id": "_sbrahpa8s"
+            "id": "_sbrahpa8s",
+            "author": "connor"
         },
         {
             "text": "this is now added",
-            "id": "_qv0q1taxh"
+            "id": "_qv0q1taxh",
+            "author": "connor"
         },
         {
             "text": "pretty print the json to the file so we get nicer git diffs",
-            "id": "_wj994fyp6"
+            "id": "_wj994fyp6",
+            "author": "connor"
         },
         {
             "text": "did my tweak to JSON.stringify work?",
-            "id": "_tonamgioa"
+            "id": "_tonamgioa",
+            "author": "connor"
         },
         {
             "text": "yes",
-            "id": "_pqvxatotp"
+            "id": "_pqvxatotp",
+            "author": "connor"
         },
         {
             "text": "test a git diff",
-            "id": "_lh1gzred7"
+            "id": "_lh1gzred7",
+            "author": "connor"
         },
         {
             "text": "we use the tool to build the tool",
-            "id": "_bf5h6531x"
+            "id": "_bf5h6531x",
+            "author": "connor"
         },
         {
             "text": "do a git commit after every modifying action?",
-            "id": "_j86eaw68y"
+            "id": "_j86eaw68y",
+            "author": "connor"
         },
         {
             "text": "hi\nthis is my first comment",
-            "id": "_tfezvamnc"
+            "id": "_tfezvamnc",
+            "author": "connor"
         },
         {
             "text": "this is now added",
-            "id": "_jjq3mp9mj"
+            "id": "_jjq3mp9mj",
+            "author": "connor"
         },
         {
             "text": "put author of a node next to the node, so we know who said it",
-            "id": "_wtic0984u"
+            "id": "_wtic0984u",
+            "author": "connor"
         },
         {
             "text": "an alternative to this",
-            "id": "_7qred7u9w"
+            "id": "_7qred7u9w",
+            "author": "connor"
         },
         {
             "text": "Pegah proposes: different authors could have different colors",
-            "id": "_ksq8htjso"
+            "id": "_ksq8htjso",
+            "author": "connor"
         },
         {
             "text": "the nodes would have a fill colour that signified the author",
-            "id": "_iz00w85x9"
+            "id": "_iz00w85x9",
+            "author": "connor"
         },
         {
             "text": "ability to tag nodes as having a certain 'topic'",
-            "id": "_b0c29zzfa"
+            "id": "_b0c29zzfa",
+            "author": "connor"
         },
         {
             "text": "each topic would have a colour",
-            "id": "_8gmh71q9i"
+            "id": "_8gmh71q9i",
+            "author": "connor"
         },
         {
             "text": "have a node be selected for responding to, after you create it",
-            "id": "_wh0g0unl5"
+            "id": "_wh0g0unl5",
+            "author": "connor"
         },
         {
             "text": "you could assign a hex colour to a topic",
-            "id": "_s8ii3vwo2"
+            "id": "_s8ii3vwo2",
+            "author": "connor"
         },
         {
             "text": "actually not every node would have a colour, you could add a topic to a node",
-            "id": "_kg31prkha"
+            "id": "_kg31prkha",
+            "author": "connor"
         },
         {
             "text": "an alternative to this",
-            "id": "_3ynivi711"
+            "id": "_3ynivi711",
+            "author": "connor"
         },
         {
             "text": "the node icon could be a profile picture of the author",
-            "id": "_q1g4upjfa"
+            "id": "_q1g4upjfa",
+            "author": "connor"
         },
         {
             "text": "have a switch mode between the 'participant' view and the 'topic' view",
-            "id": "_u7eycyukb"
+            "id": "_u7eycyukb",
+            "author": "connor"
         },
         {
             "text": "a panel on the right hand side of the screen which can be expanded or minimized",
-            "id": "_dnoyh5iqd"
+            "id": "_dnoyh5iqd",
+            "author": "connor"
         },
         {
             "text": "shows possible modes",
-            "id": "_p9478ptfw"
+            "id": "_p9478ptfw",
+            "author": "connor"
         },
         {
             "text": "participant view",
-            "id": "_jm7yquhkh"
+            "id": "_jm7yquhkh",
+            "author": "connor"
         },
         {
             "text": "topic view",
-            "id": "_f0zz76ghl"
+            "id": "_f0zz76ghl",
+            "author": "connor"
         },
         {
             "text": "you could multi-select and then tag multiple nodes with a topic",
-            "id": "_ijjh13e9a"
+            "id": "_ijjh13e9a",
+            "author": "connor"
         },
         {
             "text": "there could be a panel which displays a selected thread in a linear, start to finish way",
-            "id": "_30j91k9oe"
+            "id": "_30j91k9oe",
+            "author": "connor"
         },
         {
             "text": "nodes could have media attached",
-            "id": "_4y27ccx2g"
+            "id": "_4y27ccx2g",
+            "author": "connor"
         },
         {
             "text": "videos",
-            "id": "_7l1ijlmdx"
+            "id": "_7l1ijlmdx",
+            "author": "connor"
         },
         {
             "text": "pictures",
-            "id": "_lzx52sxu8"
+            "id": "_lzx52sxu8",
+            "author": "connor"
         },
         {
             "text": "links",
-            "id": "_cuyi403ed"
+            "id": "_cuyi403ed",
+            "author": "connor"
         },
         {
             "text": "songs",
-            "id": "_7stos8ygw"
+            "id": "_7stos8ygw",
+            "author": "connor"
         },
         {
             "text": "in page search",
-            "id": "_pidexjd4s"
+            "id": "_pidexjd4s",
+            "author": "connor"
         },
         {
             "text": "when the page reloads after node creation, set that node as the focal node",
-            "id": "_5qhgayc5q"
+            "id": "_5qhgayc5q",
+            "author": "connor"
         },
         {
             "text": "nodes should have timestamps attached when they're created, and updated",
-            "id": "_j9l8zevhb"
+            "id": "_j9l8zevhb",
+            "author": "connor"
         },
         {
             "text": "edges could also have colour",
-            "id": "_zcad3xzyn"
+            "id": "_zcad3xzyn",
+            "author": "connor"
         },
         {
             "text": "the colour for an edge could be consistent for the whole edge if the author of the two nodes is the same",
-            "id": "_iqyyzry8g"
+            "id": "_iqyyzry8g",
+            "author": "connor"
         },
         {
             "text": "the colour for an edge could be a gradient between the colours of the two authors if the edge is between nodes by two authors!",
-            "id": "_0scvcomsp"
+            "id": "_0scvcomsp",
+            "author": "connor"
         },
         {
             "text": "Connor loves this idea",
-            "id": "_arurdkiwc"
+            "id": "_arurdkiwc",
+            "author": "connor"
         },
         {
             "text": "nodes could be given a size according to how many descendants they have",
-            "id": "_segwg6hc7"
+            "id": "_segwg6hc7",
+            "author": "connor"
         },
         {
             "text": "the ability to set an interval for how often to poll git remotes for new updates",
-            "id": "_5hbprlh4b"
+            "id": "_5hbprlh4b",
+            "author": "connor"
         },
         {
             "text": "I am really liking this idea",
-            "id": "_4liqrfezp"
+            "id": "_4liqrfezp",
+            "author": "connor"
         },
         {
             "text": "from the user interface",
-            "id": "_fjufb15iz"
+            "id": "_fjufb15iz",
+            "author": "connor"
+        },
+        {
+            "text": "test",
+            "id": "_nzz4t3zys",
+            "author": "connor"
+        },
+        {
+            "text": "test author function",
+            "author": "connor",
+            "id": "_zgbs8cvhq"
+        },
+        {
+            "text": "pretend I'm robert",
+            "author": "robert",
+            "id": "_6m8j91hhj"
         }
     ],
     "edges": [
@@ -617,6 +695,24 @@
         {
             "from": "_5hbprlh4b",
             "to": "_fjufb15iz",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_1dibr5xjl",
+            "to": "_nzz4t3zys",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_iz00w85x9",
+            "to": "_zgbs8cvhq",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_zgbs8cvhq",
+            "to": "_6m8j91hhj",
             "category": "from-to",
             "desc": "has reply"
         }

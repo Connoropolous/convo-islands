@@ -20,7 +20,8 @@ module.exports = function (nodes, edges, positions) {
             data: {
                 id: "edge" + index,
                 source: edge.from,
-                target: edge.to
+                target: edge.to,
+                authors: nodes.find(n => n.id === edge.from).author + '-' + nodes.find(n => n.id === edge.to).author
             }
         }
     })
