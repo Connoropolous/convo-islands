@@ -329,6 +329,31 @@
             "text": "pretend I'm robert",
             "author": "robert",
             "id": "_6m8j91hhj"
+        },
+        {
+            "text": "this is now added",
+            "author": "connor",
+            "id": "_vbwff1rv5"
+        },
+        {
+            "text": "this is now added",
+            "author": "connor",
+            "id": "_jmfxv3yiw"
+        },
+        {
+            "text": "this is now added",
+            "author": "connor",
+            "id": "_0kpzgn7sm"
+        },
+        {
+            "text": "this is now removed again",
+            "author": "connor",
+            "id": "_r1zl921vm"
+        },
+        {
+            "text": "the reason is because if we are trying to 'distributed version control' we can't have deletes",
+            "author": "connor",
+            "id": "_xbu2hv3t4"
         }
     ],
     "edges": [
@@ -713,6 +738,36 @@
         {
             "from": "_zgbs8cvhq",
             "to": "_6m8j91hhj",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_iz00w85x9",
+            "to": "_vbwff1rv5",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_iqyyzry8g",
+            "to": "_jmfxv3yiw",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_0scvcomsp",
+            "to": "_0kpzgn7sm",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_qv0q1taxh",
+            "to": "_r1zl921vm",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_r1zl921vm",
+            "to": "_xbu2hv3t4",
             "category": "from-to",
             "desc": "has reply"
         }
