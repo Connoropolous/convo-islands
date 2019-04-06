@@ -239,6 +239,18 @@
         {
             "text": "nodes could be given a size according to how many descendants they have",
             "id": "_segwg6hc7"
+        },
+        {
+            "text": "the ability to set an interval for how often to poll git remotes for new updates",
+            "id": "_5hbprlh4b"
+        },
+        {
+            "text": "I am really liking this idea",
+            "id": "_4liqrfezp"
+        },
+        {
+            "text": "from the user interface",
+            "id": "_fjufb15iz"
         }
     ],
     "edges": [
@@ -587,6 +599,24 @@
         {
             "from": "_z0k58fv18",
             "to": "_segwg6hc7",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_5hbprlh4b",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_j86eaw68y",
+            "to": "_4liqrfezp",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_5hbprlh4b",
+            "to": "_fjufb15iz",
             "category": "from-to",
             "desc": "has reply"
         }

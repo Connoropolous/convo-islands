@@ -1,5 +1,6 @@
 .DS_Store
 .vscode
+conversation-graph/conversation-graph.js
 
 # Logs
 logs
