@@ -24,7 +24,9 @@ const refreshHtml = (nodes, edges) => {
     fs.writeFileSync('./conversation-graph/conversation-graph.js', newhtml, 'utf-8')
 }
 
-if (!fs.readFileSync('./conversation-graph/conversation-graph.js', 'utf-8')) {
+try {
+    fs.readFileSync('./conversation-graph/conversation-graph.js', 'utf-8')
+} catch (e) {
     const { nodes, edges } = JSON.parse(fs.readFileSync('./conversation-graph/conversation-graph.json', 'utf-8'))
     refreshHtml(nodes, edges)
 }
