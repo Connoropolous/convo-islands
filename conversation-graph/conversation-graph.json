@@ -99,6 +99,14 @@
         {
             "text": "test a git diff",
             "id": "_lh1gzred7"
+        },
+        {
+            "text": "we use the tool to build the tool",
+            "id": "_bf5h6531x"
+        },
+        {
+            "text": "do a git commit after every modifying action?",
+            "id": "_j86eaw68y"
         }
     ],
     "edges": [
@@ -237,6 +245,18 @@
         {
             "from": "_pqvxatotp",
             "to": "_lh1gzred7",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "1",
+            "to": "_bf5h6531x",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_j86eaw68y",
             "category": "from-to",
             "desc": "has reply"
         }
