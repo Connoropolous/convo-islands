@@ -469,6 +469,21 @@
             "text": "you only select a node if you want to respond to it",
             "author": "connor",
             "id": "_y297gl54f"
+        },
+        {
+            "text": "ability to do \"merge comments\" which would have two parents",
+            "author": "connor",
+            "id": "_nf131ytca"
+        },
+        {
+            "text": "data structures",
+            "author": "connor",
+            "id": "_eu226qjhw"
+        },
+        {
+            "text": "we shouldn't bother our JSON with maintaining an edge list when it doesn't add any value",
+            "author": "connor",
+            "id": "_ep0o3yvp0"
         }
     ],
     "edges": [
@@ -1021,6 +1036,24 @@
         {
             "from": "_85xo626um",
             "to": "_y297gl54f",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_nf131ytca",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "1",
+            "to": "_eu226qjhw",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_eu226qjhw",
+            "to": "_ep0o3yvp0",
             "category": "from-to",
             "desc": "has reply"
         }
