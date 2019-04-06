@@ -95,6 +95,10 @@
         {
             "text": "yes",
             "id": "_pqvxatotp"
+        },
+        {
+            "text": "test a git diff",
+            "id": "_lh1gzred7"
         }
     ],
     "edges": [
@@ -227,6 +231,12 @@
         {
             "from": "_tonamgioa",
             "to": "_pqvxatotp",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_pqvxatotp",
+            "to": "_lh1gzred7",
             "category": "from-to",
             "desc": "has reply"
         }
