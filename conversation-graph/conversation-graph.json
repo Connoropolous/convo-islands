@@ -414,6 +414,16 @@
             "text": "this could be useful to compare with : https://github.com/nicoespeon/gitgraph.js",
             "author": "connor",
             "id": "_tcgkrmxnt"
+        },
+        {
+            "text": "add a git pre-commit hook that checks that you ONLY added lines to conversation-graph.json",
+            "author": "connor",
+            "id": "_ew9788wnt"
+        },
+        {
+            "text": "no removing lines from the file",
+            "author": "connor",
+            "id": "_ds24rkc4p"
         }
     ],
     "edges": [
@@ -900,6 +910,18 @@
         {
             "from": "_qgpevyxy8",
             "to": "_tcgkrmxnt",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_ew9788wnt",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_ew9788wnt",
+            "to": "_ds24rkc4p",
             "category": "from-to",
             "desc": "has reply"
         }
