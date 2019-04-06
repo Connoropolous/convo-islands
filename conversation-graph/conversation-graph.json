@@ -107,6 +107,134 @@
         {
             "text": "do a git commit after every modifying action?",
             "id": "_j86eaw68y"
+        },
+        {
+            "text": "hi\nthis is my first comment",
+            "id": "_tfezvamnc"
+        },
+        {
+            "text": "this is now added",
+            "id": "_jjq3mp9mj"
+        },
+        {
+            "text": "put author of a node next to the node, so we know who said it",
+            "id": "_wtic0984u"
+        },
+        {
+            "text": "an alternative to this",
+            "id": "_7qred7u9w"
+        },
+        {
+            "text": "Pegah proposes: different authors could have different colors",
+            "id": "_ksq8htjso"
+        },
+        {
+            "text": "the nodes would have a fill colour that signified the author",
+            "id": "_iz00w85x9"
+        },
+        {
+            "text": "ability to tag nodes as having a certain 'topic'",
+            "id": "_b0c29zzfa"
+        },
+        {
+            "text": "each topic would have a colour",
+            "id": "_8gmh71q9i"
+        },
+        {
+            "text": "have a node be selected for responding to, after you create it",
+            "id": "_wh0g0unl5"
+        },
+        {
+            "text": "you could assign a hex colour to a topic",
+            "id": "_s8ii3vwo2"
+        },
+        {
+            "text": "actually not every node would have a colour, you could add a topic to a node",
+            "id": "_kg31prkha"
+        },
+        {
+            "text": "an alternative to this",
+            "id": "_3ynivi711"
+        },
+        {
+            "text": "the node icon could be a profile picture of the author",
+            "id": "_q1g4upjfa"
+        },
+        {
+            "text": "have a switch mode between the 'participant' view and the 'topic' view",
+            "id": "_u7eycyukb"
+        },
+        {
+            "text": "a panel on the right hand side of the screen which can be expanded or minimized",
+            "id": "_dnoyh5iqd"
+        },
+        {
+            "text": "shows possible modes",
+            "id": "_p9478ptfw"
+        },
+        {
+            "text": "participant view",
+            "id": "_jm7yquhkh"
+        },
+        {
+            "text": "topic view",
+            "id": "_f0zz76ghl"
+        },
+        {
+            "text": "you could multi-select and then tag multiple nodes with a topic",
+            "id": "_ijjh13e9a"
+        },
+        {
+            "text": "there could be a panel which displays a selected thread in a linear, start to finish way",
+            "id": "_30j91k9oe"
+        },
+        {
+            "text": "nodes could have media attached",
+            "id": "_4y27ccx2g"
+        },
+        {
+            "text": "videos",
+            "id": "_7l1ijlmdx"
+        },
+        {
+            "text": "pictures",
+            "id": "_lzx52sxu8"
+        },
+        {
+            "text": "links",
+            "id": "_cuyi403ed"
+        },
+        {
+            "text": "songs",
+            "id": "_7stos8ygw"
+        },
+        {
+            "text": "in page search",
+            "id": "_pidexjd4s"
+        },
+        {
+            "text": "when the page reloads after node creation, set that node as the focal node",
+            "id": "_5qhgayc5q"
+        },
+        {
+            "text": "nodes should have timestamps attached when they're created, and updated",
+            "id": "_j9l8zevhb"
+        },
+        {
+            "text": "edges could also have colour",
+            "id": "_zcad3xzyn"
+        },
+        {
+            "text": "the colour for an edge could be consistent for the whole edge if the author of the two nodes is the same",
+            "id": "_iqyyzry8g"
+        },
+        {
+            "text": "the colour for an edge could be a gradient between the colours of the two authors if the edge is between nodes by two authors!",
+            "id": "_0scvcomsp"
+        },
+        {
+            "text": "Connor loves this idea",
+            "id": "_arurdkiwc"
         }
     ],
     "edges": [
@@ -257,6 +385,198 @@
         {
             "from": "_z0k58fv18",
             "to": "_j86eaw68y",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "1",
+            "to": "_tfezvamnc",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_lh1gzred7",
+            "to": "_jjq3mp9mj",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_wtic0984u",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_wtic0984u",
+            "to": "_7qred7u9w",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_7qred7u9w",
+            "to": "_ksq8htjso",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_ksq8htjso",
+            "to": "_iz00w85x9",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_b0c29zzfa",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_b0c29zzfa",
+            "to": "_8gmh71q9i",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_wh0g0unl5",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_8gmh71q9i",
+            "to": "_s8ii3vwo2",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_8gmh71q9i",
+            "to": "_kg31prkha",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_wtic0984u",
+            "to": "_3ynivi711",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_3ynivi711",
+            "to": "_q1g4upjfa",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_u7eycyukb",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_u7eycyukb",
+            "to": "_dnoyh5iqd",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_dnoyh5iqd",
+            "to": "_p9478ptfw",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_p9478ptfw",
+            "to": "_jm7yquhkh",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_p9478ptfw",
+            "to": "_f0zz76ghl",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_b0c29zzfa",
+            "to": "_ijjh13e9a",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_30j91k9oe",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_4y27ccx2g",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_4y27ccx2g",
+            "to": "_7l1ijlmdx",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_4y27ccx2g",
+            "to": "_lzx52sxu8",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_4y27ccx2g",
+            "to": "_cuyi403ed",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_4y27ccx2g",
+            "to": "_7stos8ygw",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_pidexjd4s",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_wh0g0unl5",
+            "to": "_5qhgayc5q",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_j9l8zevhb",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_ksq8htjso",
+            "to": "_zcad3xzyn",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_zcad3xzyn",
+            "to": "_iqyyzry8g",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_zcad3xzyn",
+            "to": "_0scvcomsp",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_0scvcomsp",
+            "to": "_arurdkiwc",
             "category": "from-to",
             "desc": "has reply"
         }
