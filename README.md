@@ -24,7 +24,20 @@ An island has the following assumptions at this time:
 Run `node generate-vis-data.js`
 Then open `UI/index.html` in a browser.
 
-How it works: it takes the data from `test-data/big-graph.1.json` and feeds it through our algorithm, then writes that data to the `UI/graph-vis.js` file, after injecting the values into the `graph-vis.template.js` template for that file.
+How it works: it takes the data from `test-data/big-graph.json` and feeds it through our algorithm, then writes that data to the `UI/graph-vis.js` file, after injecting the values into the `graph-vis.template.js` template for that file.
+
+## Live Testing and Having "Conversation"
+
+Run `node editor-server.js` and then open `localhost:3000`.
+
+Add responses one at a time. You can add 'unrelated' thoughts, by NOT having any node selected, typing in the text area, then hitting submit.
+
+OR
+
+You can submit a related 'reply' response by selecting a node, then typing in the text area, then hitting submit.
+
+Once you add all your thoughts, do a git commit and push to github!
+
 
 ## Next Steps
-
+- [ ]

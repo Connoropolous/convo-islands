@@ -1,0 +1,34 @@
+<html>
+<title>Cytoscape Graph Test</title>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.5.2/cytoscape.min.js"></script>
+
+    <style>
+        #cy {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        #reply {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cy"></div>
+    <div id="reply">
+        <textarea id="reply-input"></textarea>
+        <input type="submit" id="reply-submit"></input>
+    </div>
+
+    <script src="conversation-graph.js"></script>
+</body>
+
+</html>

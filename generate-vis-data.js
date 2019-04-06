@@ -1,41 +1,14 @@
 const fs = require('fs') // nodejs file system lib
 // import our layout algorithm
 const { getLayoutForData } = require('./src/index')
+const cytoscapeConverter = require('./cytoscape-converter')
 // import our test data
-const { nodes, edges } = require('./test-data/big-graph.1.json')
+const { nodes, edges } = require('./test-data/big-graph.json')
 
-
-const focalTopicId = 6
+const focalTopicId = 1
 const focalCoords = { x: 0, y: 0 }
 const positions = getLayoutForData(nodes, edges, focalTopicId, focalCoords)
-
-// combine the nodes with their positions, creating a
-// cytoscape compatible list of nodes
-const mappedNodes = nodes.map((node) => {
-    return {
-        data: {
-            ...node // copy the ID (and potentially other properties) from the node
-        },
-        position: {
-            ...positions[node.id] // copy the x:,y: from the positions object
-        }
-    }
-})
-
-// create a cytoscape compatible list of edges
-const mappedEdges = edges.map((edge, index) => {
-    return {
-        data: {
-            id: "edge" + index,
-            source: edge.from,
-            target: edge.to
-        }
-    }
-})
-
-// combine the nodes and edges list into a single array
-// which is the cytoscape compatible format
-const cytoscapeData = mappedNodes.concat(mappedEdges)
+const cytoscapeData = cytoscapeConverter(nodes, edges, positions)
 
 // update the graph-vis.js file based off the template file, injecting our
 // data into it

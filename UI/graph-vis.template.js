@@ -13,9 +13,9 @@ cytoscape({
     {
       selector: 'node',
       style: {
-        'label': 'data(id)'
+        'label': 'data(text)'
       }
     }
   ]
 
-});
+})
