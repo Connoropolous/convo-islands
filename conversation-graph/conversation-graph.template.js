@@ -13,7 +13,9 @@ const cy = cytoscape({
     {
       selector: 'node',
       style: {
-        'label': 'data(text)'
+        'label': 'data(text)',
+        'text-wrap': 'wrap',
+        'text-max-width': '150px'
       }
     }
   ]

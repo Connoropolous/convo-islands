@@ -38,6 +38,8 @@ You can submit a related 'reply' response by selecting a node, then typing in th
 
 Once you add all your thoughts, do a git commit and push to github!
 
+The conversation graph is stored in `conversation-graph/conversation-graph.json`.
+
 
 ## Next Steps
 - [ ]
