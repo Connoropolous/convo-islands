@@ -97,9 +97,7 @@ authors.forEach(author => {
 
 // REPLIES
 const replyInput = document.getElementById('reply-input')
-const replySubmit = document.getElementById('reply-submit')
-replySubmit.onclick = event => {
-  event.preventDefault()
+const submitNode = () => {
   if (!replyInput.value) return
   const selected = cy.$(':selected')
   const reply_to = selected.length ? selected[0].data('id') : ''
@@ -116,6 +114,19 @@ replySubmit.onclick = event => {
       reply_to
     })
   }).then(() => window.location.reload())
+}
+replyInput.focus()
+const enterKeyCode = 13
+replyInput.onkeydown = event => {
+  if (event.metaKey && event.keyCode === enterKeyCode) {
+    submitNode()
+  }
+}
+
+const replySubmit = document.getElementById('reply-submit')
+replySubmit.onclick = event => {
+  event.preventDefault()
+  submitNode()
 }
 
 
