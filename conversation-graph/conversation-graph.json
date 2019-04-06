@@ -464,6 +464,11 @@
             "text": "how could we eliminate all that time spent?",
             "author": "connor",
             "id": "_yjr8ucds8"
+        },
+        {
+            "text": "you only select a node if you want to respond to it",
+            "author": "connor",
+            "id": "_y297gl54f"
         }
     ],
     "edges": [
@@ -1010,6 +1015,12 @@
         {
             "from": "_rnqe14g2w",
             "to": "_yjr8ucds8",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_85xo626um",
+            "to": "_y297gl54f",
             "category": "from-to",
             "desc": "has reply"
         }
