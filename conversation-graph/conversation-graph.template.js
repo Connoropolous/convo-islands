@@ -22,6 +22,7 @@ const cy = cytoscape({
 })
 
 const replyInput = document.getElementById('reply-input')
+
 const replySubmit = document.getElementById('reply-submit')
 replySubmit.onclick = event => {
   event.preventDefault()
@@ -38,6 +39,25 @@ replySubmit.onclick = event => {
         text: replyInput.value
       },
       reply_to
+    })
+  }).then(() => window.location.reload())
+}
+
+const deleteButton = document.getElementById('delete')
+deleteButton.onclick = event => {
+  event.preventDefault()
+  
+  const selected = cy.$(':selected')
+
+  if (!selected.length) return
+
+  fetch('remove-node', {
+    method: 'POST',
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      id: selected[0].data('id')
     })
   }).then(() => window.location.reload())
 }

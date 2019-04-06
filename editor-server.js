@@ -46,6 +46,19 @@ app.post('/add-node', (req, res) => {
     res.sendStatus(200)
 })
 
+app.post('/remove-node', (req, res) => {
+    const { id } = req.body
+    // update the graph
+    let { nodes, edges } = JSON.parse(fs.readFileSync('./conversation-graph/conversation-graph.json', 'utf-8'))
+    nodes = nodes.filter(n => n.id !== id)
+    edges = edges.filter(e => e.from !== id && e.to !== id)
+    fs.writeFileSync('./conversation-graph/conversation-graph.json', JSON.stringify({ nodes, edges }), 'utf-8')
+
+    // update the html
+    refreshHtml(nodes, edges)
+    res.sendStatus(200)
+})
+
 app.get('/refresh', (req, res) => {
     const { nodes, edges } = JSON.parse(fs.readFileSync('./conversation-graph/conversation-graph.json', 'utf-8'))
     refreshHtml(nodes, edges)
