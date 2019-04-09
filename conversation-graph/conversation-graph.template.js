@@ -78,6 +78,8 @@ const cy = cytoscape({
   ]
 })
 
+
+// SET THE SELECTED from the url
 const searchParams = new URLSearchParams(window.location.search)
 const selectedId = searchParams.get('selected') || "1"
 cy.$(`#${selectedId}`).select()
@@ -142,7 +144,16 @@ replySubmit.onclick = event => {
 }
 
 
+// WEBSOCKETS connection, to listen for updates
 
+const socket = new WebSocket("ws://localhost:3000/")
+// the only message type coming from the server means
+// that there's a remote update
+socket.onmessage = (msg) => document.getElementById('updates').className = 'show'
 
-
-
+// you click this button to reload, because you've been 
+// notified by the server that there's remote updates that
+// have been pulled
+document.getElementById('reload-button').onclick = () => {
+  window.location.reload()
+}

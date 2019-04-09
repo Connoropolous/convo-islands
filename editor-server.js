@@ -13,6 +13,7 @@ const cytoscapeConverter = require('./cytoscape-converter')
 
 const express = require('express')
 const app = express()
+const expressWs = require('express-ws')(app)
 const port = 3000
 
 // this handles parsing http request bodies
@@ -32,7 +33,8 @@ const ID = () => {
 // then convert that into a graph vis friendly format
 // and inject that into the JS file which is referenced in the
 // main index.html file
-const refreshJs = (nodes, edges) => {
+const refreshJs = () => {
+    const { nodes, edges } = JSON.parse(fs.readFileSync('./conversation-graph/conversation-graph.json', 'utf-8'))
     const focalTopicId = "1"
     const focalCoords = { x: 0, y: 0 }
     const positions = getLayoutForData(nodes, edges, focalTopicId, focalCoords)
@@ -47,9 +49,69 @@ const refreshJs = (nodes, edges) => {
 try {
     fs.readFileSync('./conversation-graph/conversation-graph.js', 'utf-8')
 } catch (e) {
-    const { nodes, edges } = JSON.parse(fs.readFileSync('./conversation-graph/conversation-graph.json', 'utf-8'))
-    refreshJs(nodes, edges)
+    refreshJs()
 }
+
+/* polling of the remote git repository
+    for updates. can be stopped, started,
+    and changed in its frequency
+*/
+
+const DEFAULT_POLL_INTERVAL = 5000 // milliseconds
+let pollInterval // value to store the current interval amount in memory
+let polltimer
+let localsocket
+const createPollTimer = (newInterval) => {
+    if (polltimer) clearInterval(polltimer)
+    polltimer = setInterval(() => {
+        const cmd = shell.exec('git pull', { silent: true })
+        // means there's updates
+        if (cmd.stdout.indexOf('Already up to date') === -1) {
+            console.log('Fetched an update from git')
+
+            // since there's updates
+            // refresh the js
+            refreshJs()
+
+            // push notification to the client
+            // letting it know the HTML has been updated
+            // with updates to the graph from the remote repo
+            if (localsocket) {
+                localsocket.send('update')
+            }
+        }
+    }, newInterval)
+    // save the interval in memory for future stops/restarts
+    pollInterval = newInterval
+}
+createPollTimer(DEFAULT_POLL_INTERVAL)
+
+// mount a websocket server at main route
+app.ws('/', (ws, req) => {
+    localsocket = ws
+    ws.on('close', () => {
+        localsocket = null
+    })
+})
+
+
+/* ROUTES */
+
+// routes for adjusting git polling
+app.post('/polling', (req, res) => {
+    createPollTimer(req.body.pollInterval)
+    res.sendStatus(200)
+})
+app.get('/stoppolling', (req, res) => {
+    console.log('stopping polling')
+    clearInterval(polltimer)
+    res.sendStatus(200)
+})
+app.get('/startpolling', (req, res) => {
+    console.log('starting polling')
+    createPollTimer(pollInterval)
+    res.sendStatus(200)
+})
 
 // a route to handle the adding of a node
 // from the UI
@@ -78,10 +140,15 @@ app.post('/add-node', (req, res) => {
     if (shell.exec('git commit -am "auto-commit"').code !== 0) {
         // 500 server side error
         res.sendStatus(500)
+    } else {
+        if (shell.exec('git push').code !== 0) {
+            // 500 server side error
+            res.sendStatus(500)
+        }
     }
 
     // update the js based on the new graph
-    refreshJs(nodes, edges)
+    refreshJs()
 
     // respond with the node id so that the UI
     // can trigger a page refresh, with the newly minted
@@ -92,8 +159,7 @@ app.post('/add-node', (req, res) => {
 // a route to manually trigger a rebuild of the JS file
 // based on the current graph
 app.get('/refresh', (req, res) => {
-    const { nodes, edges } = JSON.parse(fs.readFileSync('./conversation-graph/conversation-graph.json', 'utf-8'))
-    refreshJs(nodes, edges)
+    refreshJs()
     res.sendStatus(200)
 })
 
