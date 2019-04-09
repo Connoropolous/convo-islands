@@ -974,6 +974,11 @@
             "text": "when it receives a remote update, it notifies the UI via websockets that an update is available",
             "author": "connor",
             "id": "_4oet5lmzw"
+        },
+        {
+            "text": "then this presents to the user, and gives them a button to click to reload",
+            "author": "connor",
+            "id": "_bfy83i589"
         }
     ],
     "edges": [
@@ -2108,6 +2113,12 @@
         {
             "from": "_5hbprlh4b",
             "to": "_4oet5lmzw",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_4oet5lmzw",
+            "to": "_bfy83i589",
             "category": "from-to",
             "desc": "has reply"
         }
