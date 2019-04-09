@@ -1224,6 +1224,11 @@
             "text": "I am thinking of a change to the data structure, where each node just has two fields, for refering to parent ids",
             "author": "connor",
             "id": "_2a89qr43f"
+        },
+        {
+            "text": "there would be three states",
+            "author": "connor",
+            "id": "_p5hvf18tv"
         }
     ],
     "edges": [
@@ -2646,6 +2651,12 @@
         {
             "from": "_nf131ytca",
             "to": "_2a89qr43f",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_2a89qr43f",
+            "to": "_p5hvf18tv",
             "category": "from-to",
             "desc": "has reply"
         }
