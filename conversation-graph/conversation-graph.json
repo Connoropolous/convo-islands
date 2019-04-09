@@ -994,6 +994,11 @@
             "text": "Yes, I do like it",
             "author": "connor",
             "id": "_vqevfuq0r"
+        },
+        {
+            "text": "Seems we need to find a day other than Monday now",
+            "author": "robert",
+            "id": "_er14rttb6"
         }
     ],
     "edges": [
@@ -2152,6 +2157,12 @@
         {
             "from": "_4kar6nji5",
             "to": "_vqevfuq0r",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_21y562k6y",
+            "to": "_er14rttb6",
             "category": "from-to",
             "desc": "has reply"
         }
