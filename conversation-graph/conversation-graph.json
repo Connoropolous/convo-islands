@@ -1199,6 +1199,11 @@
             "text": "nodemon",
             "author": "connor",
             "id": "_dlkoi8m1q"
+        },
+        {
+            "text": "Selecting a bunch of topics in a thread, then naming that thread",
+            "author": "connor",
+            "id": "_krzqqq9cw"
         }
     ],
     "edges": [
@@ -2591,6 +2596,12 @@
         {
             "from": "_vcuvd95d3",
             "to": "_dlkoi8m1q",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_krzqqq9cw",
             "category": "from-to",
             "desc": "has reply"
         }
