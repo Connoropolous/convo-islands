@@ -1099,6 +1099,11 @@
             "text": "target the json file so that it doesn't commit code changes",
             "author": "connor",
             "id": "_lisl24nk5"
+        },
+        {
+            "text": "this is now added",
+            "author": "connor",
+            "id": "_n1z13bjim"
         }
     ],
     "edges": [
@@ -2371,6 +2376,12 @@
         {
             "from": "_j86eaw68y",
             "to": "_lisl24nk5",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_lisl24nk5",
+            "to": "_n1z13bjim",
             "category": "from-to",
             "desc": "has reply"
         }
