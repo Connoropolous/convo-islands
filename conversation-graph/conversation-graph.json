@@ -979,6 +979,11 @@
             "text": "then this presents to the user, and gives them a button to click to reload",
             "author": "connor",
             "id": "_bfy83i589"
+        },
+        {
+            "text": "I showed connor otter.ai, we'll try using it soon.",
+            "author": "robert",
+            "id": "_bwy0lgwxo"
         }
     ],
     "edges": [
@@ -2119,6 +2124,12 @@
         {
             "from": "_4oet5lmzw",
             "to": "_bfy83i589",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_nrn129j53",
+            "to": "_bwy0lgwxo",
             "category": "from-to",
             "desc": "has reply"
         }
