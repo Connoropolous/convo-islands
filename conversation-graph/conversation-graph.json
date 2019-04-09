@@ -1159,6 +1159,16 @@
             "text": "I love it",
             "author": "connor",
             "id": "_0p5mndhjm"
+        },
+        {
+            "text": "the beauty of this system is that technically it is \"offline first\"",
+            "author": "connor",
+            "id": "_oif5vqm9a"
+        },
+        {
+            "text": "blended offline/online editing",
+            "author": "connor",
+            "id": "_odrt1o0f5"
         }
     ],
     "edges": [
@@ -2503,6 +2513,18 @@
         {
             "from": "_qli83i6yt",
             "to": "_0p5mndhjm",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "1",
+            "to": "_oif5vqm9a",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_oif5vqm9a",
+            "to": "_odrt1o0f5",
             "category": "from-to",
             "desc": "has reply"
         }
