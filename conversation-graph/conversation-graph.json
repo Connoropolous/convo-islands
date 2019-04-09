@@ -989,6 +989,11 @@
             "text": "He seems to like it",
             "author": "robert",
             "id": "_4kar6nji5"
+        },
+        {
+            "text": "Yes, I do like it",
+            "author": "connor",
+            "id": "_vqevfuq0r"
         }
     ],
     "edges": [
@@ -2141,6 +2146,12 @@
         {
             "from": "_bwy0lgwxo",
             "to": "_4kar6nji5",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_4kar6nji5",
+            "to": "_vqevfuq0r",
             "category": "from-to",
             "desc": "has reply"
         }
