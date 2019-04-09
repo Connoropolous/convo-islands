@@ -1124,6 +1124,11 @@
             "text": "if the input box is not in focus, we could use the arrow keys to navigate",
             "author": "connor",
             "id": "_h9so9ueq7"
+        },
+        {
+            "text": "then we could have a hotkey for bringing the input box into focus",
+            "author": "connor",
+            "id": "_8pfsnk2ch"
         }
     ],
     "edges": [
@@ -2426,6 +2431,12 @@
         {
             "from": "_suspqdq3v",
             "to": "_h9so9ueq7",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_h9so9ueq7",
+            "to": "_8pfsnk2ch",
             "category": "from-to",
             "desc": "has reply"
         }
