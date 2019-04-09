@@ -1074,6 +1074,11 @@
             "text": "where should the input box be placed?",
             "author": "connor",
             "id": "_ct8yztjga"
+        },
+        {
+            "text": "dynamically?",
+            "author": "connor",
+            "id": "_uqwtomy9u"
         }
     ],
     "edges": [
@@ -2316,6 +2321,12 @@
         {
             "from": "_ck7burvcg",
             "to": "_ct8yztjga",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_ct8yztjga",
+            "to": "_uqwtomy9u",
             "category": "from-to",
             "desc": "has reply"
         }
