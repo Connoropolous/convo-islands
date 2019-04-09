@@ -1134,6 +1134,11 @@
             "text": "it would be interesting to do some signalling to each other about what areas of this capture our attention the most",
             "author": "connor",
             "id": "_a9gz78yjk"
+        },
+        {
+            "text": "signalling parts that we might want to work on",
+            "author": "connor",
+            "id": "_vvr13evpi"
         }
     ],
     "edges": [
@@ -2448,6 +2453,12 @@
         {
             "from": "1",
             "to": "_a9gz78yjk",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_a9gz78yjk",
+            "to": "_vvr13evpi",
             "category": "from-to",
             "desc": "has reply"
         }
