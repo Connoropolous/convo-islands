@@ -1184,6 +1184,11 @@
             "text": "grounding our work in deep theory",
             "author": "connor",
             "id": "_09hnjf7u3"
+        },
+        {
+            "text": "standing on the shoulders of giants",
+            "author": "connor",
+            "id": "_x45g1hca0"
         }
     ],
     "edges": [
@@ -2558,6 +2563,12 @@
         {
             "from": "_ju27xn6xd",
             "to": "_09hnjf7u3",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_ju27xn6xd",
+            "to": "_x45g1hca0",
             "category": "from-to",
             "desc": "has reply"
         }
