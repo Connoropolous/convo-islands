@@ -1094,6 +1094,11 @@
             "text": "desperately need this, because you lose things so quickly",
             "author": "connor",
             "id": "_t3rfrclwh"
+        },
+        {
+            "text": "target the json file so that it doesn't commit code changes",
+            "author": "connor",
+            "id": "_lisl24nk5"
         }
     ],
     "edges": [
@@ -2360,6 +2365,12 @@
         {
             "from": "_pidexjd4s",
             "to": "_t3rfrclwh",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_j86eaw68y",
+            "to": "_lisl24nk5",
             "category": "from-to",
             "desc": "has reply"
         }
