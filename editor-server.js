@@ -146,7 +146,7 @@ app.post('/add-node', (req, res) => {
     // immediately after modifying the JSON file
     // commit the change, but don't block
     setTimeout(() => {
-        if (shell.exec('git commit -am "auto-commit"', { silent: true }).code !== 0) {
+        if (shell.exec(`git commit -am "${node.text}"`, { silent: true }).code !== 0) {
             console.log('There was an error committing')
         } else {
             if (shell.exec('git push', { silent: true }).code !== 0) {
