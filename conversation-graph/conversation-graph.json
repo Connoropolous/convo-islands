@@ -1044,6 +1044,11 @@
             "text": "Create a mechanism on the interface to change the current root node",
             "author": "robert",
             "id": "_amce21iwu"
+        },
+        {
+            "text": "Because the nodes all lie on a grid, the arrow keys would be a great way to navigate the nodes",
+            "author": "robert",
+            "id": "_d17hbp3ze"
         }
     ],
     "edges": [
@@ -2250,6 +2255,12 @@
         {
             "from": "_z0k58fv18",
             "to": "_amce21iwu",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_d17hbp3ze",
             "category": "from-to",
             "desc": "has reply"
         }
