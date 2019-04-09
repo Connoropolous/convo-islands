@@ -1089,6 +1089,11 @@
             "text": "amend this so that the git commit is prefixed by something that indicates this is a content change, not a code change",
             "author": "connor",
             "id": "_qhn5voo75"
+        },
+        {
+            "text": "desperately need this, because you lose things so quickly",
+            "author": "connor",
+            "id": "_t3rfrclwh"
         }
     ],
     "edges": [
@@ -2349,6 +2354,12 @@
         {
             "from": "_1vo3wcu92",
             "to": "_qhn5voo75",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_pidexjd4s",
+            "to": "_t3rfrclwh",
             "category": "from-to",
             "desc": "has reply"
         }
