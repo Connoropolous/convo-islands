@@ -1189,6 +1189,11 @@
             "text": "standing on the shoulders of giants",
             "author": "connor",
             "id": "_x45g1hca0"
+        },
+        {
+            "text": "start the server with a filewatcher so that when changes to the server file are pulled, or made locally, it restarts",
+            "author": "connor",
+            "id": "_vcuvd95d3"
         }
     ],
     "edges": [
@@ -2569,6 +2574,12 @@
         {
             "from": "_ju27xn6xd",
             "to": "_x45g1hca0",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_vcuvd95d3",
             "category": "from-to",
             "desc": "has reply"
         }
