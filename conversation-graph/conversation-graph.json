@@ -1039,6 +1039,11 @@
             "text": "Make the trees on an island collapsible on the interface",
             "author": "robert",
             "id": "_ckl8q4qyr"
+        },
+        {
+            "text": "Create a mechanism on the interface to change the current root node",
+            "author": "robert",
+            "id": "_amce21iwu"
         }
     ],
     "edges": [
@@ -2239,6 +2244,12 @@
         {
             "from": "_z0k58fv18",
             "to": "_ckl8q4qyr",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_amce21iwu",
             "category": "from-to",
             "desc": "has reply"
         }
