@@ -894,6 +894,11 @@
             "text": "this is now added",
             "author": "connor",
             "id": "_ct8m712ge"
+        },
+        {
+            "text": "this is now added",
+            "author": "connor",
+            "id": "_qgv8a4l17"
         }
     ],
     "edges": [
@@ -1950,6 +1955,12 @@
         {
             "from": "_5qhgayc5q",
             "to": "_ct8m712ge",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_j86eaw68y",
+            "to": "_qgv8a4l17",
             "category": "from-to",
             "desc": "has reply"
         }
