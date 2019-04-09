@@ -43,20 +43,13 @@ const refreshJs = () => {
     let newjs = js.replace(/{{ data }}/gim, `${JSON.stringify(cytoscapeData)}`)
     fs.writeFileSync('./conversation-graph/conversation-graph.js', newjs, 'utf-8')
 }
+// initialize the js file on startup, based on the graph we have
+refreshJs()
 
-// initialize the js file on startup, based on the graph we have,
-// if no js file is found
-try {
-    fs.readFileSync('./conversation-graph/conversation-graph.js', 'utf-8')
-} catch (e) {
-    refreshJs()
-}
-
-/* polling of the remote git repository
+/* POLLING of the remote git repository
     for updates. can be stopped, started,
     and changed in its frequency
 */
-
 const DEFAULT_POLL_INTERVAL = 5000 // milliseconds
 let pollInterval // value to store the current interval amount in memory
 let polltimer
