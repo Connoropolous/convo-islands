@@ -1084,6 +1084,11 @@
             "text": "statically?",
             "author": "connor",
             "id": "_fe5gs7h42"
+        },
+        {
+            "text": "amend this so that the git commit is prefixed by something that indicates this is a content change, not a code change",
+            "author": "connor",
+            "id": "_qhn5voo75"
         }
     ],
     "edges": [
@@ -2338,6 +2343,12 @@
         {
             "from": "_ct8yztjga",
             "to": "_fe5gs7h42",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_1vo3wcu92",
+            "to": "_qhn5voo75",
             "category": "from-to",
             "desc": "has reply"
         }
