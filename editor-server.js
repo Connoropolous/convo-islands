@@ -61,6 +61,8 @@ app.post('/add-node', (req, res) => {
     }
     fs.writeFileSync('./conversation-graph/conversation-graph.json', JSON.stringify({ nodes, edges }, null, 4), 'utf-8')
 
+    // immediately after modifying the JSON file
+    // commit the change
     if (shell.exec('git commit -am "auto-commit"').code !== 0) {
         // 500 server side error
         res.sendStatus(500)

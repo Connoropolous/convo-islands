@@ -889,6 +889,11 @@
             "text": "testing this idead",
             "author": "connor",
             "id": "_gaae60yau"
+        },
+        {
+            "text": "this is now added",
+            "author": "connor",
+            "id": "_ct8m712ge"
         }
     ],
     "edges": [
@@ -1939,6 +1944,12 @@
         {
             "from": "_4liqrfezp",
             "to": "_gaae60yau",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_5qhgayc5q",
+            "to": "_ct8m712ge",
             "category": "from-to",
             "desc": "has reply"
         }
