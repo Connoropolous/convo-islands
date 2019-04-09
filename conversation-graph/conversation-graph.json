@@ -1064,6 +1064,11 @@
             "text": "what could we do to use the keyboard to navigate?",
             "author": "connor",
             "id": "_suspqdq3v"
+        },
+        {
+            "text": "feature questions",
+            "author": "connor",
+            "id": "_ck7burvcg"
         }
     ],
     "edges": [
@@ -2294,6 +2299,12 @@
         {
             "from": "_b33g9nysa",
             "to": "_suspqdq3v",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "1",
+            "to": "_ck7burvcg",
             "category": "from-to",
             "desc": "has reply"
         }
