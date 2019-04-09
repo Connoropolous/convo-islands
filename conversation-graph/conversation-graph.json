@@ -1244,6 +1244,11 @@
             "text": "a node has two filled parent ids (its a merge)",
             "author": "connor",
             "id": "_ma8qbc0e4"
+        },
+        {
+            "text": "this would imply the stricter data structure",
+            "author": "connor",
+            "id": "_5cuplr0ad"
         }
     ],
     "edges": [
@@ -2690,6 +2695,12 @@
         {
             "from": "_p5hvf18tv",
             "to": "_ma8qbc0e4",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_2a89qr43f",
+            "to": "_5cuplr0ad",
             "category": "from-to",
             "desc": "has reply"
         }
