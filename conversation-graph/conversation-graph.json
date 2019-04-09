@@ -1209,6 +1209,11 @@
             "text": "this was Pegahs idea",
             "author": "connor",
             "id": "_l1t8qvy4j"
+        },
+        {
+            "text": "sort of a 'summary' feature",
+            "author": "connor",
+            "id": "_8p9i7xtll"
         }
     ],
     "edges": [
@@ -2613,6 +2618,12 @@
         {
             "from": "_krzqqq9cw",
             "to": "_l1t8qvy4j",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_l1t8qvy4j",
+            "to": "_8p9i7xtll",
             "category": "from-to",
             "desc": "has reply"
         }
