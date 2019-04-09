@@ -1069,6 +1069,11 @@
             "text": "feature questions",
             "author": "connor",
             "id": "_ck7burvcg"
+        },
+        {
+            "text": "where should the input box be placed?",
+            "author": "connor",
+            "id": "_ct8yztjga"
         }
     ],
     "edges": [
@@ -2305,6 +2310,12 @@
         {
             "from": "1",
             "to": "_ck7burvcg",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_ck7burvcg",
+            "to": "_ct8yztjga",
             "category": "from-to",
             "desc": "has reply"
         }
