@@ -959,6 +959,11 @@
             "text": "it does a git push after every action now too",
             "author": "connor",
             "id": "_1izeqmvit"
+        },
+        {
+            "text": "the backend code for this is now added",
+            "author": "connor",
+            "id": "_91eul5bq5"
         }
     ],
     "edges": [
@@ -2075,6 +2080,12 @@
         {
             "from": "_qgv8a4l17",
             "to": "_1izeqmvit",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_5hbprlh4b",
+            "to": "_91eul5bq5",
             "category": "from-to",
             "desc": "has reply"
         }
