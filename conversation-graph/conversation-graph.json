@@ -969,6 +969,11 @@
             "text": "it polls by default every 5 seconds",
             "author": "connor",
             "id": "_7whamcazz"
+        },
+        {
+            "text": "when it receives a remote update, it notifies the UI via websockets that an update is available",
+            "author": "connor",
+            "id": "_4oet5lmzw"
         }
     ],
     "edges": [
@@ -2097,6 +2102,12 @@
         {
             "from": "_91eul5bq5",
             "to": "_7whamcazz",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_5hbprlh4b",
+            "to": "_4oet5lmzw",
             "category": "from-to",
             "desc": "has reply"
         }
