@@ -999,6 +999,11 @@
             "text": "Seems we need to find a day other than Monday now",
             "author": "robert",
             "id": "_er14rttb6"
+        },
+        {
+            "text": "Wednesday?",
+            "author": "connor",
+            "id": "_3ly3kksb9"
         }
     ],
     "edges": [
@@ -2163,6 +2168,12 @@
         {
             "from": "_21y562k6y",
             "to": "_er14rttb6",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_er14rttb6",
+            "to": "_3ly3kksb9",
             "category": "from-to",
             "desc": "has reply"
         }
