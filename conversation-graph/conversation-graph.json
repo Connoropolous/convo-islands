@@ -1149,6 +1149,11 @@
             "text": "Nico demoed this for me today",
             "author": "connor",
             "id": "_lhiyc6jsr"
+        },
+        {
+            "text": "it has fractal/holonic navigation",
+            "author": "connor",
+            "id": "_qli83i6yt"
         }
     ],
     "edges": [
@@ -2481,6 +2486,12 @@
         {
             "from": "_pzhgjsl5d",
             "to": "_lhiyc6jsr",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_lhiyc6jsr",
+            "to": "_qli83i6yt",
             "category": "from-to",
             "desc": "has reply"
         }
