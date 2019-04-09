@@ -1054,6 +1054,11 @@
             "text": "Yes!",
             "author": "connor",
             "id": "_r8tffdl3u"
+        },
+        {
+            "text": "the arrow keys maybe, but that could conflict with the use of the arrow keys in the text input box",
+            "author": "connor",
+            "id": "_b33g9nysa"
         }
     ],
     "edges": [
@@ -2272,6 +2277,12 @@
         {
             "from": "_ckl8q4qyr",
             "to": "_r8tffdl3u",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_d17hbp3ze",
+            "to": "_b33g9nysa",
             "category": "from-to",
             "desc": "has reply"
         }
