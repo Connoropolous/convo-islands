@@ -15,13 +15,23 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+// this handles parsing http request bodies
+// into JSON objects automagically
 app.use(express.json())
+// this serves a static files server out of the conversation-graph
+// folder
 app.use(express.static('conversation-graph'))
 
+// a utility ID generator for added nodes
 const ID = () => {
     return '_' + Math.random().toString(36).substr(2, 9)
 }
 
+// take a node list and edge list
+// and run it through our layout algorithm,
+// then convert that into a graph vis friendly format
+// and inject that into the JS file which is referenced in the
+// main index.html file
 const refreshJs = (nodes, edges) => {
     const focalTopicId = "1"
     const focalCoords = { x: 0, y: 0 }
@@ -44,6 +54,8 @@ try {
 // a route to handle the adding of a node
 // from the UI
 app.post('/add-node', (req, res) => {
+
+    // this data comes off the request body, from the client
     const { node, reply_to } = req.body
 
     // update the graph
