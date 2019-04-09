@@ -1214,6 +1214,11 @@
             "text": "sort of a 'summary' feature",
             "author": "connor",
             "id": "_8p9i7xtll"
+        },
+        {
+            "text": "if the selected id in the url changes when you select a node, then you could share that link with someone else, to draw their attention to it",
+            "author": "connor",
+            "id": "_gvolpqbzv"
         }
     ],
     "edges": [
@@ -2624,6 +2629,12 @@
         {
             "from": "_l1t8qvy4j",
             "to": "_8p9i7xtll",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_gvolpqbzv",
             "category": "from-to",
             "desc": "has reply"
         }
