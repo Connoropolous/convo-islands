@@ -153,7 +153,7 @@ app.post('/add-node', (req, res) => {
                 console.log('There was an error pushing')
             }
         }
-    }, 1)
+    }, 1000)
 })
 
 // a route to manually trigger a rebuild of the JS file

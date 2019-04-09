@@ -939,6 +939,11 @@
             "text": "test response any faster?",
             "author": "connor",
             "id": "_1nf016cpp"
+        },
+        {
+            "text": "check check check",
+            "author": "connor",
+            "id": "_u46x8dhx0"
         }
     ],
     "edges": [
@@ -2031,6 +2036,12 @@
         {
             "from": "_3cg704cpa",
             "to": "_1nf016cpp",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_1nf016cpp",
+            "to": "_u46x8dhx0",
             "category": "from-to",
             "desc": "has reply"
         }
