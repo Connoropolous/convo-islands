@@ -1169,6 +1169,11 @@
             "text": "blended offline/online editing",
             "author": "connor",
             "id": "_odrt1o0f5"
+        },
+        {
+            "text": "view the time a node was created by hovering over it",
+            "author": "connor",
+            "id": "_mol3f2kok"
         }
     ],
     "edges": [
@@ -2525,6 +2530,12 @@
         {
             "from": "_oif5vqm9a",
             "to": "_odrt1o0f5",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_j9l8zevhb",
+            "to": "_mol3f2kok",
             "category": "from-to",
             "desc": "has reply"
         }
