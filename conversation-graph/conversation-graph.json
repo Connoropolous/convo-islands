@@ -949,6 +949,11 @@
             "text": "seems faster",
             "author": "connor",
             "id": "_pjtvrwhrh"
+        },
+        {
+            "text": "much faster?",
+            "author": "connor",
+            "id": "_owwiik58h"
         }
     ],
     "edges": [
@@ -2053,6 +2058,12 @@
         {
             "from": "_u46x8dhx0",
             "to": "_pjtvrwhrh",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_pjtvrwhrh",
+            "to": "_owwiik58h",
             "category": "from-to",
             "desc": "has reply"
         }
