@@ -1104,6 +1104,11 @@
             "text": "this is now added",
             "author": "connor",
             "id": "_n1z13bjim"
+        },
+        {
+            "text": "this is now added, it prefixes with `node: `",
+            "author": "connor",
+            "id": "_s4ggkjfm5"
         }
     ],
     "edges": [
@@ -2382,6 +2387,12 @@
         {
             "from": "_lisl24nk5",
             "to": "_n1z13bjim",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_qhn5voo75",
+            "to": "_s4ggkjfm5",
             "category": "from-to",
             "desc": "has reply"
         }
