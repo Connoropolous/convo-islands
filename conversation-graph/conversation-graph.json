@@ -914,6 +914,11 @@
             "text": "replying to it",
             "author": "connor",
             "id": "_i9neivaw9"
+        },
+        {
+            "text": "selected",
+            "author": "connor",
+            "id": "_kgsuokn6j"
         }
     ],
     "edges": [
@@ -1982,6 +1987,12 @@
         {
             "from": "_htroopiro",
             "to": "_i9neivaw9",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_htroopiro",
+            "to": "_kgsuokn6j",
             "category": "from-to",
             "desc": "has reply"
         }
