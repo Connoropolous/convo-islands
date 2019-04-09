@@ -144,14 +144,16 @@ app.post('/add-node', (req, res) => {
     res.status(200).send(node.id)
 
     // immediately after modifying the JSON file
-    // commit the change
-    if (shell.exec('git commit -am "auto-commit"', { silent: true }).code !== 0) {
-        console.log('There was an error committing')
-    } else {
-        if (shell.exec('git push', { silent: true }).code !== 0) {
-            console.log('There was an error pushing')
+    // commit the change, but don't block
+    setTimeout(() => {
+        if (shell.exec('git commit -am "auto-commit"', { silent: true }).code !== 0) {
+            console.log('There was an error committing')
+        } else {
+            if (shell.exec('git push', { silent: true }).code !== 0) {
+                console.log('There was an error pushing')
+            }
         }
-    }
+    }, 1)
 })
 
 // a route to manually trigger a rebuild of the JS file

@@ -929,6 +929,16 @@
             "text": "test response",
             "author": "connor",
             "id": "_chrcskjcf"
+        },
+        {
+            "text": "test response any faster?",
+            "author": "connor",
+            "id": "_3cg704cpa"
+        },
+        {
+            "text": "test response any faster?",
+            "author": "connor",
+            "id": "_1nf016cpp"
         }
     ],
     "edges": [
@@ -2009,6 +2019,18 @@
         {
             "from": "_kgsuokn6j",
             "to": "_chrcskjcf",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_chrcskjcf",
+            "to": "_3cg704cpa",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_3cg704cpa",
+            "to": "_1nf016cpp",
             "category": "from-to",
             "desc": "has reply"
         }
