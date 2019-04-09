@@ -1194,6 +1194,11 @@
             "text": "start the server with a filewatcher so that when changes to the server file are pulled, or made locally, it restarts",
             "author": "connor",
             "id": "_vcuvd95d3"
+        },
+        {
+            "text": "nodemon",
+            "author": "connor",
+            "id": "_dlkoi8m1q"
         }
     ],
     "edges": [
@@ -2580,6 +2585,12 @@
         {
             "from": "_z0k58fv18",
             "to": "_vcuvd95d3",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_vcuvd95d3",
+            "to": "_dlkoi8m1q",
             "category": "from-to",
             "desc": "has reply"
         }
