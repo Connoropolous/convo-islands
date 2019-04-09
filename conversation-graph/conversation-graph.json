@@ -1144,6 +1144,11 @@
             "text": "noomap",
             "author": "connor",
             "id": "_pzhgjsl5d"
+        },
+        {
+            "text": "Nico demoed this for me today",
+            "author": "connor",
+            "id": "_lhiyc6jsr"
         }
     ],
     "edges": [
@@ -2470,6 +2475,12 @@
         {
             "from": "_cykz1cwa3",
             "to": "_pzhgjsl5d",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_pzhgjsl5d",
+            "to": "_lhiyc6jsr",
             "category": "from-to",
             "desc": "has reply"
         }
