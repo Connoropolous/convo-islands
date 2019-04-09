@@ -1219,6 +1219,11 @@
             "text": "if the selected id in the url changes when you select a node, then you could share that link with someone else, to draw their attention to it",
             "author": "connor",
             "id": "_gvolpqbzv"
+        },
+        {
+            "text": "I am thinking of a change to the data structure, where each node just has two fields, for refering to parent ids",
+            "author": "connor",
+            "id": "_2a89qr43f"
         }
     ],
     "edges": [
@@ -2635,6 +2640,12 @@
         {
             "from": "_z0k58fv18",
             "to": "_gvolpqbzv",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_nf131ytca",
+            "to": "_2a89qr43f",
             "category": "from-to",
             "desc": "has reply"
         }
