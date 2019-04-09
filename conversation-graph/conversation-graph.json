@@ -1014,6 +1014,11 @@
             "text": "I am Robert",
             "author": "robert",
             "id": "_v8kzyphln"
+        },
+        {
+            "text": "thee git commit message is the text of the new node itself",
+            "author": "connor",
+            "id": "_1vo3wcu92"
         }
     ],
     "edges": [
@@ -2196,6 +2201,12 @@
         {
             "from": "_dlib780tu",
             "to": "_v8kzyphln",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_j86eaw68y",
+            "to": "_1vo3wcu92",
             "category": "from-to",
             "desc": "has reply"
         }
