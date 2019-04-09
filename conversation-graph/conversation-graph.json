@@ -924,6 +924,11 @@
             "text": "selected",
             "author": "connor",
             "id": "_kgsuokn6j"
+        },
+        {
+            "text": "test response",
+            "author": "connor",
+            "id": "_chrcskjcf"
         }
     ],
     "edges": [
@@ -1998,6 +2003,12 @@
         {
             "from": "_htroopiro",
             "to": "_kgsuokn6j",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_kgsuokn6j",
+            "to": "_chrcskjcf",
             "category": "from-to",
             "desc": "has reply"
         }

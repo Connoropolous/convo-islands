@@ -135,18 +135,6 @@ app.post('/add-node', (req, res) => {
     }
     fs.writeFileSync('./conversation-graph/conversation-graph.json', JSON.stringify({ nodes, edges }, null, 4), 'utf-8')
 
-    // immediately after modifying the JSON file
-    // commit the change
-    if (shell.exec('git commit -am "auto-commit"').code !== 0) {
-        // 500 server side error
-        res.sendStatus(500)
-    } else {
-        if (shell.exec('git push').code !== 0) {
-            // 500 server side error
-            res.sendStatus(500)
-        }
-    }
-
     // update the js based on the new graph
     refreshJs()
 
@@ -154,6 +142,16 @@ app.post('/add-node', (req, res) => {
     // can trigger a page refresh, with the newly minted
     // node in focus
     res.status(200).send(node.id)
+
+    // immediately after modifying the JSON file
+    // commit the change
+    if (shell.exec('git commit -am "auto-commit"', { silent: true }).code !== 0) {
+        console.log('There was an error committing')
+    } else {
+        if (shell.exec('git push', { silent: true }).code !== 0) {
+            console.log('There was an error pushing')
+        }
+    }
 })
 
 // a route to manually trigger a rebuild of the JS file
