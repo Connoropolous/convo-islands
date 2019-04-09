@@ -1119,6 +1119,11 @@
             "text": "a settings panel, to encapsulate all the settings we wish to introduce",
             "author": "connor",
             "id": "_ld4o6t017"
+        },
+        {
+            "text": "if the input box is not in focus, we could use the arrow keys to navigate",
+            "author": "connor",
+            "id": "_h9so9ueq7"
         }
     ],
     "edges": [
@@ -2415,6 +2420,12 @@
         {
             "from": "_z0k58fv18",
             "to": "_ld4o6t017",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_suspqdq3v",
+            "to": "_h9so9ueq7",
             "category": "from-to",
             "desc": "has reply"
         }
