@@ -964,6 +964,11 @@
             "text": "the backend code for this is now added",
             "author": "connor",
             "id": "_91eul5bq5"
+        },
+        {
+            "text": "it polls by default every 5 seconds",
+            "author": "connor",
+            "id": "_7whamcazz"
         }
     ],
     "edges": [
@@ -2086,6 +2091,12 @@
         {
             "from": "_5hbprlh4b",
             "to": "_91eul5bq5",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_91eul5bq5",
+            "to": "_7whamcazz",
             "category": "from-to",
             "desc": "has reply"
         }
