@@ -879,6 +879,11 @@
             "text": "I don't need to pretend",
             "author": "robert",
             "id": "_dlib780tu"
+        },
+        {
+            "text": "testing this idea",
+            "author": "connor",
+            "id": "_ckrbhumee"
         }
     ],
     "edges": [
@@ -1917,6 +1922,12 @@
         {
             "from": "_6m8j91hhj",
             "to": "_dlib780tu",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_4liqrfezp",
+            "to": "_ckrbhumee",
             "category": "from-to",
             "desc": "has reply"
         }
