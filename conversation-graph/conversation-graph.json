@@ -1154,6 +1154,11 @@
             "text": "it has fractal/holonic navigation",
             "author": "connor",
             "id": "_qli83i6yt"
+        },
+        {
+            "text": "I love it",
+            "author": "connor",
+            "id": "_0p5mndhjm"
         }
     ],
     "edges": [
@@ -2492,6 +2497,12 @@
         {
             "from": "_lhiyc6jsr",
             "to": "_qli83i6yt",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_qli83i6yt",
+            "to": "_0p5mndhjm",
             "category": "from-to",
             "desc": "has reply"
         }
