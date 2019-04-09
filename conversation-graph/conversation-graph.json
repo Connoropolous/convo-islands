@@ -1239,6 +1239,11 @@
             "text": "a node has one filled parent id (its a child)",
             "author": "connor",
             "id": "_kwoag1vvs"
+        },
+        {
+            "text": "a node has two filled parent ids (its a merge)",
+            "author": "connor",
+            "id": "_ma8qbc0e4"
         }
     ],
     "edges": [
@@ -2679,6 +2684,12 @@
         {
             "from": "_p5hvf18tv",
             "to": "_kwoag1vvs",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_p5hvf18tv",
+            "to": "_ma8qbc0e4",
             "category": "from-to",
             "desc": "has reply"
         }
