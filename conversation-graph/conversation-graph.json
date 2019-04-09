@@ -1204,6 +1204,11 @@
             "text": "Selecting a bunch of topics in a thread, then naming that thread",
             "author": "connor",
             "id": "_krzqqq9cw"
+        },
+        {
+            "text": "this was Pegahs idea",
+            "author": "connor",
+            "id": "_l1t8qvy4j"
         }
     ],
     "edges": [
@@ -2602,6 +2607,12 @@
         {
             "from": "_z0k58fv18",
             "to": "_krzqqq9cw",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_krzqqq9cw",
+            "to": "_l1t8qvy4j",
             "category": "from-to",
             "desc": "has reply"
         }
