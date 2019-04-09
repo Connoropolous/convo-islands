@@ -884,6 +884,11 @@
             "text": "testing this idea",
             "author": "connor",
             "id": "_ckrbhumee"
+        },
+        {
+            "text": "testing this idead",
+            "author": "connor",
+            "id": "_gaae60yau"
         }
     ],
     "edges": [
@@ -1928,6 +1933,12 @@
         {
             "from": "_4liqrfezp",
             "to": "_ckrbhumee",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_4liqrfezp",
+            "to": "_gaae60yau",
             "category": "from-to",
             "desc": "has reply"
         }

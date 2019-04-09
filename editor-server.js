@@ -28,7 +28,7 @@ const refreshJs = (nodes, edges) => {
     const positions = getLayoutForData(nodes, edges, focalTopicId, focalCoords)
     const cytoscapeData = cytoscapeConverter(nodes, edges, positions)
     const js = fs.readFileSync('./conversation-graph/conversation-graph.template.js', 'utf-8')
-    let newjs = html.replace(/{{data}}/gim, `${JSON.stringify(cytoscapeData)}`)
+    let newjs = js.replace(/{{data}}/gim, `${JSON.stringify(cytoscapeData)}`)
     fs.writeFileSync('./conversation-graph/conversation-graph.js', newjs, 'utf-8')
 }
 
