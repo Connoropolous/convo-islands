@@ -1174,6 +1174,16 @@
             "text": "view the time a node was created by hovering over it",
             "author": "connor",
             "id": "_mol3f2kok"
+        },
+        {
+            "text": "Robert is taking an \"augmented collective intelligence\" course with Howard Rheingold",
+            "author": "connor",
+            "id": "_ju27xn6xd"
+        },
+        {
+            "text": "grounding our work in deep theory",
+            "author": "connor",
+            "id": "_09hnjf7u3"
         }
     ],
     "edges": [
@@ -2536,6 +2546,18 @@
         {
             "from": "_j9l8zevhb",
             "to": "_mol3f2kok",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_9feu6m99o",
+            "to": "_ju27xn6xd",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_ju27xn6xd",
+            "to": "_09hnjf7u3",
             "category": "from-to",
             "desc": "has reply"
         }
