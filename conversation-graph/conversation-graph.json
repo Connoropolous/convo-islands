@@ -1249,6 +1249,11 @@
             "text": "this would imply the stricter data structure",
             "author": "connor",
             "id": "_5cuplr0ad"
+        },
+        {
+            "text": "do we want this?",
+            "author": "connor",
+            "id": "_kjj4cwr6k"
         }
     ],
     "edges": [
@@ -2701,6 +2706,12 @@
         {
             "from": "_2a89qr43f",
             "to": "_5cuplr0ad",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_5cuplr0ad",
+            "to": "_kjj4cwr6k",
             "category": "from-to",
             "desc": "has reply"
         }
