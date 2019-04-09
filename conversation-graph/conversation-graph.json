@@ -954,6 +954,11 @@
             "text": "much faster?",
             "author": "connor",
             "id": "_owwiik58h"
+        },
+        {
+            "text": "it does a git push after every action now too",
+            "author": "connor",
+            "id": "_1izeqmvit"
         }
     ],
     "edges": [
@@ -2064,6 +2069,12 @@
         {
             "from": "_pjtvrwhrh",
             "to": "_owwiik58h",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_qgv8a4l17",
+            "to": "_1izeqmvit",
             "category": "from-to",
             "desc": "has reply"
         }
