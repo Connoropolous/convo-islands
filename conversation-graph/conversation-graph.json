@@ -1059,6 +1059,11 @@
             "text": "the arrow keys maybe, but that could conflict with the use of the arrow keys in the text input box",
             "author": "connor",
             "id": "_b33g9nysa"
+        },
+        {
+            "text": "what could we do to use the keyboard to navigate?",
+            "author": "connor",
+            "id": "_suspqdq3v"
         }
     ],
     "edges": [
@@ -2283,6 +2288,12 @@
         {
             "from": "_d17hbp3ze",
             "to": "_b33g9nysa",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_b33g9nysa",
+            "to": "_suspqdq3v",
             "category": "from-to",
             "desc": "has reply"
         }
