@@ -1234,6 +1234,11 @@
             "text": "a node has no filled parent ids (its a root)",
             "author": "connor",
             "id": "_2cgnkj67h"
+        },
+        {
+            "text": "a node has one filled parent id (its a child)",
+            "author": "connor",
+            "id": "_kwoag1vvs"
         }
     ],
     "edges": [
@@ -2668,6 +2673,12 @@
         {
             "from": "_p5hvf18tv",
             "to": "_2cgnkj67h",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_p5hvf18tv",
+            "to": "_kwoag1vvs",
             "category": "from-to",
             "desc": "has reply"
         }
