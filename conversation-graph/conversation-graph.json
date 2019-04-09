@@ -1079,6 +1079,11 @@
             "text": "dynamically?",
             "author": "connor",
             "id": "_uqwtomy9u"
+        },
+        {
+            "text": "statically?",
+            "author": "connor",
+            "id": "_fe5gs7h42"
         }
     ],
     "edges": [
@@ -2327,6 +2332,12 @@
         {
             "from": "_ct8yztjga",
             "to": "_uqwtomy9u",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_ct8yztjga",
+            "to": "_fe5gs7h42",
             "category": "from-to",
             "desc": "has reply"
         }
