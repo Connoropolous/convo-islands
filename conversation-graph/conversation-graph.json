@@ -1139,6 +1139,11 @@
             "text": "signalling parts that we might want to work on",
             "author": "connor",
             "id": "_vvr13evpi"
+        },
+        {
+            "text": "noomap",
+            "author": "connor",
+            "id": "_pzhgjsl5d"
         }
     ],
     "edges": [
@@ -2459,6 +2464,12 @@
         {
             "from": "_a9gz78yjk",
             "to": "_vvr13evpi",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_cykz1cwa3",
+            "to": "_pzhgjsl5d",
             "category": "from-to",
             "desc": "has reply"
         }
