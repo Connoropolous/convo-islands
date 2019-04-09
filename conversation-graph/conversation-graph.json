@@ -909,6 +909,11 @@
             "text": "a new element",
             "author": "connor",
             "id": "_htroopiro"
+        },
+        {
+            "text": "replying to it",
+            "author": "connor",
+            "id": "_i9neivaw9"
         }
     ],
     "edges": [
@@ -1971,6 +1976,12 @@
         {
             "from": "_j86eaw68y",
             "to": "_qgv8a4l17",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_htroopiro",
+            "to": "_i9neivaw9",
             "category": "from-to",
             "desc": "has reply"
         }
