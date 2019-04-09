@@ -1034,6 +1034,11 @@
             "text": "Does this create a new node? I I don't have anything selected.",
             "author": "robert",
             "id": "_zc41vq45d"
+        },
+        {
+            "text": "Make the trees on an island collapsible on the interface",
+            "author": "robert",
+            "id": "_ckl8q4qyr"
         }
     ],
     "edges": [
@@ -2228,6 +2233,12 @@
         {
             "from": "_bwy0lgwxo",
             "to": "_59padpdi9",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_ckl8q4qyr",
             "category": "from-to",
             "desc": "has reply"
         }
