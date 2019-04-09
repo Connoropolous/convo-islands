@@ -984,6 +984,11 @@
             "text": "I showed connor otter.ai, we'll try using it soon.",
             "author": "robert",
             "id": "_bwy0lgwxo"
+        },
+        {
+            "text": "He seems to like it",
+            "author": "robert",
+            "id": "_4kar6nji5"
         }
     ],
     "edges": [
@@ -2130,6 +2135,12 @@
         {
             "from": "_nrn129j53",
             "to": "_bwy0lgwxo",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_bwy0lgwxo",
+            "to": "_4kar6nji5",
             "category": "from-to",
             "desc": "has reply"
         }
