@@ -1344,6 +1344,11 @@
             "text": "use the `esc` key to take the input out of focus so that you can navigate the graph with the keyboard again",
             "author": "connor",
             "id": "_ntbusw38g"
+        },
+        {
+            "text": "how could the entire app take accessibility into account?",
+            "author": "connor",
+            "id": "_oo02kk14x"
         }
     ],
     "edges": [
@@ -2910,6 +2915,12 @@
         {
             "from": "_i3rq9s14v",
             "to": "_ntbusw38g",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_ck7burvcg",
+            "to": "_oo02kk14x",
             "category": "from-to",
             "desc": "has reply"
         }
