@@ -1349,6 +1349,11 @@
             "text": "how could the entire app take accessibility into account?",
             "author": "connor",
             "id": "_oo02kk14x"
+        },
+        {
+            "text": "clicking on a node could highlight the downstream thread, and others outside that could be faded",
+            "author": "connor",
+            "id": "_qxlulace5"
         }
     ],
     "edges": [
@@ -2921,6 +2926,12 @@
         {
             "from": "_ck7burvcg",
             "to": "_oo02kk14x",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_qxlulace5",
             "category": "from-to",
             "desc": "has reply"
         }
