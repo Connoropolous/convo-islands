@@ -1399,6 +1399,11 @@
             "text": "currently it will only take you to the very latest one",
             "author": "connor",
             "id": "_t6l6m4qav"
+        },
+        {
+            "text": "technically, the whole list of new nodes is available to the UI to do something with",
+            "author": "connor",
+            "id": "_ajy0pa2l3"
         }
     ],
     "edges": [
@@ -3031,6 +3036,12 @@
         {
             "from": "_m41sp5a43",
             "to": "_t6l6m4qav",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_m41sp5a43",
+            "to": "_ajy0pa2l3",
             "category": "from-to",
             "desc": "has reply"
         }
