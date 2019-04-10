@@ -1284,6 +1284,11 @@
             "text": "node text should be selectable for copying somehow",
             "author": "connor",
             "id": "_knp5ts5mw"
+        },
+        {
+            "text": "we are seeing the limitations of the layout",
+            "author": "connor",
+            "id": "_p3ghblaeg"
         }
     ],
     "edges": [
@@ -2778,6 +2783,12 @@
         {
             "from": "_z0k58fv18",
             "to": "_knp5ts5mw",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_ck7burvcg",
+            "to": "_p3ghblaeg",
             "category": "from-to",
             "desc": "has reply"
         }
