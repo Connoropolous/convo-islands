@@ -1314,6 +1314,11 @@
             "text": "relate to Eric HBs ideas about collective intelligence",
             "author": "connor",
             "id": "_x6tw8x4ah"
+        },
+        {
+            "text": "he calls the 'mother of all apps' the text editor",
+            "author": "connor",
+            "id": "_7k0s8350m"
         }
     ],
     "edges": [
@@ -2844,6 +2849,12 @@
         {
             "from": "_gytatvf8y",
             "to": "_x6tw8x4ah",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_x6tw8x4ah",
+            "to": "_7k0s8350m",
             "category": "from-to",
             "desc": "has reply"
         }
