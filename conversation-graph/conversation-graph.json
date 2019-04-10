@@ -1289,6 +1289,11 @@
             "text": "we are seeing the limitations of the layout",
             "author": "connor",
             "id": "_p3ghblaeg"
+        },
+        {
+            "text": "what are some alternative solutions to the layout we could consider?",
+            "author": "connor",
+            "id": "_n47lcnonk"
         }
     ],
     "edges": [
@@ -2789,6 +2794,12 @@
         {
             "from": "_ck7burvcg",
             "to": "_p3ghblaeg",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_p3ghblaeg",
+            "to": "_n47lcnonk",
             "category": "from-to",
             "desc": "has reply"
         }
