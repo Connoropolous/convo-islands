@@ -1324,6 +1324,11 @@
             "text": "he says its a tree editor, but not a very good one",
             "author": "connor",
             "id": "_pcqmjp582"
+        },
+        {
+            "text": "REVISION! that's all you have to do, it will commit and push in the background",
+            "author": "connor",
+            "id": "_xkxhw0rvo"
         }
     ],
     "edges": [
@@ -2866,6 +2871,12 @@
         {
             "from": "_7k0s8350m",
             "to": "_pcqmjp582",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_3id3gb428",
+            "to": "_xkxhw0rvo",
             "category": "from-to",
             "desc": "has reply"
         }
