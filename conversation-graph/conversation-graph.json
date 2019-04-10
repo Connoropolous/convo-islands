@@ -1379,6 +1379,11 @@
             "text": "the node id is now included as well",
             "author": "connor",
             "id": "_sk5k3xe0u"
+        },
+        {
+            "text": "Have an option for how many degrees of separation you want to keep in view while navigating (using cy's auto focus)",
+            "author": "robert",
+            "id": "_b7ztwvq0a"
         }
     ],
     "edges": [
@@ -2987,6 +2992,12 @@
         {
             "from": "_s4ggkjfm5",
             "to": "_sk5k3xe0u",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_b7ztwvq0a",
             "category": "from-to",
             "desc": "has reply"
         }
