@@ -1299,6 +1299,11 @@
             "text": "uncategorized observations",
             "author": "connor",
             "id": "_sva5ebwj4"
+        },
+        {
+            "text": "the more data that appears in the map, the slower my thinking about adding new things gets",
+            "author": "connor",
+            "id": "_e6u3nr1jp"
         }
     ],
     "edges": [
@@ -2811,6 +2816,12 @@
         {
             "from": "1",
             "to": "_sva5ebwj4",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_sva5ebwj4",
+            "to": "_e6u3nr1jp",
             "category": "from-to",
             "desc": "has reply"
         }
