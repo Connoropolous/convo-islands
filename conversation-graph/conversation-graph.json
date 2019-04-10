@@ -1414,6 +1414,16 @@
             "text": "take the selected node out of the URL once you deselect everything",
             "author": "connor",
             "id": "_f7ib3fmrw"
+        },
+        {
+            "text": "Make it so that changing who you are \"acting as\" doesn't change your selected node.",
+            "author": "robert",
+            "id": "_5l5c5jxm5"
+        },
+        {
+            "text": "if we intend to make it do that unselecting a node removes if from the URL, maybe we shouldn't have a default selected node and instead should be able to specify a zoom level and translate camera option in the URL too?",
+            "author": "robert",
+            "id": "_jcoxnila0"
         }
     ],
     "edges": [
@@ -3064,6 +3074,18 @@
         {
             "from": "_z0k58fv18",
             "to": "_f7ib3fmrw",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_5l5c5jxm5",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_jcoxnila0",
             "category": "from-to",
             "desc": "has reply"
         }
