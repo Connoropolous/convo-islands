@@ -1374,6 +1374,11 @@
             "text": "a facilitator can develop a skill in picking a really valuable process for the group to enter into, for the goal they have at that time",
             "author": "connor",
             "id": "_kbqqqniju"
+        },
+        {
+            "text": "the node id is now included as well",
+            "author": "connor",
+            "id": "_sk5k3xe0u"
         }
     ],
     "edges": [
@@ -2976,6 +2981,12 @@
         {
             "from": "_mcptw1h73",
             "to": "_kbqqqniju",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_s4ggkjfm5",
+            "to": "_sk5k3xe0u",
             "category": "from-to",
             "desc": "has reply"
         }
