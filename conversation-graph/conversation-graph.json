@@ -1394,6 +1394,11 @@
             "text": "keep a record of which new nodes have been added since you last refreshed the page",
             "author": "connor",
             "id": "_m41sp5a43"
+        },
+        {
+            "text": "currently it will only take you to the very latest one",
+            "author": "connor",
+            "id": "_t6l6m4qav"
         }
     ],
     "edges": [
@@ -3020,6 +3025,12 @@
         {
             "from": "_z0k58fv18",
             "to": "_m41sp5a43",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_m41sp5a43",
+            "to": "_t6l6m4qav",
             "category": "from-to",
             "desc": "has reply"
         }
