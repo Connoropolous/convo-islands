@@ -1424,6 +1424,11 @@
             "text": "if we intend to make it do that unselecting a node removes if from the URL, maybe we shouldn't have a default selected node and instead should be able to specify a zoom level and translate camera option in the URL too?",
             "author": "robert",
             "id": "_jcoxnila0"
+        },
+        {
+            "text": "yeah that could be easily added\n",
+            "author": "connor",
+            "id": "_qoon0qnf5"
         }
     ],
     "edges": [
@@ -3086,6 +3091,12 @@
         {
             "from": "_z0k58fv18",
             "to": "_jcoxnila0",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_jcoxnila0",
+            "to": "_qoon0qnf5",
             "category": "from-to",
             "desc": "has reply"
         }
