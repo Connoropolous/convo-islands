@@ -1339,6 +1339,11 @@
             "text": "use the `f` key to bring the input box into focus, to reply to a node",
             "author": "connor",
             "id": "_g2z8zeasz"
+        },
+        {
+            "text": "use the `esc` key to take the input out of focus so that you can navigate the graph with the keyboard again",
+            "author": "connor",
+            "id": "_ntbusw38g"
         }
     ],
     "edges": [
@@ -2899,6 +2904,12 @@
         {
             "from": "_i3rq9s14v",
             "to": "_g2z8zeasz",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_i3rq9s14v",
+            "to": "_ntbusw38g",
             "category": "from-to",
             "desc": "has reply"
         }
