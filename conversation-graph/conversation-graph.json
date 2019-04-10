@@ -1279,6 +1279,11 @@
             "text": "for navigation, if you on the root node of the island, then using arrow down or arrow up keys should likely make you hop islands",
             "author": "connor",
             "id": "_w1ld29d6q"
+        },
+        {
+            "text": "node text should be selectable for copying somehow",
+            "author": "connor",
+            "id": "_knp5ts5mw"
         }
     ],
     "edges": [
@@ -2767,6 +2772,12 @@
         {
             "from": "_h9so9ueq7",
             "to": "_w1ld29d6q",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_knp5ts5mw",
             "category": "from-to",
             "desc": "has reply"
         }
