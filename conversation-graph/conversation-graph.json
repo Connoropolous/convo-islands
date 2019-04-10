@@ -1409,6 +1409,11 @@
             "text": "allow the refresh (from remote updates) to take you to the new node being selected when you refresh",
             "author": "connor",
             "id": "_756nqogyc"
+        },
+        {
+            "text": "take the selected node out of the URL once you deselect everything",
+            "author": "connor",
+            "id": "_f7ib3fmrw"
         }
     ],
     "edges": [
@@ -3053,6 +3058,12 @@
         {
             "from": "_m41sp5a43",
             "to": "_756nqogyc",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_f7ib3fmrw",
             "category": "from-to",
             "desc": "has reply"
         }
