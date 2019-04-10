@@ -1254,6 +1254,11 @@
             "text": "do we want this?",
             "author": "connor",
             "id": "_kjj4cwr6k"
+        },
+        {
+            "text": "this is now added",
+            "author": "connor",
+            "id": "_dfbmong59"
         }
     ],
     "edges": [
@@ -2712,6 +2717,12 @@
         {
             "from": "_5cuplr0ad",
             "to": "_kjj4cwr6k",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_h9so9ueq7",
+            "to": "_dfbmong59",
             "category": "from-to",
             "desc": "has reply"
         }
