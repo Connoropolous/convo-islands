@@ -1364,6 +1364,11 @@
             "text": "That we can make a interesting \"new\" contribution to how conversation can be had",
             "author": "robert",
             "id": "_ezjj8pd9q"
+        },
+        {
+            "text": "Gameshifting",
+            "author": "robert",
+            "id": "_nyrxt7e0c"
         }
     ],
     "edges": [
@@ -2954,6 +2959,12 @@
         {
             "from": "_xpn8e0g99",
             "to": "_ezjj8pd9q",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_954crg84j",
+            "to": "_nyrxt7e0c",
             "category": "from-to",
             "desc": "has reply"
         }
