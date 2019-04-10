@@ -1429,6 +1429,11 @@
             "text": "yeah that could be easily added\n",
             "author": "connor",
             "id": "_qoon0qnf5"
+        },
+        {
+            "text": "questions for each other",
+            "author": "connor",
+            "id": "_sw9ikp81r"
         }
     ],
     "edges": [
@@ -3097,6 +3102,12 @@
         {
             "from": "_jcoxnila0",
             "to": "_qoon0qnf5",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "1",
+            "to": "_sw9ikp81r",
             "category": "from-to",
             "desc": "has reply"
         }
