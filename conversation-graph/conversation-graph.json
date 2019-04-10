@@ -1294,6 +1294,11 @@
             "text": "what are some alternative solutions to the layout we could consider?",
             "author": "connor",
             "id": "_n47lcnonk"
+        },
+        {
+            "text": "uncategorized observations",
+            "author": "connor",
+            "id": "_sva5ebwj4"
         }
     ],
     "edges": [
@@ -2800,6 +2805,12 @@
         {
             "from": "_p3ghblaeg",
             "to": "_n47lcnonk",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "1",
+            "to": "_sva5ebwj4",
             "category": "from-to",
             "desc": "has reply"
         }
