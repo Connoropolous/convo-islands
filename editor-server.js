@@ -140,7 +140,7 @@ app.post('/add-node', (req, res) => {
     // commit the change, but don't block
     setTimeout(() => {
         shell.exec('git add conversation-graph/conversation-graph.json', { silent: true })
-        shell.exec(`git commit -m "node: ${node.text}"`, { silent: true })
+        shell.exec(`git commit -m "node:${node.id}: ${node.text}"`, { silent: true })
         shell.exec('git push', { silent: true })
     }, 1000)
 })
