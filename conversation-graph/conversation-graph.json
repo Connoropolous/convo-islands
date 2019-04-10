@@ -1319,6 +1319,11 @@
             "text": "he calls the 'mother of all apps' the text editor",
             "author": "connor",
             "id": "_7k0s8350m"
+        },
+        {
+            "text": "he says its a tree editor, but not a very good one",
+            "author": "connor",
+            "id": "_pcqmjp582"
         }
     ],
     "edges": [
@@ -2855,6 +2860,12 @@
         {
             "from": "_x6tw8x4ah",
             "to": "_7k0s8350m",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_7k0s8350m",
+            "to": "_pcqmjp582",
             "category": "from-to",
             "desc": "has reply"
         }
