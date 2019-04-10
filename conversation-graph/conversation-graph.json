@@ -1389,6 +1389,11 @@
             "text": "Should we give edges IDs and make them selectable too?",
             "author": "robert",
             "id": "_wufynh2xc"
+        },
+        {
+            "text": "keep a record of which new nodes have been added since you last refreshed the page",
+            "author": "connor",
+            "id": "_m41sp5a43"
         }
     ],
     "edges": [
@@ -3009,6 +3014,12 @@
         {
             "from": "_z0k58fv18",
             "to": "_wufynh2xc",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_m41sp5a43",
             "category": "from-to",
             "desc": "has reply"
         }
