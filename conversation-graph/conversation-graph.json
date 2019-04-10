@@ -1309,6 +1309,11 @@
             "text": "relates to the Otter.ai discussion in the other island",
             "author": "connor",
             "id": "_97zh9n7l0"
+        },
+        {
+            "text": "relate to Eric HBs ideas about collective intelligence",
+            "author": "connor",
+            "id": "_x6tw8x4ah"
         }
     ],
     "edges": [
@@ -2833,6 +2838,12 @@
         {
             "from": "_9bq9etjed",
             "to": "_97zh9n7l0",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_gytatvf8y",
+            "to": "_x6tw8x4ah",
             "category": "from-to",
             "desc": "has reply"
         }
