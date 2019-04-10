@@ -1434,6 +1434,11 @@
             "text": "questions for each other",
             "author": "connor",
             "id": "_sw9ikp81r"
+        },
+        {
+            "text": "do you still want to know how I added the metacodes to the mattermost chat?",
+            "author": "connor",
+            "id": "_ys720vaez"
         }
     ],
     "edges": [
@@ -3108,6 +3113,12 @@
         {
             "from": "1",
             "to": "_sw9ikp81r",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_sw9ikp81r",
+            "to": "_ys720vaez",
             "category": "from-to",
             "desc": "has reply"
         }
