@@ -1404,6 +1404,11 @@
             "text": "technically, the whole list of new nodes is available to the UI to do something with",
             "author": "connor",
             "id": "_ajy0pa2l3"
+        },
+        {
+            "text": "allow the refresh (from remote updates) to take you to the new node being selected when you refresh",
+            "author": "connor",
+            "id": "_756nqogyc"
         }
     ],
     "edges": [
@@ -3042,6 +3047,12 @@
         {
             "from": "_m41sp5a43",
             "to": "_ajy0pa2l3",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_m41sp5a43",
+            "to": "_756nqogyc",
             "category": "from-to",
             "desc": "has reply"
         }
