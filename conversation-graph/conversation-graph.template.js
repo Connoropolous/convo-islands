@@ -250,15 +250,24 @@ replySubmit.onclick = event => {
 
 
 // WEBSOCKETS connection, to listen for updates
-
+let remoteNodeToView
 const socket = new WebSocket("ws://localhost:3000/")
 // the only message type coming from the server means
 // that there's a remote update
-socket.onmessage = (msg) => document.getElementById('updates').className = 'show'
+socket.onmessage = (msg) => {
+
+  // msg.data will be a string, with a comma separated
+  // list of new node ids
+  // for now, just use the first
+  remoteNodeToView = msg.data.split(', ')[0]
+  document.getElementById('updates').className = 'show'
+}
 
 // you click this button to reload, because you've been 
 // notified by the server that there's remote updates that
 // have been pulled
 document.getElementById('reload-button').onclick = () => {
-  window.location.reload()
+  const search = new URLSearchParams(window.location.search)
+  search.set('selected', remoteNodeToView)
+  window.location.search = search.toString()
 }

@@ -62,6 +62,21 @@ const createPollTimer = (newInterval) => {
         if (cmd.stdout.indexOf('Already up to date') === -1) {
             console.log('Fetched an update from git')
 
+            const updatingReg = /Updating (\w+)..(\w+)/g
+            const shaResults = updatingReg.exec(cmd.stdout)
+
+            const logcmd = shell.exec(`git log ${shaResults[1]}..${shaResults[2]}`, { silent: true })
+            let match
+            let matches = []
+            const nodeReg = /node:(\w+):/g
+            while ((match = nodeReg.exec(logcmd.stdout)) != null) {
+                matches.push(match[1])
+            }
+
+            // don't bother to send a message to the UI
+            // if the change doesn't affect it
+            if (matches.length === 0) return
+
             // since there's updates
             // refresh the js
             refreshJs()
@@ -70,7 +85,7 @@ const createPollTimer = (newInterval) => {
             // letting it know the HTML has been updated
             // with updates to the graph from the remote repo
             if (localsocket) {
-                localsocket.send('update')
+                localsocket.send(matches.join(', '))
             }
         }
     }, newInterval)
