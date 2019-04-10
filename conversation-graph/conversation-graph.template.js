@@ -86,13 +86,90 @@ style: [
 })
 
 
+let selectedId
+const setSelected = (id) => {
+  cy.$('node').unselect()
+  cy.$(`#${id}`).select()
+  const viewPadding = 350
+  // http://cytoscape.github.io/cytoscape.js/#core/viewport-manipulation/cy.fit
+  cy.fit(cy.$(':selected'), viewPadding)
+  selectedId = id
+}
+
 // SET THE SELECTED from the url
 const searchParams = new URLSearchParams(window.location.search)
-const selectedId = searchParams.get('selected') || "1"
-cy.$(`#${selectedId}`).select()
-// http://cytoscape.github.io/cytoscape.js/#core/viewport-manipulation/cy.fit
-const viewPadding = 350
-cy.fit(cy.$(':selected'), viewPadding)
+const DEFAULT_SELECTED_NODE_ID = "1"
+setSelected(searchParams.get('selected') || DEFAULT_SELECTED_NODE_ID)
+
+// KEYBOARD LISTENERS FOR NAVIGATION
+const LEFT_ARROW = 37
+const UP_ARROW = 38
+const RIGHT_ARROW = 39
+const DOWN_ARROW = 40
+const F_KEY = 70
+const ESC_KEY = 27
+
+document.onkeyup = event => {
+  if (event.keyCode === ESC_KEY) document.getElementById('reply-input').blur()
+  // only listen to keyboard,
+  // if focus is not on the input box
+  if (event.target.id !== 'reply-input') {
+    let selectedNode,
+      parentNodeId,
+      childIds,
+      childrenList,
+      sortedChildrenList,
+      siblingIds,
+      siblingList,
+      sortedSiblingList,
+      nextNodeUp,
+      nextNodeOver,
+      nextNodeDown
+
+    switch (event.keyCode) {
+      case F_KEY:
+        document.getElementById('reply-input').focus()
+        break
+      case LEFT_ARROW:
+        setSelected(cy.elements(`edge[target="${selectedId}"]`)[0].data('source'))
+        break;
+      case UP_ARROW:
+        selectedNode = cy.$(`#${selectedId}`)
+        parentNodeId = cy.elements(`edge[target="${selectedId}"]`)[0].data('source')
+        siblingIds = cy.elements(`edge[source="${parentNodeId}"]`).map(e => `#${e.data('target')}`).join(', ')
+        siblingList = cy.elements(siblingIds)
+        // sort them highest y to lowest y
+        sortedSiblingList = siblingList.sort((a, b) => b.position().y - a.position().y)
+        nextNodeUp = sortedSiblingList.toArray().find(n => n.position().y < selectedNode.position().y)
+        setSelected(nextNodeUp.data('id'))
+        break
+      case RIGHT_ARROW:
+        selectedNode = cy.$(`#${selectedId}`)
+        childIds = cy.elements(`edge[source="${selectedId}"]`).map(e => `#${e.data('target')}`).join(', ')
+        childrenList = cy.elements(childIds)
+        // sort them lowest y to highest y
+        sortedChildrenList = childrenList.sort((a, b) => a.position().y - b.position().y)
+        nextNodeOver = sortedChildrenList.toArray().find(n => n.position().y >= selectedNode.position().y)
+        if (!nextNodeOver) {
+          sortedChildrenList = childrenList.sort((a, b) => b.position().y - a.position().y)
+          nextNodeOver = sortedChildrenList.toArray().find(n => n.position().y <= selectedNode.position().y)
+        }
+        setSelected(nextNodeOver.data('id'))
+        break
+      case DOWN_ARROW:
+        selectedNode = cy.$(`#${selectedId}`)
+        parentNodeId = cy.elements(`edge[target="${selectedId}"]`)[0].data('source')
+        siblingIds = cy.elements(`edge[source="${parentNodeId}"]`).map(e => `#${e.data('target')}`).join(', ')
+        siblingList = cy.elements(siblingIds)
+        // sort them lowest y to highest y
+        sortedSiblingList = siblingList.sort((a, b) => a.position().y - b.position().y)
+        nextNodeDown = sortedSiblingList.toArray().find(n => n.position().y > selectedNode.position().y)
+        setSelected(nextNodeDown.data('id'))
+        break
+    }
+  }
+}
+
 
 // AUTHORS
 const authors = ["connor", "robert"]
