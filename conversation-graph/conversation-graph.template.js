@@ -86,7 +86,18 @@ style: [
 })
 
 
+
 let selectedId
+// this updates the browser history (back/forward)
+// without reloading the page
+// we do this so that when you DO reload the page
+// you keep your current selected focus
+const updateUrlToSelected = () => {
+  const searchParams = new URLSearchParams(window.location.search)
+  searchParams.set('selected', selectedId)
+  const newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + searchParams.toString()
+  window.history.pushState(null, document.title, newurl)
+}
 const setSelected = (id) => {
   cy.$('node').unselect()
   cy.$(`#${id}`).select()
@@ -94,14 +105,24 @@ const setSelected = (id) => {
   // http://cytoscape.github.io/cytoscape.js/#core/viewport-manipulation/cy.fit
   cy.fit(cy.$(':selected'), viewPadding)
   selectedId = id
+  updateUrlToSelected()
 }
 
-// SET THE SELECTED from the url
+// SET THE SELECTED from the url, or a default
+// this is an object containing
+// easy access to the kinds of query keys that can be in the URL
+// like ?author=connor&selected=_dijas34
 const searchParams = new URLSearchParams(window.location.search)
 const DEFAULT_SELECTED_NODE_ID = "1"
 setSelected(searchParams.get('selected') || DEFAULT_SELECTED_NODE_ID)
 
-// KEYBOARD LISTENERS FOR NAVIGATION
+// UPDATE SELECTED ID WHEN CLICKING TO SELECT NODE
+cy.on('select', 'node', event => {
+  selectedId = event.target.data('id')
+  updateUrlToSelected()
+})
+
+// KEYBOARD LISTENERS FOR NAVIGATION of SELECTION
 const LEFT_ARROW = 37
 const UP_ARROW = 38
 const RIGHT_ARROW = 39
