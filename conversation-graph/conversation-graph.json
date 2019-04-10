@@ -1329,6 +1329,11 @@
             "text": "REVISION! that's all you have to do, it will commit and push in the background",
             "author": "connor",
             "id": "_xkxhw0rvo"
+        },
+        {
+            "text": "when a node is selected, and the input box is not in focus, use the arrow keys to navigate the graph",
+            "author": "connor",
+            "id": "_i3rq9s14v"
         }
     ],
     "edges": [
@@ -2877,6 +2882,12 @@
         {
             "from": "_3id3gb428",
             "to": "_xkxhw0rvo",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_1dibr5xjl",
+            "to": "_i3rq9s14v",
             "category": "from-to",
             "desc": "has reply"
         }
