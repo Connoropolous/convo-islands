@@ -237,7 +237,7 @@ const submitNode = () => {
 replyInput.focus()
 const enterKeyCode = 13
 replyInput.onkeydown = event => {
-  if (event.metaKey && event.keyCode === enterKeyCode) {
+  if ((event.metaKey || event.ctrlKey) && event.keyCode === enterKeyCode) {
     submitNode()
   }
 }
