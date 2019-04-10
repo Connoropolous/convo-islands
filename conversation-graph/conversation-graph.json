@@ -1354,6 +1354,11 @@
             "text": "clicking on a node could highlight the downstream thread, and others outside that could be faded",
             "author": "connor",
             "id": "_qxlulace5"
+        },
+        {
+            "text": "test2",
+            "author": "connor",
+            "id": "_1w97youv5"
         }
     ],
     "edges": [
@@ -2932,6 +2937,12 @@
         {
             "from": "_z0k58fv18",
             "to": "_qxlulace5",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_v8kzyphln",
+            "to": "_1w97youv5",
             "category": "from-to",
             "desc": "has reply"
         }
