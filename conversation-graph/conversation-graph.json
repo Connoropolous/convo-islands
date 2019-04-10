@@ -1334,6 +1334,11 @@
             "text": "when a node is selected, and the input box is not in focus, use the arrow keys to navigate the graph",
             "author": "connor",
             "id": "_i3rq9s14v"
+        },
+        {
+            "text": "use the `f` key to bring the input box into focus, to reply to a node",
+            "author": "connor",
+            "id": "_g2z8zeasz"
         }
     ],
     "edges": [
@@ -2888,6 +2893,12 @@
         {
             "from": "_1dibr5xjl",
             "to": "_i3rq9s14v",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_i3rq9s14v",
+            "to": "_g2z8zeasz",
             "category": "from-to",
             "desc": "has reply"
         }
