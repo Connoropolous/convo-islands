@@ -1259,6 +1259,11 @@
             "text": "this is now added",
             "author": "connor",
             "id": "_dfbmong59"
+        },
+        {
+            "text": "The hotkey to bring the input into focus is just `f`",
+            "author": "connor",
+            "id": "_fodohhacx"
         }
     ],
     "edges": [
@@ -2723,6 +2728,12 @@
         {
             "from": "_h9so9ueq7",
             "to": "_dfbmong59",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_8pfsnk2ch",
+            "to": "_fodohhacx",
             "category": "from-to",
             "desc": "has reply"
         }
