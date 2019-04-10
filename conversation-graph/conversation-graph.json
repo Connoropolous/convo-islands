@@ -1269,6 +1269,11 @@
             "text": "the key to blur the input, for navigation again is `esc`",
             "author": "connor",
             "id": "_7c1sissh8"
+        },
+        {
+            "text": "this is now added",
+            "author": "connor",
+            "id": "_w6wue4vgm"
         }
     ],
     "edges": [
@@ -2745,6 +2750,12 @@
         {
             "from": "_8pfsnk2ch",
             "to": "_7c1sissh8",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_gvolpqbzv",
+            "to": "_w6wue4vgm",
             "category": "from-to",
             "desc": "has reply"
         }
