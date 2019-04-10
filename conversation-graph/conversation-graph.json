@@ -1264,6 +1264,11 @@
             "text": "The hotkey to bring the input into focus is just `f`",
             "author": "connor",
             "id": "_fodohhacx"
+        },
+        {
+            "text": "the key to blur the input, for navigation again is `esc`",
+            "author": "connor",
+            "id": "_7c1sissh8"
         }
     ],
     "edges": [
@@ -2734,6 +2739,12 @@
         {
             "from": "_8pfsnk2ch",
             "to": "_fodohhacx",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_8pfsnk2ch",
+            "to": "_7c1sissh8",
             "category": "from-to",
             "desc": "has reply"
         }
