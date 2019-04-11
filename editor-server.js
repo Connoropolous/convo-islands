@@ -35,7 +35,7 @@ const ID = () => {
 // main index.html file
 const refreshJs = () => {
     const { nodes, edges } = JSON.parse(fs.readFileSync('./conversation-graph/conversation-graph.json', 'utf-8'))
-    const focalTopicId = "1"
+    const focalTopicId = "_z0k58fv18"
     const focalCoords = { x: 0, y: 0 }
     const positions = getLayoutForData(nodes, edges, focalTopicId, focalCoords)
     const cytoscapeData = cytoscapeConverter(nodes, edges, positions)

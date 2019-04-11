@@ -113,7 +113,7 @@ const setSelected = (id) => {
 // easy access to the kinds of query keys that can be in the URL
 // like ?author=connor&selected=_dijas34
 const searchParams = new URLSearchParams(window.location.search)
-const DEFAULT_SELECTED_NODE_ID = "1"
+const DEFAULT_SELECTED_NODE_ID = "_z0k58fv18"
 setSelected(searchParams.get('selected') || DEFAULT_SELECTED_NODE_ID)
 
 // UPDATE SELECTED ID WHEN CLICKING TO SELECT NODE

@@ -1572,12 +1572,6 @@
             "desc": "has reply"
         },
         {
-            "from": "1",
-            "to": "_z0k58fv18",
-            "category": "from-to",
-            "desc": "has reply"
-        },
-        {
             "from": "_z0k58fv18",
             "to": "_u68grbeyz",
             "category": "from-to",
