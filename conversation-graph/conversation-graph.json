@@ -1449,6 +1449,11 @@
             "text": "Yes, I see now how it does that",
             "author": "connor",
             "id": "_euont612f"
+        },
+        {
+            "text": "I can fix that",
+            "author": "connor",
+            "id": "_rmd46eh2c"
         }
     ],
     "edges": [
@@ -3135,6 +3140,12 @@
         {
             "from": "_5l5c5jxm5",
             "to": "_euont612f",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_5l5c5jxm5",
+            "to": "_rmd46eh2c",
             "category": "from-to",
             "desc": "has reply"
         }
