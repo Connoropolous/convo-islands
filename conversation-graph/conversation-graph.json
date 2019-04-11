@@ -1479,6 +1479,11 @@
             "text": "this node is a test at breaking out compound nodes into discrete nodes, for granularity",
             "author": "robert",
             "id": "_qzs14jc8q"
+        },
+        {
+            "text": "this is now added",
+            "author": "connor",
+            "id": "_03wh2gvdl"
         }
     ],
     "edges": [
@@ -3201,6 +3206,12 @@
         {
             "from": "_u9n5t2r15",
             "to": "_qzs14jc8q",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_5l5c5jxm5",
+            "to": "_03wh2gvdl",
             "category": "from-to",
             "desc": "has reply"
         }
