@@ -1469,6 +1469,11 @@
             "text": "'give nodes a creation timestamp' has another node (duplicate)",
             "author": "robert",
             "id": "_nvx40cfu0"
+        },
+        {
+            "text": "cycle through nodes based on timestamp metadata (as another means to seeing new stuff)",
+            "author": "robert",
+            "id": "_u9n5t2r15"
         }
     ],
     "edges": [
@@ -3179,6 +3184,12 @@
         {
             "from": "_ko8ec8gme",
             "to": "_nvx40cfu0",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_ko8ec8gme",
+            "to": "_u9n5t2r15",
             "category": "from-to",
             "desc": "has reply"
         }
