@@ -1474,6 +1474,11 @@
             "text": "cycle through nodes based on timestamp metadata (as another means to seeing new stuff)",
             "author": "robert",
             "id": "_u9n5t2r15"
+        },
+        {
+            "text": "this node is a test at breaking out compound nodes into discrete nodes, for granularity",
+            "author": "robert",
+            "id": "_qzs14jc8q"
         }
     ],
     "edges": [
@@ -3190,6 +3195,12 @@
         {
             "from": "_ko8ec8gme",
             "to": "_u9n5t2r15",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_u9n5t2r15",
+            "to": "_qzs14jc8q",
             "category": "from-to",
             "desc": "has reply"
         }
