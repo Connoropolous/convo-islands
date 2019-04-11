@@ -204,7 +204,9 @@ authors.forEach(author => {
   }
   authorDiv.appendChild(buttonEl)
   buttonEl.onclick = () => {
-    window.location.search = "author=" + author
+    const search = new URLSearchParams(window.location.search)
+    search.set('author', author)
+    window.location.search = search.toString()
   }
 })
 
