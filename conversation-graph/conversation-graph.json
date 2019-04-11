@@ -1459,6 +1459,11 @@
             "text": "yes",
             "author": "robert",
             "id": "_rc2ambex6"
+        },
+        {
+            "text": "give nodes a creation timestamp, then we can cycle through nodes based on that metadata (as another means to seeing new stuff) ",
+            "author": "robert",
+            "id": "_ko8ec8gme"
         }
     ],
     "edges": [
@@ -3157,6 +3162,12 @@
         {
             "from": "_ys720vaez",
             "to": "_rc2ambex6",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_ko8ec8gme",
             "category": "from-to",
             "desc": "has reply"
         }
