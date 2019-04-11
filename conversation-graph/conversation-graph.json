@@ -1454,6 +1454,11 @@
             "text": "I can fix that",
             "author": "connor",
             "id": "_rmd46eh2c"
+        },
+        {
+            "text": "yes",
+            "author": "robert",
+            "id": "_rc2ambex6"
         }
     ],
     "edges": [
@@ -3146,6 +3151,12 @@
         {
             "from": "_5l5c5jxm5",
             "to": "_rmd46eh2c",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_ys720vaez",
+            "to": "_rc2ambex6",
             "category": "from-to",
             "desc": "has reply"
         }
