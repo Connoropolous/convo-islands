@@ -65,6 +65,8 @@ const createPollTimer = (newInterval) => {
             const updatingReg = /Updating (\w+)..(\w+)/g
             const shaResults = updatingReg.exec(cmd.stdout)
 
+            if (!shaResults) return
+
             const logcmd = shell.exec(`git log ${shaResults[1]}..${shaResults[2]}`, { silent: true })
             let match
             let matches = []
