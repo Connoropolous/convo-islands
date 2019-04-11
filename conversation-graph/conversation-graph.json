@@ -1464,6 +1464,11 @@
             "text": "give nodes a creation timestamp, then we can cycle through nodes based on that metadata (as another means to seeing new stuff) ",
             "author": "robert",
             "id": "_ko8ec8gme"
+        },
+        {
+            "text": "'give nodes a creation timestamp' has another node (duplicate)",
+            "author": "robert",
+            "id": "_nvx40cfu0"
         }
     ],
     "edges": [
@@ -3168,6 +3173,12 @@
         {
             "from": "_z0k58fv18",
             "to": "_ko8ec8gme",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_ko8ec8gme",
+            "to": "_nvx40cfu0",
             "category": "from-to",
             "desc": "has reply"
         }
