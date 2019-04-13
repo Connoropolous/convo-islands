@@ -1494,6 +1494,11 @@
             "text": "matrix.cafe",
             "author": "robert",
             "id": "_51sqysz84"
+        },
+        {
+            "text": "ooops, thought i had something selected when adding matrix.cafe now its it's own island.",
+            "author": "robert",
+            "id": "_04ntrt222"
         }
     ],
     "edges": [
@@ -3222,6 +3227,12 @@
         {
             "from": "_gytatvf8y",
             "to": "_z5omr3997",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_51sqysz84",
+            "to": "_04ntrt222",
             "category": "from-to",
             "desc": "has reply"
         }
