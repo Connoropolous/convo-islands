@@ -1484,6 +1484,11 @@
             "text": "this is now added",
             "author": "connor",
             "id": "_03wh2gvdl"
+        },
+        {
+            "text": "tools / prototypes / idea seeds we've had",
+            "author": "robert",
+            "id": "_z5omr3997"
         }
     ],
     "edges": [
@@ -3206,6 +3211,12 @@
         {
             "from": "_5l5c5jxm5",
             "to": "_03wh2gvdl",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_gytatvf8y",
+            "to": "_z5omr3997",
             "category": "from-to",
             "desc": "has reply"
         }
