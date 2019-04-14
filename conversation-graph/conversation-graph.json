@@ -1514,6 +1514,11 @@
             "text": "how would that change and inform our design and development process",
             "author": "connor",
             "id": "_flp75rlaq"
+        },
+        {
+            "text": "Totally agree :)",
+            "author": "connor",
+            "id": "_rab12gd2j"
         }
     ],
     "edges": [
@@ -3260,6 +3265,12 @@
         {
             "from": "_sr0y88rct",
             "to": "_flp75rlaq",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_i53i4xxuw",
+            "to": "_rab12gd2j",
             "category": "from-to",
             "desc": "has reply"
         }
