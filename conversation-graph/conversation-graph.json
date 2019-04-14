@@ -1524,6 +1524,11 @@
             "text": "For these cases, I recommend just writing in the box and repeatedly hitting enter, so at least the thoughts are broken up into roughly discrete units and put into a chain. Not worrying about the order or synapsing",
             "author": "connor",
             "id": "_pzk8gea1p"
+        },
+        {
+            "text": "I bet this one would be an easy one for you to do Robert",
+            "author": "connor",
+            "id": "_9wllfulwd"
         }
     ],
     "edges": [
@@ -3282,6 +3287,12 @@
         {
             "from": "_i53i4xxuw",
             "to": "_pzk8gea1p",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_j9l8zevhb",
+            "to": "_9wllfulwd",
             "category": "from-to",
             "desc": "has reply"
         }
