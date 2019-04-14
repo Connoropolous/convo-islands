@@ -1519,6 +1519,11 @@
             "text": "Totally agree :)",
             "author": "connor",
             "id": "_rab12gd2j"
+        },
+        {
+            "text": "For these cases, I recommend just writing in the box and repeatedly hitting enter, so at least the thoughts are broken up into roughly discrete units and put into a chain. Not worrying about the order or synapsing",
+            "author": "connor",
+            "id": "_pzk8gea1p"
         }
     ],
     "edges": [
@@ -3271,6 +3276,12 @@
         {
             "from": "_i53i4xxuw",
             "to": "_rab12gd2j",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_i53i4xxuw",
+            "to": "_pzk8gea1p",
             "category": "from-to",
             "desc": "has reply"
         }
