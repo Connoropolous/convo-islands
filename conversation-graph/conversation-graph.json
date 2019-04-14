@@ -1509,6 +1509,11 @@
             "text": "what if we designed everything with the question 'how would this be working if 100 people simultaneously were doing it?'",
             "author": "connor",
             "id": "_sr0y88rct"
+        },
+        {
+            "text": "how would that change and inform our design and development process",
+            "author": "connor",
+            "id": "_flp75rlaq"
         }
     ],
     "edges": [
@@ -3249,6 +3254,12 @@
         {
             "from": "_gytatvf8y",
             "to": "_sr0y88rct",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_sr0y88rct",
+            "to": "_flp75rlaq",
             "category": "from-to",
             "desc": "has reply"
         }
