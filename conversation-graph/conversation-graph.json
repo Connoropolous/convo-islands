@@ -1504,6 +1504,11 @@
             "text": "sometimes I want to just write and worry about what how it connects later",
             "author": "robert",
             "id": "_i53i4xxuw"
+        },
+        {
+            "text": "what if we designed everything with the question 'how would this be working if 100 people simultaneously were doing it?'",
+            "author": "connor",
+            "id": "_sr0y88rct"
         }
     ],
     "edges": [
@@ -3238,6 +3243,12 @@
         {
             "from": "_51sqysz84",
             "to": "_04ntrt222",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_gytatvf8y",
+            "to": "_sr0y88rct",
             "category": "from-to",
             "desc": "has reply"
         }
