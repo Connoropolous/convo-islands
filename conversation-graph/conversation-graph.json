@@ -1529,6 +1529,11 @@
             "text": "I bet this one would be an easy one for you to do Robert",
             "author": "connor",
             "id": "_9wllfulwd"
+        },
+        {
+            "text": "Is there any planning you'd like to do for this Wednesday?",
+            "author": "connor",
+            "id": "_fv9hol72l"
         }
     ],
     "edges": [
@@ -3293,6 +3298,12 @@
         {
             "from": "_j9l8zevhb",
             "to": "_9wllfulwd",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_8ffn8pj5e",
+            "to": "_fv9hol72l",
             "category": "from-to",
             "desc": "has reply"
         }
