@@ -1544,6 +1544,21 @@
             "text": "i'd like to leave this convo-world running all the time and get notifications somehow when certain branches have their leaves rustled.",
             "author": "robert",
             "id": "_pak836hu6"
+        },
+        {
+            "text": "We could use desktop notifications for web, optionally. ",
+            "author": "connor",
+            "id": "_u9xcee9xg"
+        },
+        {
+            "text": "We could use desktop notifications for web, optionally. ",
+            "author": "connor",
+            "id": "_rtmzfthny"
+        },
+        {
+            "text": "We could use desktop notifications for web, optionally. ",
+            "author": "connor",
+            "id": "_ai2j9qtb8"
         }
     ],
     "edges": [
@@ -3326,6 +3341,24 @@
         {
             "from": "_z0k58fv18",
             "to": "_pak836hu6",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_pak836hu6",
+            "to": "_u9xcee9xg",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_pak836hu6",
+            "to": "_rtmzfthny",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_pak836hu6",
+            "to": "_ai2j9qtb8",
             "category": "from-to",
             "desc": "has reply"
         }
