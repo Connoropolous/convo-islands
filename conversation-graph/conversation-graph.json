@@ -1539,6 +1539,11 @@
             "text": "Actually, this wednesday I have invited someone I met on the fedwiki call to join us and demo some of his work, and pair code... He's doing some neat stuff with spreadsheets, and elm... I told him about our recent work... I'd love for you two to meet.",
             "author": "robert",
             "id": "_gh4olj79t"
+        },
+        {
+            "text": "i'd like to leave this convo-world running all the time and get notifications somehow when certain branches have their leaves rustled.",
+            "author": "robert",
+            "id": "_pak836hu6"
         }
     ],
     "edges": [
@@ -3315,6 +3320,12 @@
         {
             "from": "_fv9hol72l",
             "to": "_gh4olj79t",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_pak836hu6",
             "category": "from-to",
             "desc": "has reply"
         }
