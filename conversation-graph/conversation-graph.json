@@ -1534,6 +1534,11 @@
             "text": "Is there any planning you'd like to do for this Wednesday?",
             "author": "connor",
             "id": "_fv9hol72l"
+        },
+        {
+            "text": "Actually, this wednesday I have invited someone I met on the fedwiki call to join us and demo some of his work, and pair code... He's doing some neat stuff with spreadsheets, and elm... I told him about our recent work... I'd love for you two to meet.",
+            "author": "robert",
+            "id": "_gh4olj79t"
         }
     ],
     "edges": [
@@ -3304,6 +3309,12 @@
         {
             "from": "_8ffn8pj5e",
             "to": "_fv9hol72l",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_fv9hol72l",
+            "to": "_gh4olj79t",
             "category": "from-to",
             "desc": "has reply"
         }
