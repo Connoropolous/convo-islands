@@ -1549,6 +1549,11 @@
             "text": "We could use desktop notifications for web, optionally. ",
             "author": "connor",
             "id": "_u9xcee9xg"
+        },
+        {
+            "text": "Me too",
+            "author": "connor",
+            "id": "_ynm3dw9u5"
         }
     ],
     "edges": [
@@ -3337,6 +3342,12 @@
         {
             "from": "_pak836hu6",
             "to": "_u9xcee9xg",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_pak836hu6",
+            "to": "_ynm3dw9u5",
             "category": "from-to",
             "desc": "has reply"
         }
