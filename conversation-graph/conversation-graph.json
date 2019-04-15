@@ -1549,16 +1549,6 @@
             "text": "We could use desktop notifications for web, optionally. ",
             "author": "connor",
             "id": "_u9xcee9xg"
-        },
-        {
-            "text": "We could use desktop notifications for web, optionally. ",
-            "author": "connor",
-            "id": "_rtmzfthny"
-        },
-        {
-            "text": "We could use desktop notifications for web, optionally. ",
-            "author": "connor",
-            "id": "_ai2j9qtb8"
         }
     ],
     "edges": [
@@ -3347,18 +3337,6 @@
         {
             "from": "_pak836hu6",
             "to": "_u9xcee9xg",
-            "category": "from-to",
-            "desc": "has reply"
-        },
-        {
-            "from": "_pak836hu6",
-            "to": "_rtmzfthny",
-            "category": "from-to",
-            "desc": "has reply"
-        },
-        {
-            "from": "_pak836hu6",
-            "to": "_ai2j9qtb8",
             "category": "from-to",
             "desc": "has reply"
         }
