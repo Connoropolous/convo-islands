@@ -20,12 +20,15 @@ const GRAPH_DATA_PATH = "/conversation-graph.json"
 // that must be performed asynchronously)
 const fetchAndLoad = async () => {
     // get the conversation graph data
-    const res = await fetch(GRAPH_DATA_PATH)
+    // using the built in browser function `fetch`
+    // for making HTTP requests
+    const response = await fetch(GRAPH_DATA_PATH)
 
     // convert the conversation graph data into a parsed JSON object
+    // (also a built in function, for the `response` object that `fetch` returns)
     // and
     // destructure the JSON object into its component nodes and edges
-    const { nodes, edges } = await res.json()
+    const { nodes, edges } = await response.json()
 
     // put the graph data through our custom layout algorithm
     const positions = getLayoutForData(nodes, edges, FOCAL_TOPIC_ID, FOCAL_COORDS)
