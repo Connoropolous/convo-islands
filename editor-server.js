@@ -35,21 +35,18 @@ let localsocket
 const createPollTimer = (newInterval) => {
     if (polltimer) clearInterval(polltimer)
     polltimer = setInterval(() => {
-        const cmd = shell.exec('git pull', { silent: true })
+        
+        // here we check the remote for updates
+        shell.exec('git fetch', { silent: true })
+        // here we actually view the commit messages that are different/new
+        const logcmd = shell.exec("git log --graph --pretty=format:'%s' --abbrev-commit master..origin/master", { silent: true })
+        // here we merge any updates
+        const mergecmd = shell.exec('git merge FETCH_HEAD', { silent: true })
+
         // means there's updates
-        if (cmd.stdout.indexOf('Already up to date') === -1) {
-            console.log('Fetched an update from git')
+        if (mergecmd.stdout.indexOf("Already up to date") === -1) {
 
-            const updatingReg = /(\w+)..(\w+)  master/g
-
-            const shaResults = updatingReg.exec(cmd.stdout)
-
-            if (!shaResults) {
-                console.log('Did not see two SHAs to check, not proceeding')
-                return
-            }
-
-            const logcmd = shell.exec(`git log ${shaResults[1]}..${shaResults[2]}`, { silent: true })
+            // collect a list of new node ids from the git logs
             let match
             let matches = []
             const nodeReg = /node:(\w+):/g
@@ -60,7 +57,7 @@ const createPollTimer = (newInterval) => {
             // don't bother to send a message to the UI
             // if the change doesn't affect it
             if (matches.length === 0) {
-                console.log('Did not see any new nodes in the diff, not proceeding')
+                console.log('Did not see any new nodes in the diff, not notifying client')
                 return
             }
 
