@@ -1,5 +1,6 @@
 
 // This file gets built into convo-graph.bundle.js
+// To rebuild it, run `npx webpack` from the main directory
 
 const selection = require('./modules/selection')
 const authors = require('./modules/authors')
