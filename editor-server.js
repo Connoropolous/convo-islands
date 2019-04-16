@@ -40,10 +40,14 @@ const createPollTimer = (newInterval) => {
         if (cmd.stdout.indexOf('Already up to date') === -1) {
             console.log('Fetched an update from git')
 
-            const updatingReg = /Updating (\w+)..(\w+)/g
+            const updatingReg = /(\w+)..(\w+)  master/g
+
             const shaResults = updatingReg.exec(cmd.stdout)
 
-            if (!shaResults) return
+            if (!shaResults) {
+                console.log('Did not see two SHAs to check, not proceeding')
+                return
+            }
 
             const logcmd = shell.exec(`git log ${shaResults[1]}..${shaResults[2]}`, { silent: true })
             let match
@@ -55,7 +59,10 @@ const createPollTimer = (newInterval) => {
 
             // don't bother to send a message to the UI
             // if the change doesn't affect it
-            if (matches.length === 0) return
+            if (matches.length === 0) {
+                console.log('Did not see any new nodes in the diff, not proceeding')
+                return
+            }
 
             // push notification to the client
             // letting it know the HTML has been updated

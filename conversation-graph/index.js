@@ -44,8 +44,8 @@ fetchAndLoad().then(cy => {
     // Pass the `cy` cytoscape object into all the remaining modules that require it
     // since most want to fetch or set data to/from it
     keyboardShortcuts(cy)
-    websockets(cy)
     reloadButton()
+    websockets.init(cy)
     input.init(cy)
     selection.init(cy)
     authors.init()
