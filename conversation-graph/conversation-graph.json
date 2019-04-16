@@ -1564,6 +1564,11 @@
             "text": "test",
             "author": "connor",
             "id": "_bfige0bmv"
+        },
+        {
+            "text": "a test reply",
+            "author": "connor",
+            "id": "_o4cm7dd7j"
         }
     ],
     "edges": [
@@ -3358,6 +3363,12 @@
         {
             "from": "_pak836hu6",
             "to": "_ynm3dw9u5",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_kef7twh69",
+            "to": "_o4cm7dd7j",
             "category": "from-to",
             "desc": "has reply"
         }
