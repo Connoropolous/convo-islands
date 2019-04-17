@@ -1589,6 +1589,11 @@
             "text": "What is Nima's app called?",
             "author": "robert",
             "id": "_j8u9pdes0"
+        },
+        {
+            "text": "I want parametric SVGs using spreadsheets",
+            "author": "robert",
+            "id": "_o1f9kloxj"
         }
     ],
     "edges": [
@@ -3407,6 +3412,12 @@
         {
             "from": "_o8e30jc7n",
             "to": "_j8u9pdes0",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_j8u9pdes0",
+            "to": "_o1f9kloxj",
             "category": "from-to",
             "desc": "has reply"
         }
