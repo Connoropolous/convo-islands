@@ -1594,6 +1594,11 @@
             "text": "I want parametric SVGs using spreadsheets",
             "author": "robert",
             "id": "_o1f9kloxj"
+        },
+        {
+            "text": "I want to talk about Collective Intelligence",
+            "author": "robert",
+            "id": "_vijo1zfu5"
         }
     ],
     "edges": [
@@ -3418,6 +3423,12 @@
         {
             "from": "_j8u9pdes0",
             "to": "_o1f9kloxj",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_wv3but47x",
+            "to": "_vijo1zfu5",
             "category": "from-to",
             "desc": "has reply"
         }
