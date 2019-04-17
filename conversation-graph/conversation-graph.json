@@ -1599,6 +1599,11 @@
             "text": "I want to talk about Collective Intelligence",
             "author": "robert",
             "id": "_vijo1zfu5"
+        },
+        {
+            "text": "Something like this:\nhttps://raw.githubusercontent.com/Bortseb/bortseb.github.io/master/assets/test.svg?sanitize=true",
+            "author": "robert",
+            "id": "_mb4t6z5h6"
         }
     ],
     "edges": [
@@ -3429,6 +3434,12 @@
         {
             "from": "_wv3but47x",
             "to": "_vijo1zfu5",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_o1f9kloxj",
+            "to": "_mb4t6z5h6",
             "category": "from-to",
             "desc": "has reply"
         }
