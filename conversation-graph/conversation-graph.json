@@ -1584,6 +1584,11 @@
             "text": "expand on the conversation",
             "author": "connor",
             "id": "_wv3but47x"
+        },
+        {
+            "text": "What is Nima's app called?",
+            "author": "robert",
+            "id": "_j8u9pdes0"
         }
     ],
     "edges": [
@@ -3396,6 +3401,12 @@
         {
             "from": "_o8e30jc7n",
             "to": "_wv3but47x",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_o8e30jc7n",
+            "to": "_j8u9pdes0",
             "category": "from-to",
             "desc": "has reply"
         }
