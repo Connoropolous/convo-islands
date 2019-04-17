@@ -1574,6 +1574,11 @@
             "text": "starting point",
             "author": "connor",
             "id": "_o8e30jc7n"
+        },
+        {
+            "text": "hello from rob!",
+            "author": "robert",
+            "id": "_ppu6ttmv3"
         }
     ],
     "edges": [
@@ -3374,6 +3379,12 @@
         {
             "from": "_kef7twh69",
             "to": "_o4cm7dd7j",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_o8e30jc7n",
+            "to": "_ppu6ttmv3",
             "category": "from-to",
             "desc": "has reply"
         }
