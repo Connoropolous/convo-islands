@@ -1579,6 +1579,11 @@
             "text": "hello from rob!",
             "author": "robert",
             "id": "_ppu6ttmv3"
+        },
+        {
+            "text": "expand on the conversation",
+            "author": "connor",
+            "id": "_wv3but47x"
         }
     ],
     "edges": [
@@ -3385,6 +3390,12 @@
         {
             "from": "_o8e30jc7n",
             "to": "_ppu6ttmv3",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_o8e30jc7n",
+            "to": "_wv3but47x",
             "category": "from-to",
             "desc": "has reply"
         }
