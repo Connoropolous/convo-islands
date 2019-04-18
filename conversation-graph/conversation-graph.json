@@ -1789,6 +1789,11 @@
             "text": "Stuff we're doing on the side could become integrated into the core",
             "author": "connor",
             "id": "_9621hrfrf"
+        },
+        {
+            "text": "Is it open source software?",
+            "author": "connor",
+            "id": "_2mjtnimox"
         }
     ],
     "edges": [
@@ -3829,6 +3834,12 @@
         {
             "from": "_6gsgii4js",
             "to": "_9621hrfrf",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_6gsgii4js",
+            "to": "_2mjtnimox",
             "category": "from-to",
             "desc": "has reply"
         }
