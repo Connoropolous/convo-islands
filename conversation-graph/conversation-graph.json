@@ -1889,6 +1889,11 @@
             "text": "Maybe the relationships should have lower opacity so that they don't distract so much attention",
             "author": "connor",
             "id": "_sygoqz7fd"
+        },
+        {
+            "text": "yes, added it to my todos",
+            "author": "robert",
+            "id": "_meqzysxfg"
         }
     ],
     "edges": [
@@ -4049,6 +4054,12 @@
         {
             "from": "_z0k58fv18",
             "to": "_sygoqz7fd",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_acn8f6k3y",
+            "to": "_meqzysxfg",
             "category": "from-to",
             "desc": "has reply"
         }
