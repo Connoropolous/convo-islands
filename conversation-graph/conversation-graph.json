@@ -1904,6 +1904,11 @@
             "text": "I had a weird insight while writing this",
             "author": "connor",
             "id": "_nehvb9fru"
+        },
+        {
+            "text": "It seemed way more valuable to use your name than just \"you\" because we don't know who else will be reading this in the future, and information loses context!",
+            "author": "connor",
+            "id": "_2dq0h69hk"
         }
     ],
     "edges": [
@@ -4082,6 +4087,12 @@
         {
             "from": "_acn8f6k3y",
             "to": "_nehvb9fru",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_nehvb9fru",
+            "to": "_2dq0h69hk",
             "category": "from-to",
             "desc": "has reply"
         }
