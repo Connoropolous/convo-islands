@@ -1749,6 +1749,11 @@
             "text": "methods of data collection",
             "author": "connor",
             "id": "_dnp7adzgp"
+        },
+        {
+            "text": "could also be called input",
+            "author": "connor",
+            "id": "_5vb8gu5fs"
         }
     ],
     "edges": [
@@ -3747,6 +3752,12 @@
         {
             "from": "_gytatvf8y",
             "to": "_dnp7adzgp",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_dnp7adzgp",
+            "to": "_5vb8gu5fs",
             "category": "from-to",
             "desc": "has reply"
         }
