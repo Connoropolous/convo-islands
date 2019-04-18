@@ -1709,6 +1709,11 @@
             "text": "Our layout algorithm assumes left-right layout of text, which isn't true for all languages/text. ",
             "author": "connor",
             "id": "_12wsjupfr"
+        },
+        {
+            "text": "It could be an accessibility/internationalization option to make it layout the other way too",
+            "author": "connor",
+            "id": "_a9vqt0si1"
         }
     ],
     "edges": [
@@ -3659,6 +3664,12 @@
         {
             "from": "_z0k58fv18",
             "to": "_12wsjupfr",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_12wsjupfr",
+            "to": "_a9vqt0si1",
             "category": "from-to",
             "desc": "has reply"
         }
