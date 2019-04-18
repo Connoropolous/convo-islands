@@ -1649,6 +1649,11 @@
             "text": "the input box behaves in a way where it will actually break written text apart per the punctuation it contains",
             "author": "connor",
             "id": "_ss56s0ubf"
+        },
+        {
+            "text": "it would take a paragraph of three sentences and create it as three distinct nodes, in a chain",
+            "author": "connor",
+            "id": "_qk29pilsp"
         }
     ],
     "edges": [
@@ -3533,6 +3538,12 @@
         {
             "from": "_z0k58fv18",
             "to": "_ss56s0ubf",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_ss56s0ubf",
+            "to": "_qk29pilsp",
             "category": "from-to",
             "desc": "has reply"
         }
