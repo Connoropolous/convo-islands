@@ -1724,6 +1724,11 @@
             "text": "AllOurIdeas",
             "author": "connor",
             "id": "_wevbfniz4"
+        },
+        {
+            "text": "https://www.allourideas.org/",
+            "author": "connor",
+            "id": "_e1et01fw4"
         }
     ],
     "edges": [
@@ -3692,6 +3697,12 @@
         {
             "from": "_cykz1cwa3",
             "to": "_wevbfniz4",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_wevbfniz4",
+            "to": "_e1et01fw4",
             "category": "from-to",
             "desc": "has reply"
         }
