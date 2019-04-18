@@ -1939,6 +1939,11 @@
             "text": "It feels so good because I might just want to be expanding on my own thinking, and not in conversation mode",
             "author": "connor",
             "id": "_up743xm4g"
+        },
+        {
+            "text": "Or, i might want to receive updates in as close to realtime as possible",
+            "author": "connor",
+            "id": "_o2lcq65mz"
         }
     ],
     "edges": [
@@ -4159,6 +4164,12 @@
         {
             "from": "_857alnnj9",
             "to": "_up743xm4g",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_up743xm4g",
+            "to": "_o2lcq65mz",
             "category": "from-to",
             "desc": "has reply"
         }
