@@ -1659,6 +1659,11 @@
             "text": "it could also propose that run on sentences joined with connector words like 'and' or 'but' be separated into consecutive, chained nodes",
             "author": "connor",
             "id": "_kdmc54je0"
+        },
+        {
+            "text": "this is like a little bit of an intelligent assistant that helps you be 'one-pointed', without it feeling like a big cognitive overhead",
+            "author": "connor",
+            "id": "_1wz0wwbbj"
         }
     ],
     "edges": [
@@ -3555,6 +3560,12 @@
         {
             "from": "_qk29pilsp",
             "to": "_kdmc54je0",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_kdmc54je0",
+            "to": "_1wz0wwbbj",
             "category": "from-to",
             "desc": "has reply"
         }
