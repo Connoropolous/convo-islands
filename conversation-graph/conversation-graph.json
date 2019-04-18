@@ -1734,6 +1734,11 @@
             "text": "Metamapper",
             "author": "connor",
             "id": "_h60lak2vb"
+        },
+        {
+            "text": "methods of data visualization",
+            "author": "connor",
+            "id": "_x085hxiqk"
         }
     ],
     "edges": [
@@ -3714,6 +3719,12 @@
         {
             "from": "_cykz1cwa3",
             "to": "_h60lak2vb",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_gytatvf8y",
+            "to": "_x085hxiqk",
             "category": "from-to",
             "desc": "has reply"
         }
