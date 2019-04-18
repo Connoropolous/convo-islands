@@ -1754,6 +1754,11 @@
             "text": "could also be called input",
             "author": "connor",
             "id": "_5vb8gu5fs"
+        },
+        {
+            "text": "could be considered one-way flow, people -> data",
+            "author": "connor",
+            "id": "_vkiqt8p6u"
         }
     ],
     "edges": [
@@ -3758,6 +3763,12 @@
         {
             "from": "_dnp7adzgp",
             "to": "_5vb8gu5fs",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_dnp7adzgp",
+            "to": "_vkiqt8p6u",
             "category": "from-to",
             "desc": "has reply"
         }
