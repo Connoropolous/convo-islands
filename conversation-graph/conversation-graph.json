@@ -1919,6 +1919,11 @@
             "text": "This is now added via a very hacky/simple input box added to the UI",
             "author": "connor",
             "id": "_ek0zjd629"
+        },
+        {
+            "text": "And you can set it via the 'focal' key in the URL params",
+            "author": "connor",
+            "id": "_tezzik867"
         }
     ],
     "edges": [
@@ -4115,6 +4120,12 @@
         {
             "from": "_amce21iwu",
             "to": "_ek0zjd629",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_ek0zjd629",
+            "to": "_tezzik867",
             "category": "from-to",
             "desc": "has reply"
         }
