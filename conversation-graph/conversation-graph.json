@@ -1934,6 +1934,11 @@
             "text": "I love this idea that I can control how often it is checking for updates",
             "author": "connor",
             "id": "_857alnnj9"
+        },
+        {
+            "text": "It feels so good because I might just want to be expanding on my own thinking, and not in conversation mode",
+            "author": "connor",
+            "id": "_up743xm4g"
         }
     ],
     "edges": [
@@ -4148,6 +4153,12 @@
         {
             "from": "_fjufb15iz",
             "to": "_857alnnj9",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_857alnnj9",
+            "to": "_up743xm4g",
             "category": "from-to",
             "desc": "has reply"
         }
