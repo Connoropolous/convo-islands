@@ -1884,6 +1884,11 @@
             "text": "Facilitation, also consulting",
             "author": "connor",
             "id": "_cmujejde2"
+        },
+        {
+            "text": "Maybe the relationships should have lower opacity so that they don't distract so much attention",
+            "author": "connor",
+            "id": "_sygoqz7fd"
         }
     ],
     "edges": [
@@ -4038,6 +4043,12 @@
         {
             "from": "_uirmis2mm",
             "to": "_cmujejde2",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_sygoqz7fd",
             "category": "from-to",
             "desc": "has reply"
         }
