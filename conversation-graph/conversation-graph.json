@@ -1699,6 +1699,11 @@
             "text": "then you would have more of a truly infinite canvas, that could scale to the conversation",
             "author": "connor",
             "id": "_bbupz7lls"
+        },
+        {
+            "text": "The layout algorithm could/would also progressively slow with the overall size though, so there DOES, at some level, need to be distinctions between conversation contexts",
+            "author": "connor",
+            "id": "_4ya2xkd81"
         }
     ],
     "edges": [
@@ -3637,6 +3642,12 @@
         {
             "from": "_u4et2fvy2",
             "to": "_bbupz7lls",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_bbupz7lls",
+            "to": "_4ya2xkd81",
             "category": "from-to",
             "desc": "has reply"
         }
