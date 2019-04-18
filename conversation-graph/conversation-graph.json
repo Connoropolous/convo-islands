@@ -1824,6 +1824,11 @@
             "text": "if three or more have their own focal node, and they have their own layout",
             "author": "connor",
             "id": "_7kf626una"
+        },
+        {
+            "text": "it's less about 'islands' ",
+            "author": "connor",
+            "id": "_lyjpog5fr"
         }
     ],
     "edges": [
@@ -3906,6 +3911,12 @@
         {
             "from": "_6gsgii4js",
             "to": "_7kf626una",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_7kf626una",
+            "to": "_lyjpog5fr",
             "category": "from-to",
             "desc": "has reply"
         }
