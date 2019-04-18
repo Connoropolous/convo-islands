@@ -1794,6 +1794,11 @@
             "text": "Is it open source software?",
             "author": "connor",
             "id": "_2mjtnimox"
+        },
+        {
+            "text": "Makes sense that when doing the mapping, the data should be on a p2p framework so that participants maintain ownership/stewardship of the data",
+            "author": "connor",
+            "id": "_nv3qrpf71"
         }
     ],
     "edges": [
@@ -3840,6 +3845,12 @@
         {
             "from": "_6gsgii4js",
             "to": "_2mjtnimox",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_6gsgii4js",
+            "to": "_nv3qrpf71",
             "category": "from-to",
             "desc": "has reply"
         }
