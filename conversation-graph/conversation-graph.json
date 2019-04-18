@@ -1689,6 +1689,11 @@
             "text": "the server would also know the layout algorithm, meaning it would know which nodes were in view, and which weren't, and could respond with the relevant data, as the view expanded or changed",
             "author": "connor",
             "id": "_ncwc44zh6"
+        },
+        {
+            "text": "then when you zoom in on a conversation, it could actually literally drop nodes from the rendering, that were far enough out of view",
+            "author": "connor",
+            "id": "_u4et2fvy2"
         }
     ],
     "edges": [
@@ -3615,6 +3620,12 @@
         {
             "from": "_6o0wp9gq6",
             "to": "_ncwc44zh6",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_ncwc44zh6",
+            "to": "_u4et2fvy2",
             "category": "from-to",
             "desc": "has reply"
         }
