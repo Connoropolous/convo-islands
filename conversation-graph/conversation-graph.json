@@ -1784,6 +1784,11 @@
             "text": "Facilitation funds development",
             "author": "connor",
             "id": "_uirmis2mm"
+        },
+        {
+            "text": "Stuff we're doing on the side could become integrated into the core",
+            "author": "connor",
+            "id": "_9621hrfrf"
         }
     ],
     "edges": [
@@ -3818,6 +3823,12 @@
         {
             "from": "_skp06cs1f",
             "to": "_uirmis2mm",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_6gsgii4js",
+            "to": "_9621hrfrf",
             "category": "from-to",
             "desc": "has reply"
         }
