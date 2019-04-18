@@ -1674,6 +1674,11 @@
             "text": "If I think of this growing to hundreds or thousands of nodes, it is easy to imagine the page slowing down to make it unusable",
             "author": "connor",
             "id": "_rl3jxspw1"
+        },
+        {
+            "text": "to address this, dynamic loading of data that should be in the viewport could be used",
+            "author": "connor",
+            "id": "_ti3gauydc"
         }
     ],
     "edges": [
@@ -3582,6 +3587,12 @@
         {
             "from": "_z0k58fv18",
             "to": "_rl3jxspw1",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_rl3jxspw1",
+            "to": "_ti3gauydc",
             "category": "from-to",
             "desc": "has reply"
         }
