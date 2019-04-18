@@ -1644,6 +1644,11 @@
             "text": "http://greaterthanthesum.com/sumapp",
             "author": "connor",
             "id": "_v5r0ky1nm"
+        },
+        {
+            "text": "the input box behaves in a way where it will actually break written text apart per the punctuation it contains",
+            "author": "connor",
+            "id": "_ss56s0ubf"
         }
     ],
     "edges": [
@@ -3522,6 +3527,12 @@
         {
             "from": "_czb0g7r96",
             "to": "_v5r0ky1nm",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_ss56s0ubf",
             "category": "from-to",
             "desc": "has reply"
         }
