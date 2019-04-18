@@ -1619,6 +1619,11 @@
             "text": "Robert, would you be willing to make a cut of the clip of the demo where we talk about what we're working on and upload it?",
             "author": "connor",
             "id": "_acn8f6k3y"
+        },
+        {
+            "text": "this feels increasingly important",
+            "author": "connor",
+            "id": "_k3x6eyb6o"
         }
     ],
     "edges": [
@@ -3467,6 +3472,12 @@
         {
             "from": "_ezx679437",
             "to": "_73en4d4wu",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_knp5ts5mw",
+            "to": "_k3x6eyb6o",
             "category": "from-to",
             "desc": "has reply"
         }
