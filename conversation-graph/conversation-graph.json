@@ -1894,6 +1894,11 @@
             "text": "yes, added it to my todos",
             "author": "robert",
             "id": "_meqzysxfg"
+        },
+        {
+            "text": "sweet, thanks!",
+            "author": "connor",
+            "id": "_g7fg3si6r"
         }
     ],
     "edges": [
@@ -4060,6 +4065,12 @@
         {
             "from": "_acn8f6k3y",
             "to": "_meqzysxfg",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_meqzysxfg",
+            "to": "_g7fg3si6r",
             "category": "from-to",
             "desc": "has reply"
         }
