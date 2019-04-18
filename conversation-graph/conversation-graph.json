@@ -1814,6 +1814,11 @@
             "text": "which of the feature sets is the first to do?",
             "author": "connor",
             "id": "_zqk7qdhof"
+        },
+        {
+            "text": "so that it could then iterate from the place of being self-sustaining",
+            "author": "connor",
+            "id": "_9dhfwfvo4"
         }
     ],
     "edges": [
@@ -3884,6 +3889,12 @@
         {
             "from": "_6gsgii4js",
             "to": "_zqk7qdhof",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_zqk7qdhof",
+            "to": "_9dhfwfvo4",
             "category": "from-to",
             "desc": "has reply"
         }
