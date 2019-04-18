@@ -1624,6 +1624,11 @@
             "text": "this feels increasingly important",
             "author": "connor",
             "id": "_k3x6eyb6o"
+        },
+        {
+            "text": "especially for the use case of sharing URLs in node text",
+            "author": "connor",
+            "id": "_8h8vd8v20"
         }
     ],
     "edges": [
@@ -3478,6 +3483,12 @@
         {
             "from": "_knp5ts5mw",
             "to": "_k3x6eyb6o",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_k3x6eyb6o",
+            "to": "_8h8vd8v20",
             "category": "from-to",
             "desc": "has reply"
         }
