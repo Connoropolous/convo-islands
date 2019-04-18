@@ -1839,6 +1839,11 @@
             "text": "Jerry",
             "author": "connor",
             "id": "_loosraeeq"
+        },
+        {
+            "text": "as people shift their focal nodes, the conversation is emerging and shifting",
+            "author": "connor",
+            "id": "_v8ajet1vj"
         }
     ],
     "edges": [
@@ -3939,6 +3944,12 @@
         {
             "from": "_w16q9tkkm",
             "to": "_loosraeeq",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_7kf626una",
+            "to": "_v8ajet1vj",
             "category": "from-to",
             "desc": "has reply"
         }
