@@ -1829,6 +1829,11 @@
             "text": "it's less about 'islands' ",
             "author": "connor",
             "id": "_lyjpog5fr"
+        },
+        {
+            "text": "he wants the emergent structure",
+            "author": "connor",
+            "id": "_w16q9tkkm"
         }
     ],
     "edges": [
@@ -3917,6 +3922,12 @@
         {
             "from": "_7kf626una",
             "to": "_lyjpog5fr",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_lyjpog5fr",
+            "to": "_w16q9tkkm",
             "category": "from-to",
             "desc": "has reply"
         }
