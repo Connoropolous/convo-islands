@@ -1774,6 +1774,11 @@
             "text": "notes from chat with Robert",
             "author": "connor",
             "id": "_6gsgii4js"
+        },
+        {
+            "text": "SenseCompass",
+            "author": "connor",
+            "id": "_skp06cs1f"
         }
     ],
     "edges": [
@@ -3796,6 +3801,12 @@
         {
             "from": "_x085hxiqk",
             "to": "_25kmw0a5o",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_6gsgii4js",
+            "to": "_skp06cs1f",
             "category": "from-to",
             "desc": "has reply"
         }
