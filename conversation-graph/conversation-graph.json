@@ -1914,6 +1914,11 @@
             "text": "Unviewed nodes could be made larger, or a different color, for quick visual scanning",
             "author": "connor",
             "id": "_hrsafzn91"
+        },
+        {
+            "text": "This is now added via a very hacky/simple input box added to the UI",
+            "author": "connor",
+            "id": "_ek0zjd629"
         }
     ],
     "edges": [
@@ -4104,6 +4109,12 @@
         {
             "from": "_pak836hu6",
             "to": "_hrsafzn91",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_amce21iwu",
+            "to": "_ek0zjd629",
             "category": "from-to",
             "desc": "has reply"
         }
