@@ -1629,6 +1629,11 @@
             "text": "especially for the use case of sharing URLs in node text",
             "author": "connor",
             "id": "_8h8vd8v20"
+        },
+        {
+            "text": "Feature idea: URLs should render as clickable, or there should be a shortcut for clicking on a node that will open a contained link",
+            "author": "connor",
+            "id": "_4340rbz2r"
         }
     ],
     "edges": [
@@ -3489,6 +3494,12 @@
         {
             "from": "_k3x6eyb6o",
             "to": "_8h8vd8v20",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_8h8vd8v20",
+            "to": "_4340rbz2r",
             "category": "from-to",
             "desc": "has reply"
         }
