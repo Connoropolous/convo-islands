@@ -1714,6 +1714,11 @@
             "text": "It could be an accessibility/internationalization option to make it layout the other way too",
             "author": "connor",
             "id": "_a9vqt0si1"
+        },
+        {
+            "text": "https://twitter.com/Bortseb/status/1091194462246563841",
+            "author": "connor",
+            "id": "_u6nz7mn8l"
         }
     ],
     "edges": [
@@ -3670,6 +3675,12 @@
         {
             "from": "_12wsjupfr",
             "to": "_a9vqt0si1",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z3g23nx7f",
+            "to": "_u6nz7mn8l",
             "category": "from-to",
             "desc": "has reply"
         }
