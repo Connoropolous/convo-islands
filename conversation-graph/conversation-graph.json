@@ -1819,6 +1819,11 @@
             "text": "so that it could then iterate from the place of being self-sustaining",
             "author": "connor",
             "id": "_9dhfwfvo4"
+        },
+        {
+            "text": "if three or more have their own focal node, and they have their own layout",
+            "author": "connor",
+            "id": "_7kf626una"
         }
     ],
     "edges": [
@@ -3895,6 +3900,12 @@
         {
             "from": "_zqk7qdhof",
             "to": "_9dhfwfvo4",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_6gsgii4js",
+            "to": "_7kf626una",
             "category": "from-to",
             "desc": "has reply"
         }
