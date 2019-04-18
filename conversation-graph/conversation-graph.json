@@ -1804,6 +1804,11 @@
             "text": "Already forming LLCs",
             "author": "connor",
             "id": "_7h2xkcelm"
+        },
+        {
+            "text": "A couple software devs in the conversation",
+            "author": "connor",
+            "id": "_jzdmz2jqm"
         }
     ],
     "edges": [
@@ -3862,6 +3867,12 @@
         {
             "from": "_6gsgii4js",
             "to": "_7h2xkcelm",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_7h2xkcelm",
+            "to": "_jzdmz2jqm",
             "category": "from-to",
             "desc": "has reply"
         }
