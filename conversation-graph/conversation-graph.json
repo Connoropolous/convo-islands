@@ -1609,6 +1609,11 @@
             "text": "if the main function of just clicking a node is that it selects it, what keyboard or click function could be used to facilitate this?",
             "author": "connor",
             "id": "_ezx679437"
+        },
+        {
+            "text": "I feel like this is one of your areas of strength",
+            "author": "connor",
+            "id": "_73en4d4wu"
         }
     ],
     "edges": [
@@ -3451,6 +3456,12 @@
         {
             "from": "_amce21iwu",
             "to": "_ezx679437",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_ezx679437",
+            "to": "_73en4d4wu",
             "category": "from-to",
             "desc": "has reply"
         }
