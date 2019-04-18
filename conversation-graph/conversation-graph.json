@@ -1684,6 +1684,11 @@
             "text": "so it depends on the pan and zoom values",
             "author": "connor",
             "id": "_6o0wp9gq6"
+        },
+        {
+            "text": "the server would also know the layout algorithm, meaning it would know which nodes were in view, and which weren't, and could respond with the relevant data, as the view expanded or changed",
+            "author": "connor",
+            "id": "_ncwc44zh6"
         }
     ],
     "edges": [
@@ -3604,6 +3609,12 @@
         {
             "from": "_ti3gauydc",
             "to": "_6o0wp9gq6",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_6o0wp9gq6",
+            "to": "_ncwc44zh6",
             "category": "from-to",
             "desc": "has reply"
         }
