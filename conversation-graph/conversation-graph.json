@@ -1679,6 +1679,11 @@
             "text": "to address this, dynamic loading of data that should be in the viewport could be used",
             "author": "connor",
             "id": "_ti3gauydc"
+        },
+        {
+            "text": "so it depends on the pan and zoom values",
+            "author": "connor",
+            "id": "_6o0wp9gq6"
         }
     ],
     "edges": [
@@ -3593,6 +3598,12 @@
         {
             "from": "_rl3jxspw1",
             "to": "_ti3gauydc",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_ti3gauydc",
+            "to": "_6o0wp9gq6",
             "category": "from-to",
             "desc": "has reply"
         }
