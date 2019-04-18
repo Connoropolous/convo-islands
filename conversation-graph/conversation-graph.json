@@ -1739,6 +1739,11 @@
             "text": "methods of data visualization",
             "author": "connor",
             "id": "_x085hxiqk"
+        },
+        {
+            "text": "methods of data interaction",
+            "author": "connor",
+            "id": "_rn7lhwhho"
         }
     ],
     "edges": [
@@ -3725,6 +3730,12 @@
         {
             "from": "_gytatvf8y",
             "to": "_x085hxiqk",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_gytatvf8y",
+            "to": "_rn7lhwhho",
             "category": "from-to",
             "desc": "has reply"
         }
