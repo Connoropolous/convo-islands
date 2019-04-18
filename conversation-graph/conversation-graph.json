@@ -1929,6 +1929,11 @@
             "text": "Just wondering, to add Metacode icons specifically, or some other icons?",
             "author": "connor",
             "id": "_2h74igp39"
+        },
+        {
+            "text": "I love this idea that I can control how often it is checking for updates",
+            "author": "connor",
+            "id": "_857alnnj9"
         }
     ],
     "edges": [
@@ -4137,6 +4142,12 @@
         {
             "from": "_rc2ambex6",
             "to": "_2h74igp39",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_fjufb15iz",
+            "to": "_857alnnj9",
             "category": "from-to",
             "desc": "has reply"
         }
