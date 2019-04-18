@@ -1639,6 +1639,11 @@
             "text": "sumApp",
             "author": "connor",
             "id": "_czb0g7r96"
+        },
+        {
+            "text": "http://greaterthanthesum.com/sumapp",
+            "author": "connor",
+            "id": "_v5r0ky1nm"
         }
     ],
     "edges": [
@@ -3511,6 +3516,12 @@
         {
             "from": "_cykz1cwa3",
             "to": "_czb0g7r96",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_czb0g7r96",
+            "to": "_v5r0ky1nm",
             "category": "from-to",
             "desc": "has reply"
         }
