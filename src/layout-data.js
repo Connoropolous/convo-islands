@@ -50,7 +50,7 @@ const recurseUpOrDown = (edges, arrayKey, directionKeys, maxKey, usedNodes, node
         })
 
     // sort the relatives array by the ones with the longest threads to the shortest (desc is short for descending)
-    newNode[arrayKey] = lodash.orderBy(newNode[arrayKey], maxKey, 'desc')
+    newNode[arrayKey] = lodash.orderBy(newNode[arrayKey], maxKey, 'asc')
     // set the max in the direction (maxDescendants or maxAncestors) to be equal to 0 if there are
     // none, and to be one greater than the max relatives if there is some
     // this is possible because of the sorting we do above
