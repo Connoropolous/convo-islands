@@ -1834,6 +1834,11 @@
             "text": "he wants the emergent structure",
             "author": "connor",
             "id": "_w16q9tkkm"
+        },
+        {
+            "text": "Jerry",
+            "author": "connor",
+            "id": "_loosraeeq"
         }
     ],
     "edges": [
@@ -3928,6 +3933,12 @@
         {
             "from": "_lyjpog5fr",
             "to": "_w16q9tkkm",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_w16q9tkkm",
+            "to": "_loosraeeq",
             "category": "from-to",
             "desc": "has reply"
         }
