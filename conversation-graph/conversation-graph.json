@@ -1694,6 +1694,11 @@
             "text": "then when you zoom in on a conversation, it could actually literally drop nodes from the rendering, that were far enough out of view",
             "author": "connor",
             "id": "_u4et2fvy2"
+        },
+        {
+            "text": "then you would have more of a truly infinite canvas, that could scale to the conversation",
+            "author": "connor",
+            "id": "_bbupz7lls"
         }
     ],
     "edges": [
@@ -3626,6 +3631,12 @@
         {
             "from": "_ncwc44zh6",
             "to": "_u4et2fvy2",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_u4et2fvy2",
+            "to": "_bbupz7lls",
             "category": "from-to",
             "desc": "has reply"
         }
