@@ -1864,6 +1864,11 @@
             "text": "what are the different social modes?",
             "author": "connor",
             "id": "_i1q4fj8jl"
+        },
+        {
+            "text": "we could switch between modes, and switch between canvases",
+            "author": "connor",
+            "id": "_nfafz8bvv"
         }
     ],
     "edges": [
@@ -3994,6 +3999,12 @@
         {
             "from": "_nyrxt7e0c",
             "to": "_i1q4fj8jl",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_i1q4fj8jl",
+            "to": "_nfafz8bvv",
             "category": "from-to",
             "desc": "has reply"
         }
