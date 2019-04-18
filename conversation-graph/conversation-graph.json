@@ -1779,6 +1779,11 @@
             "text": "SenseCompass",
             "author": "connor",
             "id": "_skp06cs1f"
+        },
+        {
+            "text": "Facilitation funds development",
+            "author": "connor",
+            "id": "_uirmis2mm"
         }
     ],
     "edges": [
@@ -3807,6 +3812,12 @@
         {
             "from": "_6gsgii4js",
             "to": "_skp06cs1f",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_skp06cs1f",
+            "to": "_uirmis2mm",
             "category": "from-to",
             "desc": "has reply"
         }
