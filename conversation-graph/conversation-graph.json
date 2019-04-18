@@ -1759,6 +1759,11 @@
             "text": "could be considered one-way flow, people -> data",
             "author": "connor",
             "id": "_vkiqt8p6u"
+        },
+        {
+            "text": "could be considered two-way flow, people <-> data",
+            "author": "connor",
+            "id": "_6gcilosba"
         }
     ],
     "edges": [
@@ -3769,6 +3774,12 @@
         {
             "from": "_dnp7adzgp",
             "to": "_vkiqt8p6u",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_rn7lhwhho",
+            "to": "_6gcilosba",
             "category": "from-to",
             "desc": "has reply"
         }
