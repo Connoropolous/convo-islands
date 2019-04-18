@@ -1849,6 +1849,11 @@
             "text": "pairwise comparison",
             "author": "connor",
             "id": "_1y8hk2sx9"
+        },
+        {
+            "text": "in realtime with a group, so you get realtime sensemaking",
+            "author": "connor",
+            "id": "_pdv95bk0u"
         }
     ],
     "edges": [
@@ -3961,6 +3966,12 @@
         {
             "from": "_6gsgii4js",
             "to": "_1y8hk2sx9",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_1y8hk2sx9",
+            "to": "_pdv95bk0u",
             "category": "from-to",
             "desc": "has reply"
         }
