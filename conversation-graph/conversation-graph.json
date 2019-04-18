@@ -1669,6 +1669,11 @@
             "text": "what was that tweet/thread about tools for self-surveying collective intelligence, etc???",
             "author": "connor",
             "id": "_z3g23nx7f"
+        },
+        {
+            "text": "If I think of this growing to hundreds or thousands of nodes, it is easy to imagine the page slowing down to make it unusable",
+            "author": "connor",
+            "id": "_rl3jxspw1"
         }
     ],
     "edges": [
@@ -3571,6 +3576,12 @@
         {
             "from": "_kdmc54je0",
             "to": "_1wz0wwbbj",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_rl3jxspw1",
             "category": "from-to",
             "desc": "has reply"
         }
