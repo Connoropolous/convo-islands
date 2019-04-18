@@ -1844,6 +1844,11 @@
             "text": "as people shift their focal nodes, the conversation is emerging and shifting",
             "author": "connor",
             "id": "_v8ajet1vj"
+        },
+        {
+            "text": "pairwise comparison",
+            "author": "connor",
+            "id": "_1y8hk2sx9"
         }
     ],
     "edges": [
@@ -3950,6 +3955,12 @@
         {
             "from": "_7kf626una",
             "to": "_v8ajet1vj",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_6gsgii4js",
+            "to": "_1y8hk2sx9",
             "category": "from-to",
             "desc": "has reply"
         }
