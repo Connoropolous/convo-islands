@@ -1869,6 +1869,11 @@
             "text": "we could switch between modes, and switch between canvases",
             "author": "connor",
             "id": "_nfafz8bvv"
+        },
+        {
+            "text": "This is really similar also to what Bonnita Roy was talking about doing with the sensemaking tools she was thinking of",
+            "author": "connor",
+            "id": "_087pnpwnq"
         }
     ],
     "edges": [
@@ -4005,6 +4010,12 @@
         {
             "from": "_i1q4fj8jl",
             "to": "_nfafz8bvv",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_uirmis2mm",
+            "to": "_087pnpwnq",
             "category": "from-to",
             "desc": "has reply"
         }
