@@ -1859,6 +1859,11 @@
             "text": "Facilitator",
             "author": "connor",
             "id": "_n4a777h54"
+        },
+        {
+            "text": "what are the different social modes?",
+            "author": "connor",
+            "id": "_i1q4fj8jl"
         }
     ],
     "edges": [
@@ -3983,6 +3988,12 @@
         {
             "from": "_954crg84j",
             "to": "_n4a777h54",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_nyrxt7e0c",
+            "to": "_i1q4fj8jl",
             "category": "from-to",
             "desc": "has reply"
         }
