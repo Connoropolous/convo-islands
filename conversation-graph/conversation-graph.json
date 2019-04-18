@@ -1909,6 +1909,11 @@
             "text": "It seemed way more valuable to use your name than just \"you\" because we don't know who else will be reading this in the future, and information loses context!",
             "author": "connor",
             "id": "_2dq0h69hk"
+        },
+        {
+            "text": "Unviewed nodes could be made larger, or a different color, for quick visual scanning",
+            "author": "connor",
+            "id": "_hrsafzn91"
         }
     ],
     "edges": [
@@ -4093,6 +4098,12 @@
         {
             "from": "_nehvb9fru",
             "to": "_2dq0h69hk",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_pak836hu6",
+            "to": "_hrsafzn91",
             "category": "from-to",
             "desc": "has reply"
         }
