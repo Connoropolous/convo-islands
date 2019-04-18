@@ -1809,6 +1809,11 @@
             "text": "A couple software devs in the conversation",
             "author": "connor",
             "id": "_jzdmz2jqm"
+        },
+        {
+            "text": "which of the feature sets is the first to do?",
+            "author": "connor",
+            "id": "_zqk7qdhof"
         }
     ],
     "edges": [
@@ -3873,6 +3878,12 @@
         {
             "from": "_7h2xkcelm",
             "to": "_jzdmz2jqm",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_6gsgii4js",
+            "to": "_zqk7qdhof",
             "category": "from-to",
             "desc": "has reply"
         }
