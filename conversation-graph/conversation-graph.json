@@ -1899,6 +1899,11 @@
             "text": "sweet, thanks!",
             "author": "connor",
             "id": "_g7fg3si6r"
+        },
+        {
+            "text": "I had a weird insight while writing this",
+            "author": "connor",
+            "id": "_nehvb9fru"
         }
     ],
     "edges": [
@@ -4071,6 +4076,12 @@
         {
             "from": "_meqzysxfg",
             "to": "_g7fg3si6r",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_acn8f6k3y",
+            "to": "_nehvb9fru",
             "category": "from-to",
             "desc": "has reply"
         }
