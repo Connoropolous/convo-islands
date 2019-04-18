@@ -5,6 +5,7 @@
 const selection = require('./modules/selection')
 const authors = require('./modules/authors')
 const input = require('./modules/input')
+const setFocal = require('./modules/set-focal')
 const keyboardShortcuts = require('./modules/keyboard-shortcuts')
 const websockets = require('./modules/websocket')
 const reloadButton = require('./modules/reload-button')
@@ -12,9 +13,15 @@ const { getLayoutForData } = require('../src/index')
 const cytoscapeConverter = require('./modules/cytoscape-converter')
 const cytoscapeLoader = require('./modules/cytoscape-loader')
 
-const FOCAL_TOPIC_ID = "_z0k58fv18" // feature ideas
+const DEFAULT_FOCAL_TOPIC_ID = "_z0k58fv18" // feature ideas
 const FOCAL_COORDS = { x: 0, y: 0 }
 const GRAPH_DATA_PATH = "/conversation-graph.json"
+
+const getFocalTopicId = () => {
+    const searchParams = new URLSearchParams(window.location.search)
+    const focalId = searchParams.get(setFocal.FOCAL_ID_PARAMS_KEY)
+    return focalId || DEFAULT_FOCAL_TOPIC_ID
+}
 
 // fetchAndLoad is an async function (meaning it contains function calls
 // that must be performed asynchronously)
@@ -31,7 +38,7 @@ const fetchAndLoad = async () => {
     const { nodes, edges } = await response.json()
 
     // put the graph data through our custom layout algorithm
-    const positions = getLayoutForData(nodes, edges, FOCAL_TOPIC_ID, FOCAL_COORDS)
+    const positions = getLayoutForData(nodes, edges, getFocalTopicId(), FOCAL_COORDS)
 
     // convert the result into cytoscape compatible format
     const cytoscapeData = cytoscapeConverter(nodes, edges, positions)
@@ -47,6 +54,7 @@ fetchAndLoad().then(cy => {
     reloadButton()
     websockets.init(cy)
     input.init(cy)
+    setFocal.init(cy)
     selection.init(cy)
     authors.init()
 })

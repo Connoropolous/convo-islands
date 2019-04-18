@@ -23,6 +23,12 @@
             left: 20px;
         }
 
+        #focal {
+            position: absolute;
+            top: 60px;
+            left: 20px;
+        }
+
         #authors {
             position: absolute;
             top: 20px;
@@ -58,6 +64,11 @@
     <div id="reply">
         <textarea id="reply-input"></textarea>
         <input type="submit" id="reply-submit"></input>
+    </div>
+    <div id="focal">
+        <p>Set focal node (use an ID)</p>
+        <input type="text" id="focal-input" />
+        <input type="submit" id="focal-submit"></input>
     </div>
     <div id="authors">Act as:</div>
     <div id="updates">New updates<button id="reload-button">Highlight New</button></div>
