@@ -1879,6 +1879,11 @@
             "text": "Also similar to how Dave Snowden operated with his Sensemaker suite",
             "author": "connor",
             "id": "_862efavn2"
+        },
+        {
+            "text": "Facilitation, also consulting",
+            "author": "connor",
+            "id": "_cmujejde2"
         }
     ],
     "edges": [
@@ -4027,6 +4032,12 @@
         {
             "from": "_uirmis2mm",
             "to": "_862efavn2",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_uirmis2mm",
+            "to": "_cmujejde2",
             "category": "from-to",
             "desc": "has reply"
         }
