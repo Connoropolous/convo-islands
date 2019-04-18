@@ -1634,6 +1634,11 @@
             "text": "Feature idea: URLs should render as clickable, or there should be a shortcut for clicking on a node that will open a contained link",
             "author": "connor",
             "id": "_4340rbz2r"
+        },
+        {
+            "text": "sumApp",
+            "author": "connor",
+            "id": "_czb0g7r96"
         }
     ],
     "edges": [
@@ -3500,6 +3505,12 @@
         {
             "from": "_8h8vd8v20",
             "to": "_4340rbz2r",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_cykz1cwa3",
+            "to": "_czb0g7r96",
             "category": "from-to",
             "desc": "has reply"
         }
