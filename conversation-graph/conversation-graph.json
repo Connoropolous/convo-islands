@@ -1654,6 +1654,11 @@
             "text": "it would take a paragraph of three sentences and create it as three distinct nodes, in a chain",
             "author": "connor",
             "id": "_qk29pilsp"
+        },
+        {
+            "text": "it could also propose that run on sentences joined with connector words like 'and' or 'but' be separated into consecutive, chained nodes",
+            "author": "connor",
+            "id": "_kdmc54je0"
         }
     ],
     "edges": [
@@ -3544,6 +3549,12 @@
         {
             "from": "_ss56s0ubf",
             "to": "_qk29pilsp",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_qk29pilsp",
+            "to": "_kdmc54je0",
             "category": "from-to",
             "desc": "has reply"
         }
