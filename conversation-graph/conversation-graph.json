@@ -1949,6 +1949,11 @@
             "text": "Something I wrote down in my notes is that dynamic maps are reall just a set of filters.  A static map is one where to specifiy it, you need to add extra metadata that aren't in any of the nodes or edges... i.e. node coordinates.",
             "author": "robert",
             "id": "_c500w4jgo"
+        },
+        {
+            "text": "Dynamic maps are a set of filters",
+            "author": "connor",
+            "id": "_zetre132o"
         }
     ],
     "edges": [
@@ -4181,6 +4186,12 @@
         {
             "from": "_rl3jxspw1",
             "to": "_c500w4jgo",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_c500w4jgo",
+            "to": "_zetre132o",
             "category": "from-to",
             "desc": "has reply"
         }
