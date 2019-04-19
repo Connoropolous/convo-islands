@@ -1954,6 +1954,11 @@
             "text": "Dynamic maps are a set of filters",
             "author": "connor",
             "id": "_zetre132o"
+        },
+        {
+            "text": "I agree",
+            "author": "connor",
+            "id": "_tlkjdxp03"
         }
     ],
     "edges": [
@@ -4192,6 +4197,12 @@
         {
             "from": "_c500w4jgo",
             "to": "_zetre132o",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_zetre132o",
+            "to": "_tlkjdxp03",
             "category": "from-to",
             "desc": "has reply"
         }
