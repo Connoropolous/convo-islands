@@ -1999,6 +1999,11 @@
             "text": "Testing how to write a script between a person and a bot",
             "author": "connor",
             "id": "_a6m95tx6h"
+        },
+        {
+            "text": "Hey how are you here are some instructions",
+            "author": "connor",
+            "id": "_gfcufbw2q"
         }
     ],
     "edges": [
@@ -4279,6 +4284,12 @@
         {
             "from": "_z0k58fv18",
             "to": "_3mkbczzje",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_a6m95tx6h",
+            "to": "_gfcufbw2q",
             "category": "from-to",
             "desc": "has reply"
         }
