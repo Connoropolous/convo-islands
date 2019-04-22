@@ -1984,6 +1984,11 @@
             "text": "hopefully partially resolved with the addition of 'search'",
             "author": "connor",
             "id": "_spy7bi0sr"
+        },
+        {
+            "text": "the ease of inputting new information",
+            "author": "connor",
+            "id": "_zt4casumx"
         }
     ],
     "edges": [
@@ -4252,6 +4257,12 @@
         {
             "from": "_abmub1coq",
             "to": "_spy7bi0sr",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_piv31coml",
+            "to": "_zt4casumx",
             "category": "from-to",
             "desc": "has reply"
         }
