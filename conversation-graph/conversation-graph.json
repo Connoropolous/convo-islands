@@ -2014,6 +2014,11 @@
             "text": "Good to hear",
             "author": "connor",
             "id": "_y0n23mnj3"
+        },
+        {
+            "text": "I'm having a bad day",
+            "author": "connor",
+            "id": "_bkpdfn4iu"
         }
     ],
     "edges": [
@@ -4312,6 +4317,12 @@
         {
             "from": "_88znr1or4",
             "to": "_y0n23mnj3",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_gfcufbw2q",
+            "to": "_bkpdfn4iu",
             "category": "from-to",
             "desc": "has reply"
         }
