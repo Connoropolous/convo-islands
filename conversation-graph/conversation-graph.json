@@ -2004,6 +2004,11 @@
             "text": "Hey how are you here are some instructions",
             "author": "connor",
             "id": "_gfcufbw2q"
+        },
+        {
+            "text": "I'm great thanks",
+            "author": "connor",
+            "id": "_88znr1or4"
         }
     ],
     "edges": [
@@ -4290,6 +4295,12 @@
         {
             "from": "_a6m95tx6h",
             "to": "_gfcufbw2q",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_gfcufbw2q",
+            "to": "_88znr1or4",
             "category": "from-to",
             "desc": "has reply"
         }
