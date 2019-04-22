@@ -1969,6 +1969,11 @@
             "text": "how the text renders visually on the map... e.g. currently long text nodes create overlap on top of one another",
             "author": "connor",
             "id": "_m1zrcbsgs"
+        },
+        {
+            "text": "the vastness of the map once it gets big... the vertical distance between the lowest nodes and the highest ones",
+            "author": "connor",
+            "id": "_t047z330p"
         }
     ],
     "edges": [
@@ -4219,6 +4224,12 @@
         {
             "from": "_piv31coml",
             "to": "_m1zrcbsgs",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_piv31coml",
+            "to": "_t047z330p",
             "category": "from-to",
             "desc": "has reply"
         }
