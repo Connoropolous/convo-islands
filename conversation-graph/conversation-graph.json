@@ -1989,6 +1989,11 @@
             "text": "the ease of inputting new information",
             "author": "connor",
             "id": "_zt4casumx"
+        },
+        {
+            "text": "record elements as audio recordings, and make nodes openable/playable as audio files!",
+            "author": "connor",
+            "id": "_3mkbczzje"
         }
     ],
     "edges": [
@@ -4263,6 +4268,12 @@
         {
             "from": "_piv31coml",
             "to": "_zt4casumx",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_z0k58fv18",
+            "to": "_3mkbczzje",
             "category": "from-to",
             "desc": "has reply"
         }
