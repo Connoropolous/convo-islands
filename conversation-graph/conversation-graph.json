@@ -1964,6 +1964,11 @@
             "text": "fundamental problems that need addressing to test this with others",
             "author": "connor",
             "id": "_piv31coml"
+        },
+        {
+            "text": "how the text renders visually on the map... e.g. currently long text nodes create overlap on top of one another",
+            "author": "connor",
+            "id": "_m1zrcbsgs"
         }
     ],
     "edges": [
@@ -4208,6 +4213,12 @@
         {
             "from": "_zetre132o",
             "to": "_tlkjdxp03",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_piv31coml",
+            "to": "_m1zrcbsgs",
             "category": "from-to",
             "desc": "has reply"
         }
