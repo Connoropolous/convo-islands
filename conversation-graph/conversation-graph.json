@@ -1979,6 +1979,11 @@
             "text": "the findability of things that have been said...",
             "author": "connor",
             "id": "_abmub1coq"
+        },
+        {
+            "text": "hopefully partially resolved with the addition of 'search'",
+            "author": "connor",
+            "id": "_spy7bi0sr"
         }
     ],
     "edges": [
@@ -4241,6 +4246,12 @@
         {
             "from": "_piv31coml",
             "to": "_abmub1coq",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_abmub1coq",
+            "to": "_spy7bi0sr",
             "category": "from-to",
             "desc": "has reply"
         }
