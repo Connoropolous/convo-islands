@@ -2019,6 +2019,11 @@
             "text": "I'm having a bad day",
             "author": "connor",
             "id": "_bkpdfn4iu"
+        },
+        {
+            "text": "Sorry to hear that",
+            "author": "connor",
+            "id": "_d1x49317g"
         }
     ],
     "edges": [
@@ -4323,6 +4328,12 @@
         {
             "from": "_gfcufbw2q",
             "to": "_bkpdfn4iu",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_bkpdfn4iu",
+            "to": "_d1x49317g",
             "category": "from-to",
             "desc": "has reply"
         }
