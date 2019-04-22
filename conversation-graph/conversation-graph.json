@@ -1974,6 +1974,11 @@
             "text": "the vastness of the map once it gets big... the vertical distance between the lowest nodes and the highest ones",
             "author": "connor",
             "id": "_t047z330p"
+        },
+        {
+            "text": "the findability of things that have been said...",
+            "author": "connor",
+            "id": "_abmub1coq"
         }
     ],
     "edges": [
@@ -4230,6 +4235,12 @@
         {
             "from": "_piv31coml",
             "to": "_t047z330p",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_piv31coml",
+            "to": "_abmub1coq",
             "category": "from-to",
             "desc": "has reply"
         }
