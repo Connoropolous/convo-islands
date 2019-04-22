@@ -2009,6 +2009,11 @@
             "text": "I'm great thanks",
             "author": "connor",
             "id": "_88znr1or4"
+        },
+        {
+            "text": "Good to hear",
+            "author": "connor",
+            "id": "_y0n23mnj3"
         }
     ],
     "edges": [
@@ -4301,6 +4306,12 @@
         {
             "from": "_gfcufbw2q",
             "to": "_88znr1or4",
+            "category": "from-to",
+            "desc": "has reply"
+        },
+        {
+            "from": "_88znr1or4",
+            "to": "_y0n23mnj3",
             "category": "from-to",
             "desc": "has reply"
         }
